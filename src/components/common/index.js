@@ -1,5 +1,7 @@
-import Layout from './Layout'
+import Space from './Space'
+import Loading from './Loading'
 
 export {
-  Layout
+  Space,
+  Loading
 }
