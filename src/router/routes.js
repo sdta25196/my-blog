@@ -1,7 +1,6 @@
 import { lazy } from 'react'
 import { setDeepRouter } from './setRouterFun'
 
-//! 路由配置，路由名全部小写
 const routes = [
   setDeepRouter("首页", {
     path: "/", exact: false, Comp: lazy(() => import('../pages/home')),

@@ -32,8 +32,7 @@ function Detaile(props) {
   }, [acticleItem])
 
   return (
-    <article className={styles.box} dangerouslySetInnerHTML={{ __html: marked(detail) }}>
-    </article>
+    <article className={styles.box} dangerouslySetInnerHTML={{ __html: marked(detail) }}></article>
   )
 }
 

@@ -5,13 +5,6 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { BLOGTYPE } from '../../assets/static'
 
-/**
-*
-* @author : 田源
-* @date : 2021-10-02 15:41
-* @description : 博客左侧主体
-*
-*/
 function LeftBox({ pathname }) {
   const [activeType, setActiveType] = useState(BLOGTYPE.article)
 

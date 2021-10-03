@@ -1,5 +1,11 @@
 @import "../../../assets/style/theme.scss";
 
+.mainBox {
+  min-height: 100vh;
+  min-width: 1200px;
+  background-image: url(../../../assets/image/blog-bg.jpg);
+  background-size: cover;
+}
 .main {
   width: $content-width;
   margin: 0 auto;

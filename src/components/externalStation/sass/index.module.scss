@@ -16,12 +16,14 @@
   .cardT {
     display: flex;
     align-items: center;
+    min-height: 60px;
     .logo {
       width: 60px;
+      margin-right: 10px;
     }
   }
   .subT {
-    border-top: 1px solid #eee;
+    border-top: 1px solid #555;
     padding-top: 15px;
     margin-top: 15px;
     font-size: 14px;
