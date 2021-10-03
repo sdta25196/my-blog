@@ -1,6 +1,4 @@
-import { Suspense, useEffect, useState } from "react"
-import { ARTICLE } from "../../assets/static"
-import Axios from 'axios'
+import { Suspense } from "react"
 import { Switch } from "react-router-dom"
 import { RouteWithSubRoutes } from '../../router'
 import styles from '../../components/home/sass/index.module.scss'
@@ -15,15 +13,6 @@ import { LeftBox, RightBox } from "../../components/home"
 */
 function Home(props) {
   const { routes, location: { pathname } } = props
-
-  // 测试请求博客文章
-  useEffect(() => {
-    Axios.get(`${ARTICLE[0].path}${ARTICLE[0].name}`, {
-      responseEncoding: 'utf8',
-    }).then(res => {
-      console.log(res)
-    })
-  }, [])
 
   return (
     <div className={styles.main}>

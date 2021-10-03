@@ -9,9 +9,13 @@ import styles from './sass/rightBox.module.scss'
 */
 function RightBox({ children }) {
   return (
-    <div className={styles.rightBox}>
-      {children}
-    </div>
+    <>
+      <main className={styles.rightBox}>
+        {children}
+      </main>
+      <footer className={styles.footer}>
+      </footer>
+    </>
   )
 }
 

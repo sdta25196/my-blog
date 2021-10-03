@@ -1,10 +1,9 @@
 import styles from './sass/leftBox.module.scss'
-import LOGO from '../../assets/image/logo.jpg'
 import GITHUB from '../../assets/image/github.png'
 import CSDN from '../../assets/image/csdn.png'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
-import { useEffect } from 'react/cjs/react.development'
+import { useState, useEffect } from 'react'
+import { BLOGTYPE } from '../../assets/static'
 
 /**
 *
@@ -14,31 +13,36 @@ import { useEffect } from 'react/cjs/react.development'
 *
 */
 function LeftBox({ pathname }) {
-  const [activeType, setActiveType] = useState(0)
+  const [activeType, setActiveType] = useState(BLOGTYPE.article)
 
   useEffect(() => {
     switch (pathname) {
       case '/util':
-        setActiveType(1)
+        setActiveType(BLOGTYPE.util)
         break;
       case '/externalStation':
-        setActiveType(2)
+        setActiveType(BLOGTYPE.externalStation)
         break;
       case '/translate':
-        setActiveType(3)
+        setActiveType(BLOGTYPE.translate)
         break;
       default:
-        setActiveType(0)
+        setActiveType(BLOGTYPE.article)
         break;
     }
   }, [pathname])
 
   return (
     <div className={styles.leftBox}>
-      <div className={styles.top}>
-        <img className={styles.logo} src={LOGO} alt="valor" />
-      </div>
-      <div className={styles.bottom}>
+      <header className={styles.top}>
+        <span className={styles.keep}>
+          keep
+        </span>
+        <span className={styles.coding}>
+          coding
+        </span>
+      </header>
+      <aside className={styles.bottom}>
         <div className={styles.name}>
           华洛<span className={styles.subName}>(Volar)</span>
         </div>
@@ -46,34 +50,34 @@ function LeftBox({ pathname }) {
           野生程序员，终身学习者
         </div>
         <Link to='/article'>
-          <p className={`${styles.articleType} ${activeType === 0 ? styles.active : ''}`}>
-            文章
+          <p className={`${styles.articleType} ${activeType === BLOGTYPE.article ? styles.active : ''}`}>
+            <span>文章</span>
           </p>
         </Link>
         <Link to='/util'>
-          <p className={`${styles.articleType} ${activeType === 1 ? styles.active : ''}`}>
-            技能
+          <p className={`${styles.articleType} ${activeType === BLOGTYPE.util ? styles.active : ''}`}>
+            <span>技能</span>
           </p>
         </Link>
         <Link to='/externalStation'>
-          <p className={`${styles.articleType} ${activeType === 2 ? styles.active : ''}`}>
-            工具
+          <p className={`${styles.articleType} ${activeType === BLOGTYPE.externalStation ? styles.active : ''}`}>
+            <span>工具</span>
           </p>
         </Link>
         <Link to='/translate'>
-          <p className={`${styles.articleType} ${activeType === 3 ? styles.active : ''}`}>
-            翻译
+          <p className={`${styles.articleType} ${activeType === BLOGTYPE.translate ? styles.active : ''}`}>
+            <span>翻译</span>
           </p>
         </Link>
         <div className={styles.linkBox}>
-          <a href="https://github.com/sdta25196" target="_blank">
+          <a href="https://github.com/sdta25196" target="_blank" rel="noreferrer">
             <img src={GITHUB} alt="github" className={styles.link} />
           </a>
-          <a href="https://valor.blog.csdn.net/" target="_blank">
+          <a href="https://valor.blog.csdn.net/" target="_blank" rel="noreferrer">
             <img src={CSDN} alt="csdn" className={styles.link} />
           </a>
         </div>
-      </div>
+      </aside>
     </div>
   )
 }

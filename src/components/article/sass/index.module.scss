@@ -1,0 +1,23 @@
+@import "../../../assets/style/theme.scss";
+
+.articleItem {
+  background-color: $theme-content-bg;
+  box-shadow: 0px 1px 2px 0.5px rgba(0, 0, 0, 0.3) inset;
+  transition: 0.3s;
+  margin-bottom: 10px;
+  padding: 40px;
+  cursor: pointer;
+  .title {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .descript {
+    margin-bottom: 30px;
+  }
+}
+.articleItem:hover {
+  box-shadow: 0 6px 5px -3px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+  transition: 0.3s;
+}

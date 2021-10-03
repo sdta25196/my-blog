@@ -28,7 +28,7 @@ body {
 }
 * {
   margin: 0;
-  font-family: '宋体';
+  font-family: "宋体";
 }
 /**
  * Add the correct display in IE 9-.
@@ -501,4 +501,10 @@ ul {
  内阴影+圆角*/
 ::-webkit-scrollbar-thumb {
   background-color: rgb(139, 138, 138);
+}
+
+#root {
+  min-height: 100vh;
+  background-image: url(../javascript.jpg);
+  background-size: cover;
 }

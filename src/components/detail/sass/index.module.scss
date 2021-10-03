@@ -1,0 +1,19 @@
+@import "../../../assets/style/theme.scss";
+
+.box {
+  box-shadow: 0px 1px 2px 0.5px rgba(0, 0, 0, 0.3) inset;
+  padding: 40px;
+  background-color: $theme-content-bg;
+  line-height: 20px;
+  // 重置md样式
+  p {
+    margin: 15px 0;
+  }
+  pre {
+    background-color: #eee;
+    padding: 10px;
+  }
+  strong {
+    background-color: rgb(247, 113, 113);
+  }
+}

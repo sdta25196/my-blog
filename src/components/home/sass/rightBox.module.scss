@@ -1,6 +1,11 @@
 @import "index.module.scss";
 
 .rightBox {
-  background-color: $theme-color-bd;
   margin-left: 260px;
+}
+.footer {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  background-color: rgba(239, 239, 239, 0.8);
 }
