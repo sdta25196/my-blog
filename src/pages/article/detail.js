@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
-import { BLOGTYPE, ARTICLE, UTIL, TRANSLATE } from "../../assets/static"
+import { BLOGTYPE, ARTICLE, KNOW, TRANSLATE } from "../../assets/static"
 import Axios from 'axios'
-import styles from '../../components/detail/sass/index.module.scss'
 import marked from 'marked'
+import Prism from 'prismjs'
+import styles from '../../components/article/sass/detail.module.scss'
 
 function Detaile(props) {
   const { match: { params: { type, hash } } } = props
@@ -11,8 +12,8 @@ function Detaile(props) {
     switch (type) {
       case BLOGTYPE.article:
         return ARTICLE.find(e => e.hash === hash)
-      case BLOGTYPE.util:
-        return UTIL.find(e => e.hash === hash)
+      case BLOGTYPE.know:
+        return KNOW.find(e => e.hash === hash)
       case BLOGTYPE.translate:
         return TRANSLATE.find(e => e.hash === hash)
       default:
@@ -28,11 +29,16 @@ function Detaile(props) {
       responseEncoding: 'utf8',
     }).then(res => {
       setDetail(res.data)
+      Prism.highlightAll()
     })
   }, [acticleItem])
 
   return (
-    <article className={styles.box} dangerouslySetInnerHTML={{ __html: marked(detail) }}></article>
+    <article className={styles.box}>
+      <h1>{acticleItem.title}</h1>
+      <hr></hr>
+      <div dangerouslySetInnerHTML={{ __html: marked(detail) }}></div>
+    </article>
   )
 }
 

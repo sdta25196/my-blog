@@ -1,26 +1,11 @@
 
-const article = [
-  {
-    hash: '1aeab37a38241041534e35caaf4b37ea23533724',
-    fileName: "测试.md",
-    title: "技能",
-    filePath: "/blogs/article/",
-    // date: ""
-  },
-  {
-    hash: '1aeab37a38241041534e35caaf4b37ea2353373324',
-    fileName: "测试.md",
-    title: "技能",
-    filePath: "/blogs/article/",
-    // date: ""
-  },
-  {
-    hash: '1aeab37a38241041534e35caaf4b37ea2223533724',
-    fileName: "测试.md",
-    title: "技能",
-    filePath: "/blogs/article/",
-    // date: ""
-  },
-]
-
-export default article
+  const util = [{
+        hash: "9151b49d17c074a83d9626f818b69106dc1aa23f",
+        fileName: "抓包和代理神器 - whistle.md",
+        title: "抓包和代理神器 - whistle",
+        filePath: "/blogs/util/",
+        date: "2021-10-5 16:24:35",
+        description: "## 安装@@@  `npm i whistle -g`@@@@@@## 基本操作与配套设置@@@",
+      }]
+  export default util
+  

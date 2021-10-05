@@ -7,6 +7,7 @@
 }
 .card {
   background-color: $theme-content-bg;
+  font-family: $theme-ff;
   box-shadow: 0px 1px 2px 0.5px rgba(0, 0, 0, 0.3) inset;
   transition: 0.3s;
   margin-bottom: 15px;
@@ -33,4 +34,16 @@
   box-shadow: 0 6px 5px -3px rgba(0, 0, 0, 0.3);
   transform: translateY(-3px);
   transition: 0.3s;
+}
+
+/* 移动端样式*/
+@media screen and (max-width: 750px) {
+  .card {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .card {
+    width: 100%;
+  }
 }

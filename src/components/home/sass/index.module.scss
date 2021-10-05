@@ -2,7 +2,7 @@
 
 .mainBox {
   min-height: 100vh;
-  min-width: 1200px;
+  min-width: $content-width;
   background-image: url(../../../assets/image/blog-bg.jpg);
   background-size: cover;
 }
@@ -10,4 +10,19 @@
   width: $content-width;
   margin: 0 auto;
   padding: 15px 0;
+}
+
+/* 移动端样式*/
+@media screen and (max-width: $content-width) {
+  .mainBox {
+    min-height: 100vh;
+    min-width: $content-width-mobile;
+    background-image: url(../../../assets/image/blog-bg.jpg);
+    background-size: cover;
+  }
+  .main {
+    width: $content-width-mobile;
+    margin: 0 auto;
+    padding: 0;
+  }
 }

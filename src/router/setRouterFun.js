@@ -12,7 +12,6 @@ export function setRouter(description, { path, exact = true, Comp, breadcrumb })
     path: path,
     exact: exact,
     component: (props) => {
-      window.scrollTo(0, 0)
       return <Comp {...props} breadcrumb={breadcrumb} />
     }
   }
@@ -35,7 +34,10 @@ export function setDeepRouter(description, { path, exact = true, Comp, children,
     routes: children.map(item => ({
       path: item.path,
       exact: item.exact,
-      component: (props) => <item.Comp {...props} />
+      component: (props) => {
+        window.scrollTo(0, 0)
+        return <item.Comp {...props} />
+      }
     }))
   }
 }

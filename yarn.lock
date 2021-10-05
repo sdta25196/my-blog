@@ -9322,6 +9322,11 @@ pretty-format@^27.0.0, pretty-format@^27.2.0:
     ansi-styles "^5.0.0"
     react-is "^17.0.1"
 
+prismjs@^1.25.0:
+  version "1.25.0"
+  resolved "https://registry.nlark.com/prismjs/download/prismjs-1.25.0.tgz#6f822df1bdad965734b310b315a23315cf999756"
+  integrity sha1-b4It8b2tllc0sxCzFaIzFc+Zl1Y=
+
 process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://registry.nlark.com/process-nextick-args/download/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
