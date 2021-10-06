@@ -1,7 +1,7 @@
-import LeftBox from "./LeftBox"
+import Navigation from "./Navigation"
 import RightBox from "./RightBox"
 
 export {
-  LeftBox,
+  Navigation,
   RightBox
 }

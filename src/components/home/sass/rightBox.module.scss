@@ -13,14 +13,26 @@
 /* 移动端样式*/
 @media screen and (max-width: $content-width) {
   .rightBox {
-    margin-top: 15px;
+    margin-top: 0;
     margin-left: 0px;
     padding: 0 8%;
+    padding-top: 1.2rem;
   }
   .footer {
-    margin: 20px 0;
+    margin: 0;
     text-align: center;
-    font-size: 14px;
+    font-size: 0.14rem;
     background-color: rgba(239, 239, 239, 0.8);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .rightBox {
+    padding: 0 4%;
+    padding-top: 1.8rem;
+    padding-bottom: 0.5rem;
+  }
+  .footer {
+    font-size: 0.2rem;
   }
 }

@@ -34,7 +34,7 @@ function Article(props) {
             <div className={styles.title}>
               {item.title}
             </div>
-            <div className={styles.descript} dangerouslySetInnerHTML={{ __html: marked(item.description.replaceAll("@@@", '\r\n')) }} ></div>
+            <div className={styles.descript} dangerouslySetInnerHTML={{ __html: marked(item.description.replace(/@@@/g, '\r\n')) }} ></div>
           </article>
         )
       })}

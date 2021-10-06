@@ -7,16 +7,32 @@
   margin-bottom: 10px;
   padding: 40px;
   cursor: pointer;
+  border-radius: 5px;
   .title {
     font-size: 22px;
     text-align: center;
     margin-bottom: 30px;
-  }
-  .descript {
   }
 }
 .articleItem:hover {
   box-shadow: 0 6px 5px -3px rgba(0, 0, 0, 0.3);
   transform: translateY(-3px);
   transition: 0.3s;
+}
+
+/* 移动端样式*/
+@media screen and (max-width: $content-width) {
+  .articleItem {
+    margin-bottom: 0.2rem;
+    padding: 0.4rem;
+    .title {
+      font-size: 0.22rem;
+      margin-bottom: 0.3rem;
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .articleItem {
+    margin-bottom: 0.3rem;
+  }
 }

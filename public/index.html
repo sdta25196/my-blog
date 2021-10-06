@@ -5,11 +5,24 @@
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/assets/favicon.ico" />
   <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/reset.css" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/reset.mobile.css" media="(max-width: 1200px)" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/reset.mobile.mini.css" media="(max-width: 550px)" />
   <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/prism.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="valor的博客" />
   <title>华洛</title>
+  <script>
+    // 重置移动端页面字号
+    window.onresize = function () {
+      if (document.documentElement.clientWidth < 1200) {
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+      } else {
+        document.documentElement.style.fontSize = 'medium'
+      }
+    }
+    window.onresize()
+  </script>
 </head>
 
 <body>

@@ -1,0 +1,69 @@
+@media screen and (max-width: 1200px) {
+  /* 重置md样式 */
+  article p {
+    color: #4d4d4d;
+    font-weight: 400;
+    line-height: 0.26rem;
+    margin: 0 0 0.16rem;
+    overflow: hidden;
+    overflow-x: auto;
+    font-size: 0.16rem;
+  }
+  article li {
+    list-style-type: disc;
+    margin: 0.08rem 0 0 0.32rem;
+    font-size: 0.16rem;
+  }
+  article pre {
+    font-size: medium;
+  }
+  article code {
+    color: #c7254e;
+    background-color: #fde5ec;
+    border-radius: 0.02rem;
+    font-size: 0.14rem;
+    word-break: break-word;
+  }
+
+  article blockquote {
+    display: block;
+    padding: 0.16rem;
+    margin: 0 0 0.24rem;
+    border-left: 0.08rem solid #dddfe4;
+    background: #eef0f4;
+    overflow: auto;
+    word-break: break-word !important;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  article blockquote p {
+    margin: 0;
+  }
+  article strong {
+    display: inline-block;
+    font-weight: 700;
+    color: #4d4d4d;
+  }
+  article ol {
+    padding-left: 0.2rem;
+  }
+  article ul {
+    padding-left: 0.2rem;
+  }
+  article a {
+    color: #4ea1db;
+    text-decoration: none;
+    font-size: 0.14rem;
+  }
+  article h2,
+  article h1,
+  article h3,
+  article h4,
+  article h5,
+  article h6 {
+    font-size: 0.2rem;
+    line-height: 0.3rem;
+    color: #4f4f4f;
+    margin: 0.08rem 0 0.16rem;
+    font-weight: 600;
+  }
+}

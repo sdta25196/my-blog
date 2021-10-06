@@ -56,6 +56,7 @@ article code {
   background-color: #fde5ec;
   border-radius: 2px;
   font-size: 14px;
+  word-break: break-word;
 }
 
 article blockquote {

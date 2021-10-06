@@ -14,6 +14,7 @@
   cursor: pointer;
   width: 30%;
   padding: 15px;
+  border-radius: 5px;
   .cardT {
     display: flex;
     align-items: center;
@@ -28,6 +29,7 @@
     padding-top: 15px;
     margin-top: 15px;
     font-size: 14px;
+    font-family: '微软雅黑';
   }
 }
 .card:hover {
@@ -37,13 +39,56 @@
 }
 
 /* 移动端样式*/
+@media screen and (max-width: $content-width) {
+  .card {
+    font-size: 0.12rem;
+    .subT {
+      padding-top: 0.15rem;
+      margin-top: 0.15rem;
+      font-size: 0.1rem;
+    }
+  }
+}
+
 @media screen and (max-width: 750px) {
   .card {
     width: 45%;
+    margin-bottom: 0.15rem;
+    padding: 0.15rem;
+    .cardT {
+      font-size: 0.16rem;
+      min-height: 0.6rem;
+      .logo {
+        width: 0.6rem;
+        margin-right: 0.1rem;
+      }
+    }
+    .subT {
+      border-top: 1px solid #555;
+      padding-top: 0.15rem;
+      margin-top: 0.15rem;
+      font-size: 0.14rem;
+    }
   }
 }
 @media screen and (max-width: 550px) {
   .card {
     width: 100%;
+    margin-bottom: 0.3rem;
+    padding: 0.35rem 0.15rem;
+    .cardT {
+      font-size: 0.25rem;
+      min-height: 0.6rem;
+      .logo {
+        width: 0.6rem;
+        margin-right: 0.3rem;
+      }
+    }
+    .subT {
+      border-top: 1px solid #555;
+      padding-top: 0.15rem;
+      margin-top: 0.15rem;
+      font-size: 0.2rem;
+    }
   }
 }

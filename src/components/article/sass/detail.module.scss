@@ -3,7 +3,16 @@
 .box {
   box-shadow: 0px 1px 2px 0.5px rgba(0, 0, 0, 0.3) inset;
   padding: 40px;
+  border-radius: 5px;
   background-color: $theme-content-bg;
   line-height: 25px;
   font-family: "Source Code Pro,DejaVu Sans Mono,Ubuntu Mono,Anonymous Pro,Droid Sans Mono,Menlo,Monaco,Consolas,Inconsolata,Courier,monospace,PingFang SC,Microsoft YaHei,sans-serif";
+}
+
+/* 移动端样式*/
+@media screen and (max-width: $content-width) {
+  .box {
+    padding: 0.4rem;
+    line-height: 0.25rem;
+  }
 }
