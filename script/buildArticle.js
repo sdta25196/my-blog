@@ -12,25 +12,27 @@ dir.forEach(item => {
   const article = []
 
   files.forEach(file => {
-    const fileStat = fs.statSync(path.resolve(filePath, file));
-    // 计算创建时间
-    const date = new Date(fileStat.ctime).toLocaleString()
+    if (file !== 'assets') {// assets是资源文件夹
+      const fileStat = fs.statSync(path.resolve(filePath, file));
+      // 计算创建时间
+      const date = new Date(fileStat.ctime).toLocaleString()
 
-    // 读文件
-    const content = fs.readFileSync(path.resolve(filePath, file), 'utf-8')
+      // 读文件
+      const content = fs.readFileSync(path.resolve(filePath, file), 'utf-8')
 
-    // 计算hash值
-    const hash = crypto.createHash("sha1").update(content).digest('hex')
-    article.push(
-      `{
-        hash: "${hash}",
-        fileName: "${file}",
-        title: "${file.replace(".md", "")}",
-        filePath: "/blogs/${item}/",
-        date: "${date}",
-        description: "${content.split(/\r?\n/).slice(0, 5).join('@@@')}",
-      }`
-    )
+      // 计算hash值
+      const hash = crypto.createHash("sha1").update(content).digest('hex')
+      article.push(
+        `{
+          hash: "${hash}",
+          fileName: "${file}",
+          title: "${file.replace(".md", "")}",
+          filePath: "/blogs/${item}/",
+          date: "${date}",
+          description: "${content.split(/\r?\n/).slice(0, 5).join('@@@')}",
+        }`
+      )
+    }
   })
   const DSLJson = `
   const ${item} = [${article}]

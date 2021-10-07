@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { BLOGTYPE, ARTICLE, TRANSLATE, KNOW } from "../../assets/static"
 import styles from '../../components/article/sass/index.module.scss'
+import CALENDAR from '../../assets/image/calendar.png'
 import marked from 'marked'
 
 function Article(props) {
@@ -33,6 +34,8 @@ function Article(props) {
             onClick={() => { history.push(`/detail/${articletype}/${item.hash}`) }}>
             <div className={styles.title}>
               {item.title}
+              <p className={styles.subT}>
+                <img src={CALENDAR} />{item.date}</p>
             </div>
             <div className={styles.descript} dangerouslySetInnerHTML={{ __html: marked(item.description.replace(/@@@/g, '\r\n')) }} ></div>
           </article>
