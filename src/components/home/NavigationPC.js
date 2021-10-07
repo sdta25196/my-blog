@@ -2,29 +2,28 @@ import { useState, useEffect } from 'react'
 import styles from './sass/navigation.module.scss'
 import GITHUB from '../../assets/image/github.png'
 import CSDN from '../../assets/image/csdn.png'
+import LOGO from '../../assets/image/logo.jpg'
 import { Link } from 'react-router-dom'
 
 function NavigationPC({ activeType, nav = [] }) {
   const [fixed, setFixed] = useState(false)
 
   useEffect(() => {
-    if (document.documentElement.clientWidth > 1200) {
-      window.onscroll = () => {
-        if (window.scrollY >= 96) { setFixed(true) }
-        else { setFixed(false) }
-      }
-      return () => window.onscroll = null
+    function scrollLienter() {
+      if (window.scrollY >= 150) { setFixed(true) }
+      else { setFixed(false) }
     }
+    window.addEventListener('scroll', scrollLienter)
+    return () => window.removeEventListener('scroll', scrollLienter)
   }, [])
 
   return (
     <div className={styles.navigationPC}>
       <header className={styles.top}>
-        <span className={styles.keep}>keep</span>
-        <span className={styles.coding}>coding</span>
+        <img src={LOGO} alt="logo" width='230px' />
       </header>
       <aside className={`${styles.bottom} ${fixed ? styles.fixed : ""}`}>
-        <div className={styles.name}>华洛<span className={styles.subName}>(Volar)</span></div>
+        <div className={styles.name}>华洛<span className={styles.subName}>(Valor)</span></div>
         <div className={styles.slogan}>野生程序员，终身学习者</div>
         {
           nav.map((item) => {

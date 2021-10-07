@@ -35,7 +35,7 @@ function Article(props) {
             <div className={styles.title}>
               {item.title}
               <p className={styles.subT}>
-                <img src={CALENDAR} />{item.date}</p>
+                <img src={CALENDAR} alt='calendar' />{item.date}</p>
             </div>
             <div className={styles.descript} dangerouslySetInnerHTML={{ __html: marked(item.description.replace(/@@@/g, '\r\n')) }} ></div>
           </article>

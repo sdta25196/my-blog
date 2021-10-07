@@ -22,10 +22,22 @@ function Navigation({ pathname }) {
     setActiveType(heightLightNav(pathname))
   }, [pathname])
 
+  const [mode, setMode] = useState(document.documentElement.clientWidth > 1200 ? 'PC' : 'Mobile')
+  useEffect(() => {
+    function resizeLienter() {
+      if (document.documentElement.clientWidth > 1200) { setMode('PC') }
+      else { setMode('Mobile') }
+    }
+    window.addEventListener('resize', resizeLienter)
+    return () => window.removeEventListener('resize', resizeLienter)
+  }, [])
   return (
     <>
-      <NavigationPC activeType={activeType} nav={nav} />
-      <NavigationMobile activeType={activeType} nav={nav} />
+      {
+        mode === 'PC' ?
+          <NavigationPC activeType={activeType} nav={nav} /> :
+          <NavigationMobile activeType={activeType} nav={nav} />
+      }
     </>
   )
 }

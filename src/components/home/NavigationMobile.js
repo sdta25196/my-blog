@@ -1,44 +1,45 @@
 import { useEffect, useState } from 'react'
-import styles from './sass/navigation.module.scss'
 import { Link } from 'react-router-dom'
 import { getArticleByHash } from "../../tools"
+import styles from './sass/navigation.module.scss'
+import LOGO from '../../assets/image/logo.jpg'
+
 
 function NavigationMobile({ activeType, nav = [] }) {
-  const [title, setTitle] = useState({
-    content: "",
+  const [article, setArticle] = useState({
+    title: "",
     show: false
   })
   // 移动端翻阅文章详情后显示标题
   useEffect(() => {
-    if (window.location.hash.startsWith('#/detail')) {
-      const [_, __, type, hash] = (window.location.hash.split('/'))
-      const { title } = getArticleByHash(type, hash)
-      window.onscroll = () => {
-        if (window.scrollY >= 96) {
-          setTitle({
-            content: title,
+    function scrollLienter() {
+      if (window.location.hash.startsWith('#/detail')) {
+        const [type, hash] = (window.location.hash.split('/')).slice(2, 4)
+        const { title } = getArticleByHash(type, hash)
+        if (window.scrollY >= 80) {
+          setArticle(article => article = {
+            ...article,
+            title,
             show: true
           })
         } else {
-          setTitle({
-            content: title,
+          setArticle(article => article = {
+            ...article,
+            title,
             show: false
           })
         }
       }
     }
-    return () => window.onscroll = null
-  }, [window.location.hash])
+    window.addEventListener('scroll', scrollLienter)
+    return () => window.removeEventListener('scroll', scrollLienter)
+  }, [])
+
   return (
     <header className={styles.navigationMobile}>
       <div className={styles.mobile}>
         {
-          title.show ? <p>{title.content}</p> :
-            <p>
-              <span>valor - </span>
-              <span className={styles.keep}>keep </span>
-              <span className={styles.coding}> coding</span>
-            </p>
+          article.show ? <p className={styles.t}>{article.title}</p> : <img src={LOGO} alt="logo" width='220px' />
         }
       </div>
       <div className={styles.mobileNav}>
