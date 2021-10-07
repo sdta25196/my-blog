@@ -2,7 +2,9 @@ const path = require('path')
 const fs = require('fs')
 const crypto = require("crypto")
 
-const workPath = path.resolve(__dirname, '../public/blogs/')
+const rootPath = path.resolve(__dirname, '../public/')
+const workPath = path.resolve(rootPath, 'blogs/')
+const assetPath = path.resolve(rootPath, 'assets/')
 // 读文件夹
 const dir = fs.readdirSync(workPath)
 
@@ -12,7 +14,12 @@ dir.forEach(item => {
   const article = []
 
   files.forEach(file => {
-    if (file !== 'assets') {// assets是资源文件夹
+    if (file === 'assets') {// assets是资源文件夹,copy到根目录
+      const assetsFiles = fs.readdirSync(`${filePath}/assets`)
+      assetsFiles.forEach(asset => {
+        fs.writeFileSync(`${assetPath}/${asset}`, fs.readFileSync(`${filePath}/assets/${asset}`));
+      })
+    } else {
       const fileStat = fs.statSync(path.resolve(filePath, file));
       // 计算创建时间
       const date = new Date(fileStat.ctime).toLocaleString()
