@@ -65,6 +65,7 @@
     background-color: $theme-color;
     border-radius: 50%;
     position: fixed;
+    top: unset;
     bottom: 0.3rem;
     right: 0.5rem;
     background-image: url(../../../assets/image/back.png);
@@ -92,6 +93,7 @@
     background-color: $theme-color;
     border-radius: 50%;
     position: fixed;
+    top: unset;
     bottom: 0.6rem;
     right: 0.5rem;
     background-image: url(../../../assets/image/back.png);

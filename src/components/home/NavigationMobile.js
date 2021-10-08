@@ -29,6 +29,12 @@ function NavigationMobile({ activeType, nav = [] }) {
             show: false
           })
         }
+      } else {
+        // 处理标题一直显示的bug
+        setArticle(article => article = {
+          ...article,
+          show: false
+        })
       }
     }
     window.addEventListener('scroll', scrollLienter)
@@ -39,7 +45,7 @@ function NavigationMobile({ activeType, nav = [] }) {
     <header className={styles.navigationMobile}>
       <div className={styles.mobile}>
         {
-          article.show ? <p className={styles.t}>{article.title}</p> : <img src={LOGO} alt="logo" width='220px' />
+          article.show ? <p className={styles.t}>{article.title}</p> : <img src={LOGO} alt="logo" className={styles.logo} />
         }
       </div>
       <div className={styles.mobileNav}>
