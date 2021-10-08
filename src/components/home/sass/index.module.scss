@@ -11,6 +11,10 @@
   margin: 0 auto;
   padding: 15px 0;
 }
+.loading {
+  height: 50vh;
+  position: relative;
+}
 
 /* 移动端样式*/
 @media screen and (max-width: $content-width) {

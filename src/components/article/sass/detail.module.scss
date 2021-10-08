@@ -44,6 +44,10 @@
   background-repeat: no-repeat;
   background-position: 22px center;
 }
+.loading {
+  height: 50vh;
+  position: relative;
+}
 
 /* 移动端样式*/
 @media screen and (max-width: $content-width) {

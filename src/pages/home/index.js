@@ -1,8 +1,9 @@
 import { Suspense } from "react"
 import { Switch } from "react-router-dom"
 import { RouteWithSubRoutes } from '../../router'
-import styles from '../../components/home/sass/index.module.scss'
 import { Navigation, RightBox } from "../../components/home"
+import { Loading } from "../../components/common"
+import styles from '../../components/home/sass/index.module.scss'
 
 function Home(props) {
   const { routes, location: { pathname } } = props
@@ -12,7 +13,7 @@ function Home(props) {
       <div className={styles.main}>
         <Navigation pathname={pathname} />
         <RightBox>
-          <Suspense fallback={<div>loading</div>}>
+          <Suspense fallback={<div className={styles.loading}><Loading /></div>}>
             <Switch>
               {routes.map((route, i) => <RouteWithSubRoutes key={i} {...route} />)}
             </Switch>

@@ -17,19 +17,20 @@ import chinaFlag from '../image/chinaFlag.jpg'
 import ecmaLogo from '../image/ecmaLogo.svg'
 import english from '../image/english.svg'
 import cssReference from '../image/cssReference.png'
+import bzk from '../image/bzk.gif'
 
 const EXTERNAL = [
   {
-    title: "ECMA规范(包含提议中的)",
+    title: "ECMA",
     link: "https://tc39.es/ecma262/",
     logo: ecmaLogo,
-    description: "ECMA262标准",
+    description: "ECMA262标准文档",
   },
   {
-    title: "javaScript性能对比",
+    title: "jsbench",
     link: "https://jsbench.me/",
     logo: jsbench,
-    description: "可用来测试javaScript不同代码的性能",
+    description: "可用来测试、对比 JS 不同代码的性能",
   },
   {
     title: "可视化的javaScript调用栈",
@@ -80,7 +81,7 @@ const EXTERNAL = [
     description: "图虫EXIF查看器alpha版",
   },
   {
-    title: "图片压缩",
+    title: "TinyPNG",
     link: "https://tinypng.com/",
     logo: tinypng,
     description: "图片无损压缩",
@@ -102,6 +103,12 @@ const EXTERNAL = [
     link: "https://icomoon.io/",
     logo: icomoon,
     description: "IcoMoon是一个图标解决方案",
+  },
+  {
+    title: "标智客",
+    link: "https://www.logomaker.com.cn/",
+    logo: bzk,
+    description: "在线智能LOGO设计生成",
   },
   {
     title: "google开发者文档",
