@@ -17,16 +17,16 @@ dir.forEach(item => {
     if (file === 'assets') {// assets是资源文件夹,copy到根目录
       const assetsFiles = fs.readdirSync(`${filePath}/assets`)
       assetsFiles.forEach(asset => {
-        fs.writeFileSync(`${assetPath}/${asset}`, fs.readFileSync(`${filePath}/assets/${asset}`));
+        fs.writeFileSync(`${assetPath}/${asset}`, fs.readFileSync(`${filePath}/assets/${asset}`))
       })
     } else {
-      const fileStat = fs.statSync(path.resolve(filePath, file));
+      const fileStat = fs.statSync(path.resolve(filePath, file))
       // 计算创建时间
       const date = new Date(fileStat.ctime).toLocaleString()
 
       // 读文件
       const content = fs.readFileSync(path.resolve(filePath, file), 'utf-8')
-
+      const outline = content.match(/^\s?#+\s.+/gm).map(item => `"${item.replace(/\r?\n/g, '')}"`)
       // 计算hash值
       const hash = crypto.createHash("sha1").update(content).digest('hex')
       article.push(
@@ -37,6 +37,7 @@ dir.forEach(item => {
           filePath: "/blogs/${item}/",
           date: "${date}",
           description: "${content.split(/\r?\n/).slice(0, 5).join('@@@')}",
+          outline: [${outline}],
         }`
       )
     }

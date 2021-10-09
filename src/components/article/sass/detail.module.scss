@@ -31,6 +31,7 @@
   }
 }
 .back {
+  display: none;
   cursor: pointer;
   width: 80px;
   height: 80px;
@@ -64,6 +65,7 @@
     }
   }
   .back {
+    display: block;
     width: 0.6rem;
     height: 0.6rem;
     background-color: $theme-color;
@@ -92,6 +94,7 @@
     }
   }
   .back {
+    display: block;
     width: 0.9rem;
     height: 0.9rem;
     background-color: $theme-color;

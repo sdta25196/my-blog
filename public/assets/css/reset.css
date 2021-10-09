@@ -38,6 +38,10 @@ a:focus {
 }
 
 /* 重置md样式 */
+article img {
+  max-width: 100%;
+}
+
 article p {
   color: #4d4d4d;
   font-weight: 400;
