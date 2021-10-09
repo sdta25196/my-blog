@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react"
 import styles from './sass/loading.module.scss'
 /**
 *
@@ -8,29 +7,15 @@ import styles from './sass/loading.module.scss'
 *
 */
 function Loading() {
-  const [waiting, setWait] = useState(false)
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setWait(true)
-    }, 300)
-    return () => {
-      clearTimeout(timer)
-    }
-  }, [])
   return (
-    <div>
-      {
-        waiting &&
-        <div className={styles.loadingBox}>
-          <div >
-            <div className={styles.loading}></div>
-            <div className={styles.loading}></div>
-            <div className={styles.loading}></div>
-            <div className={styles.loading}></div>
-            <div className={styles.loading}></div>
-          </div>
-        </div>
-      }
+    <div className={styles.loadingBox}>
+      <div >
+        <div className={styles.loading}></div>
+        <div className={styles.loading}></div>
+        <div className={styles.loading}></div>
+        <div className={styles.loading}></div>
+        <div className={styles.loading}></div>
+      </div>
     </div>
   )
 }

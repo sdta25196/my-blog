@@ -4,7 +4,7 @@ import marked from 'marked'
 import Prism from 'prismjs'
 import styles from '../../components/article/sass/detail.module.scss'
 import { getArticleByHash } from "../../tools"
-import { Loading } from '../../components/common'
+import { ArticleLoading } from '../../components/common'
 
 let hasListener = false
 
@@ -57,7 +57,7 @@ function Detaile(props) {
         <hr></hr>
         {
           detail ? <div dangerouslySetInnerHTML={{ __html: marked(detail) }}></div> :
-            <div className={styles.loading}><Loading /></div>
+            <div className={styles.loading}><ArticleLoading /></div>
         }
       </article>
       <div className={styles.back} onClick={() => { history.goBack() }}></div>

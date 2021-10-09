@@ -64,15 +64,7 @@ function NavigationPC({ activeType, nav = [] }) {
     return id.replace(/#+\s*/, '').replace(/\s/g, '-').replace(/&|%|#|@|!/, '').toLowerCase()
   }
   const handlerOutlineClick = (id) => {
-    let element = document.querySelector(`[data-outline="${id}"]`)
-    if (element) { element.classList.add(styles.active) }
-    console.log(handlerID(id))
     let item = document.getElementById(handlerID(id))
-    // window.scrollTo({
-    //   left: 0,
-    //   top: item.offsetTop - 80,
-    //   behavior: 'smooth'
-    // });
     window.scrollTo(0, item.offsetTop - 80);
   }
 
