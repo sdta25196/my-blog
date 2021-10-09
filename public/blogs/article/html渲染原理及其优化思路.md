@@ -1,10 +1,3 @@
-## 关键渲染路径
-![progressive page rendering](assets/progressive-rendering.png)
-
-
-项目轻量的时候问题不大，但是当项目变大，变复杂的时候，一个页面加载变慢的时候，就可以采取手动去控制组件渲染顺序的方式来保证一部分关键渲染路径是优先渲染的
-
-
 ## HTML的解析过程
 
 ![7tz9q1ngpp](assets/7tz9q1ngpp/../7tz9q1ngpp.jpg)
@@ -80,6 +73,12 @@ display:none 会触发 reflow，而 visibility:hidden 只会触发 repaint，因
 <link href="print.css" rel="stylesheet" media="print">
 <link href="other.css" rel="stylesheet" media="(min-width: 40em)">
 ```
+
+## 关键渲染路径
+![progressive page rendering](assets/progressive-rendering.png)
+
+
+项目轻量的时候问题不大，但是当项目变大，变复杂的时候，一个页面加载变慢的时候，就可以采取手动去控制组件渲染顺序的方式来保证一部分关键渲染路径是优先渲染的
 
 ### 关键路径渲染和阻塞渲染
 
