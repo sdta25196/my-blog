@@ -1,21 +1,5 @@
 
   const article = [{
-          hash: "5e11f13d369db73c0cf9d848115a6a03563ad502",
-          fileName: "Event Loop - 事件循环详解.md",
-          title: "Event Loop - 事件循环详解",
-          filePath: "/blogs/article/",
-          date: "2021-10-9 17:47:45",
-          description: "## 事件循环@@@  @@@事件循环的本质就是JavaScript引擎在 **等待任务**、**执行任务**、**进入休眠状态等待更多任务**这几个状态之间转换的无限循环。@@@@@@> 出现任务 —— 引擎处理它们 —— 等待更多任务（即休眠，几乎不消耗 CPU 资源）—— 出现新的任务",
-          outline: ["## 事件循环","## 浏览器中的宏任务","## 浏览器中的微任务","## 总结 & 补充"],
-        },{
-          hash: "7c3e158bc1801f229b1772e7b2814417b3d29352",
-          fileName: "GC-垃圾回收机制.md",
-          title: "GC-垃圾回收机制",
-          filePath: "/blogs/article/",
-          date: "2021-10-7 15:49:44",
-          description: "## 垃圾回收@@@@@@  c一类的语言拥有底层的内存管理原语`malloc()`和`free()`，@@@  而像javascript这样的高级语言，会自动释放内存，这一过程就是**内存垃圾回收**@@@  ",
-          outline: ["## 垃圾回收","## 内存生命周期","## JavaScript 中的分配内存","## JavaScript 中的使用内存","## JavaScript 中的释放内存","## 万物都有其两面性","## 四种常见的javascript内存泄露","## 管理内存的方式"],
-        },{
           hash: "55037224a70af942dfc38832d5644270ea64c5a1",
           fileName: "html渲染原理及其优化思路.md",
           title: "html渲染原理及其优化思路",
@@ -23,14 +7,6 @@
           date: "2021-10-9 17:55:44",
           description: "## HTML的解析过程@@@@@@![7tz9q1ngpp](assets/7tz9q1ngpp/../7tz9q1ngpp.jpg)@@@@@@网络进程接收到响应头之后，会根据响应头中的 content-type 字段来判断文件的类型，比如 content-type 的值是“text/html”，那么浏览器就会判断这是一个 HTML 类型的文件，然后为该请求选择或者创建一个渲染进程，渲染进程准备好之后，网络进程和渲染进程之间会建立一个共享数据的管道，网络进程接收到数据后就往这个管道里面放，而渲染进程则从管道的另外一端不断地读取数据，并同时将读取的数据“喂”给 HTML 解析器。你可以把这个管道想象成一个“水管”，网络进程接收到的字节流像水一样倒进这个“水管”，而“水管”的另外一端是渲染进程的 HTML 解析器，它会动态接收字节流，并将其解析为 DOM。如下图",
           outline: ["## HTML的解析过程","### dom的解析","### CSS的解析","### 渲染树","#### 渲染步骤","###  回流与重绘","### reflow与repaint的时机：","### CSS的渲染阻塞","## 关键渲染路径","### 关键路径渲染和阻塞渲染","### css具体如何阻塞资源的","### JavaScript具体如何阻塞资源的","### 改变脚本加载次序defer与async","## 优化的思路","## 排查优化点、衡量网站的性能的方法","## 补充&概念","## 整体大纲"],
-        },{
-          hash: "e7cc98671cbf11d9fa71d00f6a730f97a1595f8c",
-          fileName: "v8引擎执行机制.md",
-          title: "v8引擎执行机制",
-          filePath: "/blogs/article/",
-          date: "2021-10-3 15:09:39",
-          description: "## 引擎执行机制@@@@@@  SourceCode -> Abstract Syntax Tree -> Bytecode -> Binary@@@@@@  引擎中通常拥有parser（解析器）、Ignition（解释器）、TurboFan（编译器）、GC(垃圾回收器)",
-          outline: ["## 引擎执行机制","## Parser 和 Pre-Parser"],
         },{
           hash: "20ce60af0ab4895b77c7a0263bc52da74a010f37",
           fileName: "前端模块化的前世今生.md",
@@ -47,6 +23,30 @@
           date: "2021-10-9 17:50:26",
           description: "## 前端监控方案@@@@@@下面两个API配合使用，收集大部分错误信息@@@@@@  * `window.addEventListener('error')`",
           outline: ["## 前端监控方案","## react内置监控方案"],
+        },{
+          hash: "5e11f13d369db73c0cf9d848115a6a03563ad502",
+          fileName: "Event Loop - 事件循环详解.md",
+          title: "Event Loop - 事件循环详解",
+          filePath: "/blogs/article/",
+          date: "2021-10-9 17:47:45",
+          description: "## 事件循环@@@  @@@事件循环的本质就是JavaScript引擎在 **等待任务**、**执行任务**、**进入休眠状态等待更多任务**这几个状态之间转换的无限循环。@@@@@@> 出现任务 —— 引擎处理它们 —— 等待更多任务（即休眠，几乎不消耗 CPU 资源）—— 出现新的任务",
+          outline: ["## 事件循环","## 浏览器中的宏任务","## 浏览器中的微任务","## 总结 & 补充"],
+        },{
+          hash: "7c3e158bc1801f229b1772e7b2814417b3d29352",
+          fileName: "GC-垃圾回收机制.md",
+          title: "GC-垃圾回收机制",
+          filePath: "/blogs/article/",
+          date: "2021-10-7 15:49:44",
+          description: "## 垃圾回收@@@@@@  c一类的语言拥有底层的内存管理原语`malloc()`和`free()`，@@@  而像javascript这样的高级语言，会自动释放内存，这一过程就是**内存垃圾回收**@@@  ",
+          outline: ["## 垃圾回收","## 内存生命周期","## JavaScript 中的分配内存","## JavaScript 中的使用内存","## JavaScript 中的释放内存","## 万物都有其两面性","## 四种常见的javascript内存泄露","## 管理内存的方式"],
+        },{
+          hash: "e7cc98671cbf11d9fa71d00f6a730f97a1595f8c",
+          fileName: "v8引擎执行机制.md",
+          title: "v8引擎执行机制",
+          filePath: "/blogs/article/",
+          date: "2021-10-3 15:09:39",
+          description: "## 引擎执行机制@@@@@@  SourceCode -> Abstract Syntax Tree -> Bytecode -> Binary@@@@@@  引擎中通常拥有parser（解析器）、Ignition（解释器）、TurboFan（编译器）、GC(垃圾回收器)",
+          outline: ["## 引擎执行机制","## Parser 和 Pre-Parser"],
         },{
           hash: "be8b87c706ad9efe185699f8c2d4f4093c6b47c0",
           fileName: "对称加密与非对称加密.md",

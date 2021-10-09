@@ -42,10 +42,16 @@ dir.forEach(item => {
       )
     }
   })
+  article.sort((a, b) => getDateTime(b) - getDateTime(a)) //排序
+
   const DSLJson = `
   const ${item} = [${article}]
   export default ${item}
   `
   fs.writeFileSync(path.resolve(__dirname, `../src/assets/static/${item}.js`), DSLJson)
 })
+
+function getDateTime(item) {
+  return new Date(item.match(/date:\s"(.[^"]+)"/)[1]).getTime()
+}
 console.log('done')
