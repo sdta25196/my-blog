@@ -12,17 +12,20 @@ function ArticleLoading(props) {
     }
   }, [])
   return (
-    <div>
+    <>
       {
         waiting &&
-        <div className={styles.pace}>
-          <div className={styles.paceProgress} data-progress-text="99%" data-progress="99">
-            <div className={styles.paceProgressInner}></div>
+        <div className={styles.loadingBox}>
+          <div >
+            <div className={styles.loading}></div>
+            <div className={styles.loading}></div>
+            <div className={styles.loading}></div>
+            <div className={styles.loading}></div>
+            <div className={styles.loading}></div>
           </div>
-          <div className={styles.paceActivity}></div>
         </div>
       }
-    </div>
+    </>
   )
 }
 
