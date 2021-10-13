@@ -61,7 +61,7 @@ function NavigationPC({ activeType, nav = [] }) {
   }, [window.location.hash])
 
   const handlerID = (id) => {
-    return id.replace(/#+\s*/, '').replace(/\s/g, '-').replace(/&|%|#|@|!/, '').toLowerCase()
+    return id.replace(/#+\s*/, '').replace(/\s/g, '-').replace(/&|%|#|@|!|:/, '').toLowerCase()
   }
   const handlerOutlineClick = (id) => {
     let item = document.getElementById(handlerID(id))
