@@ -1,5 +1,15 @@
 @media screen and (max-width: 1200px) {
   /* 重置md样式 */
+  article table {
+    margin-bottom: 0.24rem;
+  }
+
+  article table tr td,
+  article table tr th {
+    font-size: 0.16rem;
+    line-height: 0.22rem;
+    padding: 0.08rem;
+  }
   article p {
     color: #4d4d4d;
     font-weight: 400;
@@ -11,7 +21,7 @@
   }
   article li {
     list-style-type: disc;
-    margin: 0.08rem 0 0 0.32rem;
+    margin: 0.1rem 0 0 0.24rem;
     font-size: 0.16rem;
   }
   article pre {
@@ -44,10 +54,10 @@
     color: #4d4d4d;
   }
   article ol {
-    padding-left: 0.2rem;
+    padding-left: 0.1rem;
   }
   article ul {
-    padding-left: 0.2rem;
+    padding-left: 0.1rem;
   }
   article a {
     color: #4ea1db;

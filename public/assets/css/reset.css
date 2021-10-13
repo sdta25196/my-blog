@@ -38,6 +38,31 @@ a:focus {
 }
 
 /* 重置md样式 */
+article table {
+  border-collapse: collapse;
+  display: table;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+article table tr td,
+article table tr th {
+  font-size: 14px;
+  color: #4f4f4f;
+  line-height: 22px;
+  border: 1px solid #ddd;
+  padding: 8px;
+  word-break: normal !important;
+  vertical-align: middle;
+}
+article table tr th {
+  font-weight: 700;
+  background-color: #eff3f5;
+}
+article table tr:nth-child(2n) {
+  background-color: #f7f7f7;
+}
 article img {
   max-width: 100%;
 }
