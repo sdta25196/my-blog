@@ -1,5 +1,20 @@
+## 简介
+whistle(读音 [ˈwɪsəl]，拼音 [wēisǒu] )是基于 Node 实现的跨平台抓包调试代理工具，有以下基本功能：
+  * 查看 HTTP、HTTPS、HTTP2、WebSocket、TCP 请求响应数据
+  * 修改 HTTP、HTTPS、HTTP2、WebSocket、TCP 请求响应数据
+  * 修改请求 url、方法、头部、内容等
+  * 修改响应状态码、头部、内容，并支持本地替换等
+  * 修改 WebSocket 和 TCP 收发的帧数据
+  * 设置 hosts（支持 IPv6）、http-proxy、https-proxy、socks
+  * 作为HTTP代理或反向代理
+  * 集成常用的 web 调试工具，如 weinre 和 log 等
+  * 支持用 Node 编写插件扩展
+
 ## 安装
-  `npm i whistle -g`
+
+  yarn: `yarn add whistle` 
+
+  npm: `npm i whistle -g`
 
 ## 基本操作与配套设置
 
