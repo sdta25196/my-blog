@@ -6,31 +6,34 @@ web-vitals 是google chrome团队开发，用来协助开发者优化网站性�
 
 ## 安装
 npm: `npm i web-vitals`
+
 yarn: `yarn add web-vitals`
   
 ### 使用cdn引入
-  * 使用外部模块加载
-  ```javascript
-    import {getCLS, getFID, getLCP} from 'https://unpkg.com/web-vitals?module';
+* 使用外部模块加载
 
-    getCLS(console.log);
-    getFID(console.log);
-    getLCP(console.log);
-  ```
+```javascript
+  import {getCLS, getFID, getLCP} from 'https://unpkg.com/web-vitals?module';
 
-  * 使用外部脚本加载
-  ```javascript
-    (function() {
-      var script = document.createElement('script');
-      script.src = 'https://unpkg.com/web-vitals/dist/web-vitals.iife.js';
-      script.onload = function() {
-        webVitals.getCLS(console.log);
-        webVitals.getFID(console.log);
-        webVitals.getLCP(console.log);
-      }
-      document.head.appendChild(script);
-    }())
-  ```
+  getCLS(console.log);
+  getFID(console.log);
+  getLCP(console.log);
+```
+
+* 使用外部脚本加载
+
+```javascript
+  (function() {
+    var script = document.createElement('script');
+    script.src = 'https://unpkg.com/web-vitals/dist/web-vitals.iife.js';
+    script.onload = function() {
+      webVitals.getCLS(console.log);
+      webVitals.getFID(console.log);
+      webVitals.getLCP(console.log);
+    }
+    document.head.appendChild(script);
+  }())
+```
 
 
 
@@ -45,7 +48,10 @@ yarn: `yarn add web-vitals`
     getLCP(console.log);
   ```
 ### 性能指标对象
-  web-vitals会返回一个对象参数：`{name: 'FCP', value: 606.9000000059605, delta: 606.9000000059605, entries: Array(1), id: 'v2-1634885149588-6955293147726'}`
+  web-vitals会返回一个对象参数：
+  
+  `{name: 'FCP', value: 606.9000000059605, delta: 606.9000000059605, entries: Array(1), id: 'v2-1634885149588-6955293147726'}`
+
   * name - 指标名称
   * value - 指标数据
   * delta - 指标触发事件 （如果设置报告的第二个参数为true,就会发现这条参数改变了）
@@ -54,6 +60,7 @@ yarn: `yarn add web-vitals`
 
 ## polyfill使用方法
   1. 导入`web-vitals/base`
+
   ```javascript
     import {getLCP, getFID, getCLS} from 'web-vitals/base'
     
@@ -61,7 +68,9 @@ yarn: `yarn add web-vitals`
     getFID(console.log);
     getLCP(console.log);
   ```
+  
   2. html的`head`标签中加入polyfill，必须是第一个脚本
+
   ```html
     <!DOCTYPE html>
     <html>
