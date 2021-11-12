@@ -129,3 +129,9 @@ www.test.com/xxx http://www.abc.com
 
 ## 更多
   [whistle中文文档](http://wproxy.org/whistle/install.html)
+
+## 关于chrome的跨域
+  
+  * 访问[chrome flags](chrome://flags/)
+  * 搜索`insecure origin`
+  * 填入允许跨域的域名
