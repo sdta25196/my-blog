@@ -1,5 +1,13 @@
 
 const know = [{
+        hash: "75ef5686a17bd710b641995d278973d6b38d8807",
+        fileName: "函数式编程工具库 - ramdaJS.md",
+        title: "函数式编程工具库 - ramdaJS",
+        filePath: "/blogs/know/",
+        date: "2021-11-14 0:30:39",
+        description: "## Ramda @@@@@@  > 一款实用的 JavaScript 函数式编程库 - 也是目前最理想的js函数式编程工具库。@@@@@@  > 与其他函数式的库相比，Ramda 的目标更为专注：专门为函数式编程风格而设计，更容易创建函数式 pipeline、且从不改变用户已有数据。",
+        outline: ["## Ramda ","## 安装","## 示例","## 部分API","## 应用场景","## 一些函数式编程中重要的概念","## 其他函数式工具库","## 更多"],
+      },{
         hash: "88e2b039e441f6b609322d8d339e407b1f2dc6d0",
         fileName: "抓包和代理神器 - whistle.md",
         title: "抓包和代理神器 - whistle",
