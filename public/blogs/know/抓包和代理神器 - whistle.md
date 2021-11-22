@@ -132,6 +132,7 @@ www.test.com/xxx http://www.abc.com
 
 ## 关于chrome的跨域
   
-  * 访问[chrome flags](chrome://flags/)
-  * 搜索`insecure origin`
-  * 填入允许跨域的域名
+  * 访问 `chrome://flags/#unsafely-treat-insecure-origin-as-secure`
+  * 设置为enabled 启用
+  * 填入允许跨域的域名，多个域名用逗号分隔
+  * chrome是这么教的，但不知道为啥，我改了不好使。。。。
