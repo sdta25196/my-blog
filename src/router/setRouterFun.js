@@ -1,24 +1,7 @@
+import { useEffect } from "react"
 
 /**
  * @description 设置路由
- * @param path  路径
- * @param exact 是否严格匹配 
- * @param Comp 组件 
- * @param breadcrumb 路由的面包屑显示
- * @returns 路由对象
- */
-export function setRouter(description, { path, exact = true, Comp, breadcrumb }) {
-  return {
-    path: path,
-    exact: exact,
-    component: (props) => {
-      return <Comp {...props} breadcrumb={breadcrumb} />
-    }
-  }
-}
-
-/**
- * @description 设置嵌套路由
  * @param path  路径
  * @param exact 是否严格匹配 
  * @param Comp 组件 
@@ -26,19 +9,23 @@ export function setRouter(description, { path, exact = true, Comp, breadcrumb })
  * @param breadcrumb 路由的面包屑显示
  * @returns 路由对象
  */
-export function setDeepRouter(description, { path, exact = true, Comp, children, breadcrumb }) {
+function setRouter(description, { path, exact = true, Comp, children, breadcrumb }) {
+  return setChildrenRoute({ path, exact, Comp, children, breadcrumb })
+}
+
+// 递归生成route
+const setChildrenRoute = (router) => {
   return {
-    path: path,
-    exact: exact,
-    component: (props) => <Comp {...props} breadcrumb={breadcrumb} />,
-    routes: children.map(item => ({
-      path: item.path,
-      exact: item.exact,
-      component: (props) => {
-        window.scrollTo(0, 0)
-        return <item.Comp {...props} />
-      }
-    }))
+    path: router.path,
+    exact: router.exact,
+    component: (props) => RouterGuard(props, router),
+    routes: router.children?.map(item => setChildrenRoute(item))
   }
 }
 
+// 统一的路由守卫
+const RouterGuard = (props, router) => {
+  return <router.Comp {...props} breadcrumb={router.breadcrumb} />
+}
+
+export default setRouter

@@ -18,6 +18,7 @@ import ecmaLogo from '../image/ecmaLogo.svg'
 import english from '../image/english.svg'
 import cssReference from '../image/cssReference.png'
 import bzk from '../image/bzk.gif'
+import devTool from '../image/devtool.svg'
 
 const EXTERNAL = [
   {
@@ -145,6 +146,12 @@ const EXTERNAL = [
     link: "https://hlwtsxt.miit.gov.cn/#/regist",
     logo: chinaFlag,
     description: "领导专治各种不服",
+  },
+  {
+    title: "开发者武器库",
+    link: "https://devtool.tech/",
+    logo: devTool,
+    description: "各种各样的开发者工具",
   },
 ]
 
