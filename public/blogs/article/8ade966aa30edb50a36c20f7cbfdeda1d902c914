@@ -1,0 +1,41 @@
+## 引擎执行机制
+
+  SourceCode -> Abstract Syntax Tree -> Bytecode -> Binary
+
+  引擎中通常拥有parser（解析器）、Ignition（解释器）、TurboFan（编译器）、GC(垃圾回收器)
+  
+  词法分析: source -> token
+
+  语法分析: token -> AST , 这个时候确定词法作用域
+
+  解释器: AST -> Bytecode , 此时已经开始执行javaScript代码
+
+  编译器: 优化做JIT用，提高代码执行速度
+
+## Parser 和 Pre-Parser
+
+  在 V8 中有两个解析器用于解析 JavaScript 代码，分别是 Parser 和 Pre-Parser 。
+
+  Parser 解析器又称为 full parser（全量解析） 或者 eager parser（饥饿解析）。它会解析所有立即执行的代码，包括语法检查，生成 AST，以及确定词法作用域。
+  Pre-Parser 又称为惰性解析，它只解析未被立即执行的代码（如函数），不生成 AST ，只确定作用域，以此来提高性能。当预解析后的代码开始执行时，才进行 Parser 解析。
+  我们还是以示例来说明：
+
+  ```js
+    function foo() {
+        console.log('a');
+        function inline() {
+            console.log('b')
+        }
+    }
+
+    (function bar() {
+        console.log('c')
+    })()；
+
+    foo();
+  ```
+
+  当 V8 引擎遇到 foo 函数声明时，发现它未被立即执行，就会采用 Pre-Parser 对其进行解析（inline 函数同）。
+  当 V8 遇到(function bar() {console.log(c)})()时，它会知道这是一个立即执行表达式（IIFE），会立即被执行，所以会使用 Parser 对其解析。
+  当 foo 函数被调用时，会使用 Parser 对 foo 函数进行解析，此时会对 inline 函数再进行一次预解析，也就是说 inline 函数被预解析了两次。如果嵌套层级较深，那么内层的函数会被预解析多次，所以在写代码时，**尽可能避免嵌套多层函数，会影响性能**。
+

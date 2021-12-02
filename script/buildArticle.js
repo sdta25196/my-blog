@@ -1,13 +1,18 @@
 const path = require('path')
 const fs = require('fs')
 const crypto = require("crypto")
+const copyDir = require("./copyDir")
 
 class BuildArticle {
   constructor() {
-    this.blogPath = path.resolve(__dirname, '../public/blogs/')
+    this.blogPath = path.resolve(__dirname, '../blogs/')
     this.assetPath = path.resolve(__dirname, '../public/assets/')
   }
   build() {
+    copyDir(
+      this.blogPath,
+      path.resolve(__dirname, '../public/blogs/')
+    )
     const articleDir = fs.readdirSync(this.blogPath)
     articleDir.forEach(articleType => {
       const DSLJson = this.contentModule(articleType)
@@ -39,10 +44,11 @@ class BuildArticle {
     const outline = content.match(/^\s?#+\s.+/gm).map(item => `"${item.replace(/\r?\n/g, '')}"`)
     // 计算hash值
     const hash = crypto.createHash("sha1").update(content).digest('hex')
+    const nameHash = crypto.createHash("sha1").update(file).digest('hex')
     article.push(
       `{
         hash: "${hash}",
-        fileName: "${file}",
+        fileName: "${nameHash}",
         title: "${file.replace(".md", "")}",
         filePath: "/blogs/${articleType}/",
         date: "${date}",
