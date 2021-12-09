@@ -3,16 +3,21 @@ const fs = require('fs')
 const crypto = require("crypto")
 const copyDir = require("./copyDir")
 
+/**
+*
+* @author : 田源
+* @date : 2021-12-02 17:42
+* @description : 把博客复制到根目录中，生成各类型博客列表
+*
+*/
 class BuildArticle {
   constructor() {
-    this.blogPath = path.resolve(__dirname, '../blogs/')
-    this.assetPath = path.resolve(__dirname, '../public/assets/')
+    this.blogPath = path.resolve(__dirname, '../blogs/') //博客
+    this.targetBlogPath = path.resolve(__dirname, '../public/blogs/') // 打包前需要把博客复制到根目录
+    this.assetPath = path.resolve(__dirname, '../public/assets/') // 静态资源的目录
   }
   build() {
-    copyDir(
-      this.blogPath,
-      path.resolve(__dirname, '../public/blogs/')
-    )
+    copyDir(this.blogPath, this.targetBlogPath)
     const articleDir = fs.readdirSync(this.blogPath)
     articleDir.forEach(articleType => {
       const DSLJson = this.contentModule(articleType)
@@ -61,8 +66,8 @@ class BuildArticle {
   /** 资源文件夹,copy到根目录 */
   handlerAsset(filePath) {
     const assetsFiles = fs.readdirSync(`${filePath}/assets`)
-    assetsFiles.forEach(asset => {
-      fs.writeFileSync(`${this.assetPath}/${asset}`, fs.readFileSync(`${filePath}/assets/${asset}`))
+    assetsFiles.forEach(assetFile => {
+      fs.writeFileSync(`${this.assetPath}/${assetFile}`, fs.readFileSync(`${filePath}/assets/${assetFile}`))
     })
   }
 

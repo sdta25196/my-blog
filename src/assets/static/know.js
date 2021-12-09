@@ -1,5 +1,13 @@
 
 const know = [{
+        hash: "8fa2cf4f97f95458069c5a29ccc189ed0a5e03f6",
+        fileName: "0ccafe9b9cd7f2ed8c276454a58d66a72adf8f20",
+        title: "diff比较对象一致性 - microdiff",
+        filePath: "/blogs/know/",
+        date: "2021/12/6 上午10:23:42",
+        description: "## microdiff 简介@@@@@@Microdiff 是一个小型（目前<1kb）、快速、零依赖对象和数组比较库。它比大多数其他深度比较库要快得多，并且具有完整的 TypeScript 支持。@@@@@@## 使用",
+        outline: ["## microdiff 简介","## 使用","## type","## 对数组的支持","## 为啥要用microdiff","## 更多"],
+      },{
         hash: "75ef5686a17bd710b641995d278973d6b38d8807",
         fileName: "8547bf4505a24b112e4f90140b65c4b43b6bdfa4",
         title: "函数式编程工具库 - ramdaJS",

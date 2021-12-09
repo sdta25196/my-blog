@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "yarn build:article && react-scripts build",
     "test": "react-scripts test",
     "build:article": "node script/buildArticle.js",
     "eject": "react-scripts eject"
