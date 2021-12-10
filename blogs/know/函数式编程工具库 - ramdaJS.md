@@ -314,12 +314,12 @@
 
 ## 其他函数式工具库
   
-  [underscorejs](http://underscorejs.org/)
+  * [underscorejs](http://underscorejs.org/)
 
-  [lodash](https://lodash.com/)
+  * [lodash](https://lodash.com/)
 
   **Ramda与上述两种库的最主要区别在于Ramda的全部方法柯里化与Ramda的参数后置（data last）**
 
 ## 更多
 
-  [中文官网](https://ramda.cn/)
+  * [中文官网](https://ramda.cn/)

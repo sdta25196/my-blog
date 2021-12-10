@@ -64,4 +64,4 @@ Microdiff 是一个小型（目前<1kb）、快速、零依赖对象和数组比
 
 ## 更多
 
-[microdiff 仓库](https://github.com/sdta25196/microdiff)
+  * [microdiff 仓库](https://github.com/sdta25196/microdiff)

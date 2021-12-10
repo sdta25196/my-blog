@@ -155,6 +155,6 @@ yarn: `yarn add web-vitals`
 
 ## 更多
 
-  [web-vitals官方网址](https://www.npmjs.com/package/web-vitals)
+  * [web-vitals官方网址](https://www.npmjs.com/package/web-vitals)
 
-  [polyfill地址](https://unpkg.com/web-vitals/dist/polyfill.js)
+  * [polyfill地址](https://unpkg.com/web-vitals/dist/polyfill.js)

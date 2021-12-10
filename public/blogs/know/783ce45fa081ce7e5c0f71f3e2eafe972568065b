@@ -85,6 +85,6 @@
   ```
 ## 更多
 
-  [slate示例](https://www.slatejs.org/examples/richtext)
-  [slate文档](https://docs.slatejs.org/)
-  [slate源码](https://github.dev/ianstormtaylor/slate)
+  * [slate示例](https://www.slatejs.org/examples/richtext)
+  * [slate文档](https://docs.slatejs.org/)
+  * [slate源码](https://github.dev/ianstormtaylor/slate)

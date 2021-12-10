@@ -128,7 +128,7 @@ www.test.com/xxx http://www.abc.com
   > 可以通过右键 Filter -> This URL 或 This Host 快速过滤当前URL或host的请求
 
 ## 更多
-  [whistle中文文档](http://wproxy.org/whistle/install.html)
+  * [whistle中文文档](http://wproxy.org/whistle/install.html)
 
 ## 关于chrome的跨域
   
