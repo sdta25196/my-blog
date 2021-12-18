@@ -1,13 +1,5 @@
 
 const article = [{
-        hash: "57c659b7138984f5915ca44ae3028194382d2929",
-        fileName: "c373d97cc3380774f8c8dfbe0d7760acde8c7b7b",
-        title: "8个JavaScript代码片段",
-        filePath: "/blogs/article/",
-        date: "2021/10/23 下午6:03:09",
-        description: "8个JavaScript代码片段@@@@@@## 获取文件后缀名@@@使用场景：上传文件判断后缀名@@@",
-        outline: ["## 获取文件后缀名","## 复制内容到剪贴板","## 休眠多少毫秒","## 生成随机字符串","## 简单的深拷贝","## 数组去重","## 对象转化为FormData对象","## 保留到小数点以后n位"],
-      },{
         hash: "5e11f13d369db73c0cf9d848115a6a03563ad502",
         fileName: "68f85cdeb258a15044b3236917b43f46344439e6",
         title: "Event Loop - 事件循环详解",
@@ -41,8 +33,8 @@ const article = [{
         outline: ["## http1.0 使用强制缓存","## http1.1 使用强制缓存与协商缓存"],
       },{
         hash: "94a61599773f2e2be83c2902f677dc59ad58afe1",
-        fileName: "e553ea06471fe07060b076f880662ac13bf35766",
-        title: "react远程组件事件",
+        fileName: "659ab64bf80576344bc780a7a88dc0bc7b34e127",
+        title: "react远程组件实践",
         filePath: "/blogs/article/",
         date: "2021/12/18 下午12:21:21",
         description: "## react项目加载远程组件@@@@@@  react项目使用远程组件的解决方案，可用来做微前端架构，也可用来解决部分模块的多端公用问题。@@@@@@  目前，我把远程加载组件技术用来解决公司多端使用，且需求易变的功能模块，需多端处理+上线的问题。",
@@ -55,6 +47,14 @@ const article = [{
         date: "2021/10/4 下午1:34:25",
         description: "## 引擎执行机制@@@@@@  SourceCode -> Abstract Syntax Tree -> Bytecode -> Binary@@@@@@  引擎中通常拥有parser（解析器）、Ignition（解释器）、TurboFan（编译器）、GC(垃圾回收器)",
         outline: ["## 引擎执行机制","## Parser 和 Pre-Parser"],
+      },{
+        hash: "15982a1e0398035b956d009c290dcdd77cbdd36e",
+        fileName: "fdee962fd8f23992dcdff3c7f08787759acefef5",
+        title: "webpack调优及项目分析",
+        filePath: "/blogs/article/",
+        date: "2021/12/18 下午1:29:08",
+        description: "## webpack调优方案@@@@@@### bundle analysis 打包分析@@@@@@  分析打包文件 ",
+        outline: ["## webpack调优方案","### bundle analysis 打包分析","### code coverage 代码覆盖率","### magic comments 魔法注释","### prefeching/preloading 预加载","### code splitting 代码分割","### lazy loading 懒加载(按需加载)","### 其他方式","### 最后","## 项目分析","### unimport ","### useless-files-webpack-plugin","### uglifyjs-webpack-plugin"],
       },{
         hash: "1e18b8542e6cad31e784789ee739cae101b797fe",
         fileName: "7b4b998cd2db77a3542d94dc2820f06c4ea5aaa6",
