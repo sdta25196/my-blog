@@ -42,7 +42,7 @@ class BuildArticle {
   handlerFile(filePath, file, article, articleType) {
     const fileStat = fs.statSync(path.resolve(filePath, file))
     // 计算创建时间
-    const date = new Date(fileStat.ctime).toLocaleString()
+    const date = new Date(fileStat.birthtime).toLocaleString()
 
     // 读文件
     const content = fs.readFileSync(path.resolve(filePath, file), 'utf-8')
