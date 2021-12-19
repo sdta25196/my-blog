@@ -13,7 +13,9 @@
   * react项目从服务器拉取代码使用eval后即可获得组件
   * 可提供上下文用来渲染内容
 
-## 打包组件示例
+## umd打包模式
+
+### 打包组件示例
 
 package.json 安装依赖如下
 ```json
@@ -21,7 +23,6 @@ package.json 安装依赖如下
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-react": "^7.14.5",
-    "@eol-zw/tools": "^0.0.1",
     "babel-loader": "^8.2.2",
     "react": "^17.0.2",
     "webpack": "^5.65.0",
@@ -42,8 +43,10 @@ webpack.config.js
     output: {
       filename: '[name].js',
       path: path.resolve(__dirname, 'dist'),
-      library: 'MyComponent', //挂载到window.MyComponent上
-      libraryTarget: 'umd', // umd模式打包
+      library: {
+        name: 'MyComponent', //挂载到window.MyComponent上
+        type: 'umd',// umd模式打包
+      },
     },
     module: {
       rules: [
@@ -83,7 +86,7 @@ src/index.jsx
   export default A
 ```
 
-## 远程组件使用示例
+### 远程组件使用示例
 
 ```jsx
   import axios from 'axios'
@@ -128,6 +131,131 @@ src/index.jsx
 此时页面上就会显示远程组件 - 且参数x为99
 
 ![远程组件](assets/111.jpg)
+
+## amd打包模式
+
+### 打包组件示例
+
+package.json 安装依赖如下
+```json
+  "dependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "react": "^17.0.2",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
+```
+
+webpack.config.js
+
+> 仅示例打包jsx，图片，less等根据需求单独配置即可
+
+```js
+  const path = require('path')
+
+  module.exports = {
+    entry: "./src/index.jsx",
+    mode: "production",
+    output: {
+      filename: '[name].js',
+      path: path.resolve(__dirname, 'dist'),
+      library: {
+        type: 'amd-require', // amd模式打包，立即执行
+      },
+    },
+    module: {
+      rules: [
+        {
+          test: /\.jsx?$/,
+          use: {
+            loader: "babel-loader",
+            options: {
+              presets: [
+                "@babel/preset-react",
+                "@babel/preset-env",
+              ]
+            }
+          },
+          exclude: /node_modules/
+        }
+      ]
+    }
+  }
+```
+
+src/index.jsx
+```js
+  import React from 'react'
+
+  function A({ x }) {
+    return (
+      <div>
+        这是远程组件
+        <p>
+          这是参数x：{x}
+        </p>
+      </div>
+    )
+  }
+
+  export default A
+```
+
+### 远程组件使用示例
+
+```jsx
+  import axios from 'axios'
+  import React, { useEffect, useState, useLayoutEffect } from "react"
+
+  async function getComponent() {
+    // 需要手动定义一个require函数
+    let require = function (dependencies, factory) {
+      return factory()
+    }
+    try {
+      let val = await axios.get('main.js')
+      return eval(val.data)
+    }
+    catch (ex) {
+      console.error(ex)
+      return null
+    }
+  }
+
+
+  const Codeless = (props) => {
+    let [C, setC] = useState(null)
+
+    useEffect(() => {
+      getComponent().then((val) => {
+        setC(c => val.default)
+      })
+    }, [])
+
+    if (C === null) {
+      return (
+        <div>sss</div>
+      )
+    }
+    return (
+      <div>
+        <C x={99} />
+      </div>
+    )
+  }
+
+  export default Codeless
+```
+
+此时页面上就会显示远程组件 - 且参数x为99
+
+![远程组件](assets/111.jpg)
+
+
+> umd打包模式，会污染全局变量，amd打包模式需要自定义require函数，具体选哪个根据需求来抉择吧
 
 ## 更多
 
