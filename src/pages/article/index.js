@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react'
 import { BLOGTYPE, ARTICLE, TRANSLATE, KNOW } from "../../assets/static"
 import styles from '../../components/article/sass/index.module.scss'
 import CALENDAR from '../../assets/image/calendar.png'
+import { Link } from 'react-router-dom'
 import marked from 'marked'
 
 function Article(props) {
-  const { history, location: { pathname } } = props
+  const { location: { pathname } } = props
   const [articleList, setArticleList] = useState([])
   const [articletype, setArticleType] = useState(BLOGTYPE.article)
 
@@ -27,21 +28,24 @@ function Article(props) {
   }, [pathname])
 
   return (
-    <section>
+    <ul>
       {articleList.map(item => {
         return (
-          <article key={item.hash} className={styles.articleItem}
-            onClick={() => { history.push(`/detail/${articletype}/${item.hash}`) }}>
-            <div className={styles.title}>
-              {item.title}
-              <p className={styles.subT}>
-                <img src={CALENDAR} alt='calendar' />{item.date}</p>
-            </div>
-            <div className={styles.descript} dangerouslySetInnerHTML={{ __html: marked(item.description.replace(/@@@/g, '\r\n')) }} ></div>
-          </article>
+          <li>
+            <Link to={`/detail/${articletype}/${item.hash}`} key={item.hash}>
+              <article className={styles.articleItem} >
+                <div className={styles.title}>
+                  {item.title}
+                  <p className={styles.subT}>
+                    <img src={CALENDAR} alt='calendar' />{item.date}</p>
+                </div>
+                <div className={styles.descript} dangerouslySetInnerHTML={{ __html: marked(item.description.replace(/@@@/g, '\r\n')) }} ></div>
+              </article>
+            </Link>
+          </li>
         )
       })}
-    </section>
+    </ul>
   )
 }
 

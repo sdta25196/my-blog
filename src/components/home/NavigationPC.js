@@ -58,7 +58,7 @@ function NavigationPC({ activeType, nav = [] }) {
     } else {
       setIsDetail(false)
     }
-  }, [window.location.hash])
+  }, [])
 
   const handlerID = (id) => {
     return id.replace(/#+\s*/, '').replace(/\s/g, '-').replace(/&|%|#|@|!|:|（|）|(|)|,|，|。|.|\?/, '').toLowerCase()

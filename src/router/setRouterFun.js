@@ -1,5 +1,3 @@
-import { useEffect } from "react"
-
 /**
  * @description 设置路由
  * @param path  路径

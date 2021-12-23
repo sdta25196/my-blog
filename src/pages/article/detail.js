@@ -13,6 +13,13 @@ function Detaile(props) {
   const [articleItem] = useState(() => getArticleByHash(type, hash))
   const [fixed, setFixed] = useState(false)
   const [detail, setDetail] = useState("")
+
+  useEffect(() => {
+    // 详情页重置描述
+    const description = document.querySelector('meta[name="description"]')
+    description.content = articleItem.title
+  }, [articleItem.title])
+
   // 测试请求博客文章
   useEffect(() => {
     Axios.get(`${articleItem.filePath}${articleItem.fileName}`, {
