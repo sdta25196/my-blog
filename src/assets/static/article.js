@@ -32,7 +32,7 @@ const article = [{
         description: "## http1.0 使用强制缓存@@@@@@expires 强制缓存，单位是毫秒，如果客户端跟服务端时间不一致的情况下，会出现bug，前台无法感知@@@@@@```javascript",
         outline: ["## http1.0 使用强制缓存","## http1.1 使用强制缓存与协商缓存"],
       },{
-        hash: "1762c66cda9957ab20b6fe7ee652964e05a00263",
+        hash: "53c96abdbc72fa0007ae683435c2e3db5355f996",
         fileName: "659ab64bf80576344bc780a7a88dc0bc7b34e127",
         title: "react远程组件实践",
         filePath: "/blogs/article/",

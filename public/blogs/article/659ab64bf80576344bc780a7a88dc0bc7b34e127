@@ -31,9 +31,6 @@ package.json 安装依赖如下
 ```
 
 webpack.config.js
-
-> 仅示例打包jsx，图片，less等根据需求单独配置即可
-
 ```js
   const path = require('path')
 
@@ -47,6 +44,9 @@ webpack.config.js
         name: 'MyComponent', //挂载到window.MyComponent上
         type: 'umd',// umd模式打包
       },
+    },
+    externals: {
+      react: 'react'  // react为外部依赖
     },
     module: {
       rules: [
@@ -94,8 +94,10 @@ src/index.jsx
 
   async function getComponent() {
     try {
+      window.react = window.react || React  // 需要先把React挂载到window上
       let val = await axios.get('main.js')
       eval(val.data)
+       window.react = undefined // 有强迫症的话，可以再把react删掉
     }
     catch (ex) {
       console.error(ex)
@@ -150,9 +152,6 @@ package.json 安装依赖如下
 ```
 
 webpack.config.js
-
-> 仅示例打包jsx，图片，less等根据需求单独配置即可
-
 ```js
   const path = require('path')
 
@@ -165,6 +164,9 @@ webpack.config.js
       library: {
         type: 'amd-require', // amd模式打包，立即执行
       },
+    },
+    externals: {
+      react: 'react'  // react为外部依赖
     },
     module: {
       rules: [
@@ -213,10 +215,10 @@ src/index.jsx
   async function getComponent() {
     // 需要手动定义一个require函数
     let require = function (dependencies, factory) {
-      return factory()
+      return factory(React)
     }
     try {
-      let val = await axios.get('main.js')
+      let val = await axios.get('main.js') // 去网络上请求打包后的组件js
       return eval(val.data)
     }
     catch (ex) {
