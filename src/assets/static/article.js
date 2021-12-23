@@ -48,7 +48,7 @@ const article = [{
         description: "## 引擎执行机制@@@@@@  SourceCode -> Abstract Syntax Tree -> Bytecode -> Binary@@@@@@  引擎中通常拥有parser（解析器）、Ignition（解释器）、TurboFan（编译器）、GC(垃圾回收器)",
         outline: ["## 引擎执行机制","## Parser 和 Pre-Parser"],
       },{
-        hash: "2ed51907fbaf271e7504f4779059a936d6239c69",
+        hash: "01f99ca5c894f92fcb8a0853db44e3da4f7aca59",
         fileName: "fdee962fd8f23992dcdff3c7f08787759acefef5",
         title: "webpack调优及项目分析",
         filePath: "/blogs/article/",

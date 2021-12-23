@@ -137,52 +137,53 @@ cra启动的项目，可以直接使用
   查看根目录下的`unused-files.json`文件即可
 
 ## 其他方式
-  * tree shaking 摇树, 或者叫剪枝
-    
-    可以通过配置来控制webpack打包时处理掉无用模块等
+* tree shaking 摇树, 或者叫剪枝
+  
+  可以通过配置来控制webpack打包时处理掉无用模块等
 
-  * sourcemap 源码映射配置
-    
-    [sourcemap配置](https://webpack.js.org/configuration/devtool/#devtool)
+* sourcemap 源码映射配置
+  
+  [sourcemap配置](https://webpack.js.org/configuration/devtool/#devtool)
 
-  * 使用`cache-loader`
+* 使用`cache-loader`
 
-  安装：`npm install --save-dev cache-loader`
+安装：`npm install --save-dev cache-loader`
 
-  在一些性能开销较大的 loader 之前添加此 loader，以将结果缓存到磁盘里。
-  ```js
-    module.exports = {
-      module: {
-        rules: [
-          {
-            test: /\.ext$/,
-            use: [
-              'cache-loader',
-              ...loaders
-            ],
-            include: path.resolve('src')
-          }
-        ]
-      }
+在一些性能开销较大的 loader 之前添加此 loader，以将结果缓存到磁盘里。
+```js
+  module.exports = {
+    module: {
+      rules: [
+        {
+          test: /\.ext$/,
+          use: [
+            'cache-loader',
+            ...loaders
+          ],
+          include: path.resolve('src')
+        }
+      ]
     }
-  ```
-  * webpack5 有了新的cache配置
-  ```js
-    module.exports = {
-      cache: {
-        // 1. Set cache type to filesystem
-        type: 'filesystem',
+  }
+```
+webpack5 有了新的cache配置
 
-        buildDependencies: {
-          // 2. Add your config as buildDependency to get cache invalidation on config change
-          config: [__filename],
+```js
+  module.exports = {
+    cache: {
+      // 1. Set cache type to filesystem
+      type: 'filesystem',
 
-          // 3. If you have other things the build depends on you can add them here
-          // Note that webpack, loaders and all modules referenced from your config are automatically added
-        },
+      buildDependencies: {
+        // 2. Add your config as buildDependency to get cache invalidation on config change
+        config: [__filename],
+
+        // 3. If you have other things the build depends on you can add them here
+        // Note that webpack, loaders and all modules referenced from your config are automatically added
       },
-    };
-  ```
+    },
+  };
+```
 
 ## 最后
 

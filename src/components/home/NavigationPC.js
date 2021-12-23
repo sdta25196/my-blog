@@ -11,7 +11,7 @@ function NavigationPC({ activeType, nav = [] }) {
   const [isDetail, setIsDetail] = useState(false)
   const [outline, setOutline] = useState([])
   const history = useHistory()
-
+  const { hash } = window.location
   /** 监听吸顶滚动 */
   useEffect(() => {
     function scrollLienter() {
@@ -50,15 +50,15 @@ function NavigationPC({ activeType, nav = [] }) {
   }, [outline])
 
   useEffect(() => {
-    if (window.location.hash.startsWith('#/detail')) {
-      const [type, hash] = (window.location.hash.split('/')).slice(2, 4)
-      const { outline } = getArticleByHash(type, hash)
+    if (hash.startsWith('#/detail')) {
+      const [type, articleHash] = (hash.split('/')).slice(2, 4)
+      const { outline } = getArticleByHash(type, articleHash)
       setIsDetail(true)
       setOutline(outline)
     } else {
       setIsDetail(false)
     }
-  }, [])
+  }, [hash])
 
   const handlerID = (id) => {
     return id.replace(/#+\s*/, '').replace(/\s/g, '-').replace(/&|%|#|@|!|:|（|）|(|)|,|，|。|.|\?/, '').toLowerCase()
