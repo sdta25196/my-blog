@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { BLOGTYPE, ARTICLE, TRANSLATE, KNOW } from "../../assets/static"
 import styles from '../../components/article/sass/index.module.scss'
-import CALENDAR from '../../assets/image/calendar.png'
 import { Link } from 'react-router-dom'
 import marked from 'marked'
 
@@ -36,8 +35,7 @@ function Article(props) {
               <article className={styles.articleItem} >
                 <div className={styles.title}>
                   {item.title}
-                  <p className={styles.subT}>
-                    <img src={CALENDAR} alt='calendar' />{item.date}</p>
+                  <p className={styles.subT}>{Math.random().toString(32).split('.')[1]}</p>
                 </div>
                 <div className={styles.descript} dangerouslySetInnerHTML={{ __html: marked(item.description.replace(/@@@/g, '\r\n')) }} ></div>
               </article>

@@ -56,13 +56,13 @@ const article = [{
         description: "## bundle analysis 打包分析@@@@@@  分析打包文件 @@@@@@  安装：`yarn add -D webpack-bundle-analyzer`",
         outline: ["## bundle analysis 打包分析","## code coverage 代码覆盖率","## magic comments 魔法注释","## prefeching/preloading 预加载","## code splitting 代码分割","## lazy loading 懒加载(按需加载)","## uglifyjs-webpack-plugin","## unimport ","## useless-files-webpack-plugin","## 其他方式","## 最后"],
       },{
-        hash: "1e18b8542e6cad31e784789ee739cae101b797fe",
+        hash: "8658f3d9e3baf8681e90e3b9edc12bc73566e504",
         fileName: "7b4b998cd2db77a3542d94dc2820f06c4ea5aaa6",
         title: "windows系统盘空间优化",
         filePath: "/blogs/article/",
         date: "2021/12/6 下午10:29:46",
-        description: "常见的winowsC盘清理方式，一般就是如下几种@@@	1. 第三方工具@@@	2. 磁盘清理@@@	3. C盘扩容@@@	4. 换个硬盘",
-        outline: ["## （link）软连接！","## 重点：此方法是可以重复使用的，C盘永远不怕满了。"],
+        description: "## 常见方式@@@常见的winowsC盘清理方式，一般就是如下几种@@@1. 第三方工具@@@2. 磁盘清理@@@3. C盘扩容",
+        outline: ["## 常见方式","## （link）软连接！"],
       },{
         hash: "e184854edc9ac8cae380d42fec02d2b82821e8be",
         fileName: "bc8df1e4349b302c8ba7b47fbae6b2d6d3740a6b",
