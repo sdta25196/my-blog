@@ -1,6 +1,6 @@
 ## HTML的解析过程
 
-![7tz9q1ngpp](assets/7tz9q1ngpp/../7tz9q1ngpp.jpg)
+![7tz9q1ngpp](assets/7tz9q1ngpp.webp)
 
 网络进程接收到响应头之后，会根据响应头中的 content-type 字段来判断文件的类型，比如 content-type 的值是“text/html”，那么浏览器就会判断这是一个 HTML 类型的文件，然后为该请求选择或者创建一个渲染进程，渲染进程准备好之后，网络进程和渲染进程之间会建立一个共享数据的管道，网络进程接收到数据后就往这个管道里面放，而渲染进程则从管道的另外一端不断地读取数据，并同时将读取的数据“喂”给 HTML 解析器。你可以把这个管道想象成一个“水管”，网络进程接收到的字节流像水一样倒进这个“水管”，而“水管”的另外一端是渲染进程的 HTML 解析器，它会动态接收字节流，并将其解析为 DOM。如下图
 
@@ -281,13 +281,13 @@ HTML页面的生命周期有以下以下几个重要事件：
   * FP: first print 首次渲染
   
   * FCP: First Content Paint 第一帧绘制时间，第一次用户看到东西的时间，谷歌标准是1.8秒为good,3秒以上不能接受-**每晚一秒响应，损失7%用户**
-  ![Good FCP values are 1.8 seconds or less, poor values are greater than 3.0 seconds and anything in between needs improvement](https://web-dev.imgix.net/image/eqprBhZUGfb8WYnumQ9ljAxRrA72/vQKpz0S2SGnnoXHMDidj.svg)
+  ![Good FCP values are 1.8 seconds or less, poor values are greater than 3.0 seconds and anything in between needs improvement](assets/vQKpz0S2SGnnoXHMDidj.svg)
 
   * LCP：Largest contentful paint 最大的文件加载时间，google标准是2.5秒为good
-  ![Good LCP values are 2.5 seconds, poor values are greater than 4.0 seconds and anything in between needs improvement](https://web-dev.imgix.net/image/eqprBhZUGfb8WYnumQ9ljAxRrA72/8ZW8LQsagLih1ZZoOmMR.svg)
+  ![Good LCP values are 2.5 seconds, poor values are greater than 4.0 seconds and anything in between needs improvement](assets/8ZW8LQsagLih1ZZoOmMR.svg)
 
   * FID:First input delay ，用户使用输入框的响应时间，100ms是能接受的范围
-     ![Good fid values are 2.5 seconds, poor values are greater than 4.0 seconds and anything in between needs improvement](https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/Se4TiXIdp8jtLJVScWed.svg)
+     ![Good fid values are 2.5 seconds, poor values are greater than 4.0 seconds and anything in between needs improvement](assets/Se4TiXIdp8jtLJVScWed.svg)
 
   * CLS：Cumulative layout shift 累积布局偏移，页面上的某些内容突然发生改变，文本在毫无预警的情况下移位，页面内容的意外移动通常是由于异步加载资源，或者动态添加 DOM 元素到页面现有内容的上方。网站应该努力将 CLS 分数控制在0.1 或以下
 
