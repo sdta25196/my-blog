@@ -29,6 +29,7 @@ function Article(props) {
   return (
     <ul>
       {articleList.map(item => {
+        const color = '#' + Math.random().toString(16).split('.')[1].slice(0, 6)
         return (
           <li key={item.hash}>
             <Link to={`/detail/${articletype}/${item.hash}`} >
@@ -36,9 +37,9 @@ function Article(props) {
                 <div className={styles.title}>
                   {item.title}
                   <p className={styles.subT}>
-                    一个毫无意义的字符串：
-                    <span>{Math.random().toString(32).split('.')[1]}&nbsp;</span>
-                    你信么？
+                    <span style={{ background: color, width: '20px', height: '10px', display: "inline-block" }}></span>
+                    <span> = </span>
+                    <span>{color}</span>
                   </p>
                 </div>
                 <div className={styles.descript} dangerouslySetInnerHTML={{ __html: marked(item.description.replace(/@@@/g, '\r\n')) }} ></div>

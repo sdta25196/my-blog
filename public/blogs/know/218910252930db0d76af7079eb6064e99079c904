@@ -26,7 +26,7 @@ whistle(读音 [ˈwɪsəl]，拼音 [wēisǒu] )是基于 Node 实现的跨平�
 
   > switchyOmega图标为黑色代表系统代理，灰色为直连模式，浅蓝色为proxy代理，我们选择浅蓝色的图标即可。**这里不打开代理whistle是不生效的哦**
   
-  ![proxy](assets/proxy.jpg)
+  ![proxy](assets/proxy.webp)
 
 * 关于移动端抓包，手机需要跟电脑在同一网段，打开wifi手动配置代理：ip是电脑ip, 端口是8899即可
 
