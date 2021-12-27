@@ -29,7 +29,7 @@ Immutable 最大的缺点是`侵入性极强`。
 
   > 小技巧：为了不与原生API混淆，这里使用`as`设置别名
 
-### Map() 包裹对象
+### Map
 
 ```js
   import { Map as ImmutableMap } from 'immutable'
@@ -39,7 +39,7 @@ Immutable 最大的缺点是`侵入性极强`。
   console.log(map1.get('b')); // 50
 ```
 
-### List() 包裹数组
+### List
 
 ```js
   import { List as ImmutableList } from 'immutable'
@@ -50,7 +50,10 @@ Immutable 最大的缺点是`侵入性极强`。
 ```
 > push, set, unshift or splice 都可以直接用，返回一个新的immutable对象
 
-### merge() 连接对象 | concat() 连接数组
+### merge和concat
+
+  merge() 连接对象 ，concat() 连接数组
+
 ```js
   import { Map as ImmutableMap, List as ImmutableList } from 'immutable'
   const map1 =ImmutableMap({ a: 1, b: 2, c: 3, d: 4 });
@@ -62,7 +65,10 @@ Immutable 最大的缺点是`侵入性极强`。
   const list3 = list1.concat(list2, array); // List [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 ```
 
-### toJS() 把immutable对象转换为js对象
+### toJS
+
+toJS() 把immutable对象转换为js对象
+
 ```js
   import { Map as ImmutableMap, List as ImmutableList } from 'immutable'
   const deep =ImmutableMap({ a: 1, b: 2, c:ImmutableList ([ 3, 4, 5 ]) });
@@ -72,7 +78,10 @@ Immutable 最大的缺点是`侵入性极强`。
   JSON.stringify(deep);           // '{"a":1,"b":2,"c":[3,4,5]}'
 ```
 
-### fromJS() 包裹 js对象转换为immutable对象
+### fromJS
+
+fromJS() 包裹 js对象转换为immutable对象
+
 ```js
 const { fromJS } = require('immutable');
 const nested = fromJS({ a: { b: { c: [ 3, 4, 5 ] } } });// Map { a: Map { b: Map { c: List [ 3, 4, 5 ] } } }

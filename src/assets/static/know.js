@@ -16,13 +16,13 @@ const know = [{
         description: "## 简介@@@@@@  pm2 node的生产环境管理器（管理开发环境也行啊），用来守护node启动的服务@@@  pm2 有两种模式 fork（创建一个进程） 和 class（集群模式，IO的多路复用）@@@",
         outline: ["## 简介","## 安装","## 基础命令","## pm2 + nginx","## pm2.io：监控和诊断 Web 界面","## 更多"],
       },{
-        hash: "59206ca178300cd8648a83e2389b2918df64acc8",
+        hash: "97787d951c5925ca88c2410c65dbe27e500540f6",
         fileName: "ecd8beedef623f5b19f0586e357e47a6c979ffc9",
         title: "不可变数据合集 - immutable",
         filePath: "/blogs/know/",
         date: "2021/12/27 下午2:32:46",
         description: "## 简介@@@@@@Immutable collections for JavaScript@@@@@@> JavaScript 的不可变集合",
-        outline: ["## 简介","## 安装","## 代码示例","### Map() 包裹对象","### List() 包裹数组","### merge() 连接对象 | concat() 连接数组","### toJS() 把immutable对象转换为js对象","### fromJS() 包裹 js对象转换为immutable对象","### 判断相等性","### 深度嵌套","### Lazy Seq","## 更多"],
+        outline: ["## 简介","## 安装","## 代码示例","### Map","### List","### merge和concat","### toJS","### fromJS","### 判断相等性","### 深度嵌套","### Lazy Seq","## 更多"],
       },{
         hash: "9db467b45747b76943038ab89ed9ec31e8476454",
         fileName: "8547bf4505a24b112e4f90140b65c4b43b6bdfa4",
