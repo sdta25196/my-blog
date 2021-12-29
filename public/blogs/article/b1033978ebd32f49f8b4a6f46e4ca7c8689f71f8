@@ -280,16 +280,16 @@ HTML页面的生命周期有以下以下几个重要事件：
   
   * FP: first print 首次渲染
   
-  * FCP: First Content Paint 第一帧绘制时间，第一次用户看到东西的时间，谷歌标准是1.8秒为good,3秒以上不能接受-**每晚一秒响应，损失7%用户**
+  * FCP: First Content Paint 第一帧绘制时间，第一次用户看到东西的时间，谷歌标准是**1.8秒**为good,3秒以上不能接受-**每晚一秒响应，损失7%用户**
   ![Good FCP values are 1.8 seconds or less, poor values are greater than 3.0 seconds and anything in between needs improvement](assets/vQKpz0S2SGnnoXHMDidj.svg)
 
-  * LCP：Largest contentful paint 最大的文件加载时间，google标准是2.5秒为good
+  * LCP：Largest contentful paint 最大的文件加载时间，google标准是**2.5秒**为good
   ![Good LCP values are 2.5 seconds, poor values are greater than 4.0 seconds and anything in between needs improvement](assets/8ZW8LQsagLih1ZZoOmMR.svg)
 
-  * FID:First input delay ，用户使用输入框的响应时间，100ms是能接受的范围
+  * FID:First input delay ，用户使用输入框的响应时间，优秀标准为**100ms**
      ![Good fid values are 2.5 seconds, poor values are greater than 4.0 seconds and anything in between needs improvement](assets/Se4TiXIdp8jtLJVScWed.svg)
 
-  * CLS：Cumulative layout shift 累积布局偏移，页面上的某些内容突然发生改变，文本在毫无预警的情况下移位，页面内容的意外移动通常是由于异步加载资源，或者动态添加 DOM 元素到页面现有内容的上方。网站应该努力将 CLS 分数控制在0.1 或以下
+  * CLS：Cumulative layout shift 累积布局偏移，页面上的某些内容突然发生改变，文本在毫无预警的情况下移位，页面内容的意外移动通常是由于异步加载资源，或者动态添加 DOM 元素到页面现有内容的上方。网站应该努力将 CLS 分数控制在**0.1** 或以下
 
   * TTI：Time to interactive 交互时间，TTI 衡量一个页面需要多长时间才能完全交互。在以下情况下，页面被认为是完全交互的：
     * 页面显示有用的内容，这是由First Contentful Paint衡量的，
@@ -299,6 +299,64 @@ HTML页面的生命周期有以下以下几个重要事件：
   * TBT:Total Blocking Time TBT 衡量页面被阻止响应用户输入（例如鼠标点击、屏幕点击或键盘按下）的总时间,总和是通过在First Contentful Paint和Time to Interactive之间添加所有长任务的阻塞部分来计算的。任何执行时间超过 50 毫秒的任务都是长任务。50 毫秒后的时间量是阻塞部分。例如，如果 Lighthouse 检测到一个 70 毫秒长的任务，则阻塞部分将为 20 毫秒。200ms以下是good
 
   * 浏览器会给HTML中的资源文件进行等级分类（Hightest/High/Meduim/Low/Lowest）,一般HTML文档自身、head中的CSS都是Hightest，head中JS一般是High，而图片一般是Low，而设置了async/defer的脚本一般是Low，gif图片一般是Lowest。
+
+
+## Google提出了网站用户体验的三大核心指标
+
+  * LCP 代表了页面的速度指标，虽然还存在其他的一些体现速度的指标，但是上文也说过 LCP 能体现的东西更多一些。一是指标实时更新，数据更精确，二是代表着页面最大元素的渲染时间，通常来说页面中最大元素的快速载入能让用户感觉性能还挺好。
+
+  * FID 代表了页面的交互体验指标，毕竟没有一个用户希望触发交互以后页面的反馈很迟缓，交互响应的快会让用户觉得网页挺流畅。
+
+  * CLS 代表了页面的稳定指标，尤其在手机上这个指标更为重要。因为手机屏幕挺小，CLS 值一大的话会让用户觉得页面体验做的很差。
+
+## Google提出的RAIL指标
+  
+  * Focus on the user. - 以用户为中心
+
+  * Respond to user input in under 100 ms. - 100ms内响应用户输入
+
+  * Produce a frame in under 10 ms when animating or scrolling. - 10ms内生成动画帧或滚动
+
+  * Maximize main thread idle time. - 最大化空闲时间 （js任务50ms内）
+
+  * Load interactive content in under 5000 ms. - 加载交互内容在5000毫秒以下。
+
+## 补充指标优化方法
+
+**资源优化**
+
+该项措施可以帮助我们优化 FP、FCP、LCP 指标。
+
+* 压缩文件、使用 Tree-shaking 删除无用代码
+* 服务端配置 Gzip 进一步再压缩文件体积
+* 资源按需加载
+* 通过 Chrome DevTools 分析首屏不需要使用的 CSS 文件，以此来精简 CSS
+* 内联关键的 CSS 代码
+* 使用 CDN 加载资源及 dns-prefetch 预解析 DNS 的 IP 地址
+* 对资源使用 preconnect，以便预先进行 IP 解析、TCP 握手、TLS 握手
+* 缓存文件，对首屏数据做离线缓存
+* 图片优化，包括：用 CSS 代替蹄片、裁剪适配屏幕的图片大小、小图使用 base64 或者 PNG 格式、支持 WebP 就尽量使用 WebP、渐进式加载图片
+
+**网络优化**
+
+该项措施可以帮助我们优化 FP、FCP、LCP 指标。
+
+比如说使用 HTTP2.0 协议、TLS 1.3 协议或者直接拥抱 QUIC 协议~
+
+**优化耗时任务**
+
+该项措施可以帮助我们优化 TTI、FID、TBT 指标。
+
+使用 Web Worker 将耗时任务丢到子线程中，这样能让主线程在不卡顿的情况下处理 JS 任务
+调度任务 + 时间切片，这块技术在 React 16 中有使用到。简单来说就是给不同的任务分配优先级，然后将一段长任务切片，这样能尽量保证任务只在浏览器的空闲时间中执行而不卡顿主线程
+
+**不要动态插入内容**
+
+该项措施可以帮助我们优化 CLS 指标。
+
+* 使用骨架屏给用户一个预期的内容框架，突兀的显示内容体验不会很好
+* 图片切勿不设置长宽，而是使用占位图给用户一个图片位置的预期
+* 不要在现有的内容中间插入内容，起码给出一个预留位置
 
 ## 整体大纲
 分析关键渲染路径进行优化

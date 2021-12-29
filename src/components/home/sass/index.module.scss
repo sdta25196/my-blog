@@ -3,17 +3,27 @@
 .mainBox {
   min-height: 100vh;
   min-width: $content-width;
-  background-image: url(../../../assets/image/blog-bg.jpg);
-  background-size: cover;
+  background-image: url(../../../assets/image/blog-bg.webp);
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
 }
 .main {
   width: $content-width;
   margin: 0 auto;
   padding: 15px 0;
+  padding-bottom: 0;
 }
 .loading {
   height: 50vh;
   position: relative;
+}
+.icp {
+  background: rgba(0, 0, 0, 0.5);
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #ccc;
 }
 
 /* 移动端样式*/
@@ -21,7 +31,7 @@
   .mainBox {
     min-height: 100vh;
     min-width: $content-width-mobile;
-    background-image: url(../../../assets/image/blog-bg.jpg);
+    background-image: url(../../../assets/image/blog-bg.webp);
     background-size: cover;
   }
   .main {

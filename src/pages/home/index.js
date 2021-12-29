@@ -19,7 +19,7 @@ function Home(props) {
             </Switch>
           </Suspense>
         </RightBox>
-        <div>
+        <div className={styles.icp}>
           900t.cn © 2021-2027 版权所有 | <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2021046010号</a>
         </div>
       </div>

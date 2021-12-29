@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import styles from './sass/navigation.module.scss'
 import GITHUB from '../../assets/image/github.png'
 import CSDN from '../../assets/image/csdn.png'
-import LOGO from '../../assets/image/logo.jpg'
+import LOGO from '../../assets/image/logo.webp'
 import { Link, useHistory } from 'react-router-dom'
 import { getArticleByHash } from '../../tools'
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getArticleByHash } from "../../tools"
 import styles from './sass/navigation.module.scss'
-import LOGO from '../../assets/image/logo.jpg'
+import LOGO from '../../assets/image/logo.webp'
 
 
 function NavigationMobile({ activeType, nav = [] }) {
