@@ -184,6 +184,25 @@ webpack5 有了新的cache配置
     },
   };
 ```
+## webpack打包Gizp
+
+  可以节省服务端压缩gzip的时间，webpack直接打包好gzip上传到服务器。
+
+  首先，需要安装compression-webpack-plugin：
+
+  `npm install compression-webpack-plugin --save-dev`
+
+  然后将插件添加到webpack配置中。例如：
+
+  webpack.config.js
+  ```js
+  const CompressionPlugin = require("compression-webpack-plugin");
+
+  module.exports = {
+    plugins: [new CompressionPlugin()],
+  };
+  ```
+  [官方文档](https://webpack.docschina.org/plugins/compression-webpack-plugin/#root)
 
 ## 最后
 
