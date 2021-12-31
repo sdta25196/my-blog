@@ -48,13 +48,13 @@ const know = [{
         description: "## web-vitals简介@@@@@@web-vitals 是google chrome团队开发，用来协助开发者优化网站性能得工具，它会按照chrome的评判标准，直观的返回一些性能指标@@@@@@> react的脚手架cra中，默认安装了这个库",
         outline: ["## web-vitals简介","## 安装","### 使用cdn引入","## 基本用法","### 示例 ","### 性能指标对象","## polyfill使用方法","## 注意事项","## 一次发送多个报告","## 配套设施","## 兼容性","## 限制","## 更多"],
       },{
-        hash: "81596ed01430ce1f078d96f4f01f76b289dd611d",
+        hash: "e50c91428363efa7f078c53cc47bea5303fcae53",
         fileName: "783ce45fa081ce7e5c0f71f3e2eafe972568065b",
         title: "富文本编辑器内核 - slate",
         filePath: "/blogs/know/",
         date: "2021/11/22 下午12:56:29",
         description: "## slate简介@@@  **当前版本号0.66.5**@@@@@@  >  slate is a completely customizable framework for building rich text editors.@@@  ",
-        outline: ["## slate简介","## 安装","## 常用核心概念","## 一些常用操作","### 指定编辑器获取焦点","### 编辑器全部选中","### 设置编辑器选区","### 给编辑器选区添加指定的标记","### 给编辑器选区删除指定的标记","### 获取指定属性的Node","### 把选区合并","### 替换文案","## 更多"],
+        outline: ["## slate简介","## 安装","## 常用核心概念","## 一些常用操作","### 指定编辑器获取焦点","### 编辑器全部选中","### 设置编辑器选区","### 给编辑器选区添加指定的标记","### 给编辑器选区删除指定的标记","### 获取指定属性的Node","### 把选区合并","### 替换文案","## slate架构","### model（模型）","### selection（选区）","### Transforms（变换）","### 插件机制","### slate-react","## 更多"],
       },{
         hash: "ee3be55e36a0a07b4b6b3117b4bfa9099f1a2862",
         fileName: "218910252930db0d76af7079eb6064e99079c904",
