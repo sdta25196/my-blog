@@ -4,8 +4,8 @@
 
   安装：`yarn add -D webpack-bundle-analyzer`
 
-  cra项目使用
-  // config-overrides.js
+  cra项目使用 config-overrides.js
+  
   ```js
     const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
     module.exports = override(
@@ -15,7 +15,7 @@
   ```
   pagkage.json中新增命令行
   ```js
-  "analyze": "cross-env npm_config_report=true react-app-rewired build",
+    "analyze": "cross-env npm_config_report=true react-app-rewired build",
   ```
   执行`yarn analyze`即可打开一个分析界面，如下图：
   ![图片](assets/93f72404-b338-11e6-92d4-9a365550a701.gif)

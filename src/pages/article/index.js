@@ -3,6 +3,7 @@ import { BLOGTYPE, ARTICLE, TRANSLATE, KNOW } from "../../assets/static"
 import styles from '../../components/article/sass/index.module.scss'
 import { Link } from 'react-router-dom'
 import marked from 'marked'
+import Prism from 'prismjs'
 import useLazyLoad from '../../hooks/useLazyLoad'
 
 function Article(props) {
@@ -32,6 +33,9 @@ function Article(props) {
         setArticleType(BLOGTYPE.article)
         break;
     }
+    setTimeout(() => {
+      Prism.highlightAll()
+    })
   }, [pathname])
 
   return (

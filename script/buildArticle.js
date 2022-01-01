@@ -42,7 +42,7 @@ class BuildArticle {
   handlerFile(filePath, file, article, articleType) {
     const fileStat = fs.statSync(path.resolve(filePath, file))
     // 计算创建时间
-    const date = new Date(fileStat.birthtime).toLocaleString()
+    const date = new Date(fileStat.ctime)
 
     // 读文件
     const content = fs.readFileSync(path.resolve(filePath, file), 'utf-8')
@@ -50,6 +50,19 @@ class BuildArticle {
     // 计算hash值
     const hash = crypto.createHash("sha1").update(content).digest('hex')
     const nameHash = crypto.createHash("sha1").update(file).digest('hex')
+    let allContent = content.split(/\r?\n/)
+    let num = 1
+    for (let i = 0; i < allContent.length; i++) {
+      allContent[i] = allContent[i].replace(/"|“|”/g, '\\"')
+      if (num === 4) {
+        num = i
+        break
+      }
+      if (allContent[i] === '') {
+        num++
+      }
+    }
+    const description = allContent.slice(0, num).join('@@@')
     article.push(
       `{
         hash: "${hash}",
@@ -57,7 +70,7 @@ class BuildArticle {
         title: "${file.replace(".md", "")}",
         filePath: "/blogs/${articleType}/",
         date: "${date}",
-        description: "${content.split(/\r?\n/).slice(0, 5).join('@@@')}",
+        description: "${description}",
         outline: [${outline}],
       }`
     )
