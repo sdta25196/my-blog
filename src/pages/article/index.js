@@ -5,14 +5,6 @@ import { Link } from 'react-router-dom'
 import marked from 'marked'
 import useLazyLoad from '../../hooks/useLazyLoad'
 
-marked.use({
-  renderer: {
-    image(herf, _, text) {
-      return `<img data-src="${herf}" alt="${text}" src="" width="0" height="0">`
-    }
-  }
-})
-
 function Article(props) {
   const { location: { pathname } } = props
   const [articleList, setArticleList] = useState([])
