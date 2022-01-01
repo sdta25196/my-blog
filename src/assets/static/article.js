@@ -1,13 +1,5 @@
 
 const article = [{
-        hash: "5e11f13d369db73c0cf9d848115a6a03563ad502",
-        fileName: "68f85cdeb258a15044b3236917b43f46344439e6",
-        title: "Event Loop - 事件循环详解",
-        filePath: "/blogs/article/",
-        date: "2021/12/6 下午10:29:46",
-        description: "## 事件循环@@@  @@@事件循环的本质就是JavaScript引擎在 **等待任务**、**执行任务**、**进入休眠状态等待更多任务**这几个状态之间转换的无限循环。@@@@@@> 出现任务 —— 引擎处理它们 —— 等待更多任务（即休眠，几乎不消耗 CPU 资源）—— 出现新的任务",
-        outline: ["## 事件循环","## 浏览器中的宏任务","## 浏览器中的微任务","## 总结 & 补充"],
-      },{
         hash: "7c3e158bc1801f229b1772e7b2814417b3d29352",
         fileName: "01314109be59f26a60126c86b50940a7ace8e1ae",
         title: "GC-垃圾回收机制",
@@ -24,13 +16,21 @@ const article = [{
         description: "## HTML的解析过程@@@@@@![7tz9q1ngpp](assets/7tz9q1ngpp.webp)@@@@@@网络进程接收到响应头之后，会根据响应头中的 content-type 字段来判断文件的类型，比如 content-type 的值是“text/html”，那么浏览器就会判断这是一个 HTML 类型的文件，然后为该请求选择或者创建一个渲染进程，渲染进程准备好之后，网络进程和渲染进程之间会建立一个共享数据的管道，网络进程接收到数据后就往这个管道里面放，而渲染进程则从管道的另外一端不断地读取数据，并同时将读取的数据“喂”给 HTML 解析器。你可以把这个管道想象成一个“水管”，网络进程接收到的字节流像水一样倒进这个“水管”，而“水管”的另外一端是渲染进程的 HTML 解析器，它会动态接收字节流，并将其解析为 DOM。如下图",
         outline: ["## HTML的解析过程","### dom的解析","### CSS的解析","### 渲染树","#### 渲染步骤","###  回流与重绘","#### reflow与repaint的时机","### CSS的渲染阻塞","## 关键渲染路径","### 关键路径渲染和阻塞渲染","### css具体如何阻塞资源的","### JavaScript具体如何阻塞资源的","### 改变脚本加载次序defer与async","## 图片的对决","## 优化的思路","## 排查优化点、衡量网站的性能的方法","## 补充&概念","## Google提出了网站用户体验的三大核心指标","## Google提出的RAIL指标","## 补充指标优化方法","## 整体大纲"],
       },{
-        hash: "bef6a58f43e17870bb576d3bbdaabfe1aa1629fd",
+        hash: "a8c0e4413cba42b2e24337af64a24dde4a80c782",
         fileName: "2eb8add3da46383c06f244240c573a2584e75229",
         title: "HTTP的缓存策略",
         filePath: "/blogs/article/",
         date: "2021/12/6 下午10:29:46",
         description: "## http1.0 使用强制缓存@@@@@@expires 强制缓存，单位是毫秒，如果客户端跟服务端时间不一致的情况下，会出现bug，前台无法感知@@@@@@```javascript",
         outline: ["## http1.0 使用强制缓存","## http1.1 使用强制缓存与协商缓存","## 缓存使用决策","## Cache-Control示例"],
+      },{
+        hash: "4e0b64141ec62e16f4c405c31d6a3f2852b4c55f",
+        fileName: "8c19907dcd28f79c8dcc95ee62ce33ee134a250b",
+        title: "Node与浏览器中的Event Loop",
+        filePath: "/blogs/article/",
+        date: "2021/12/6 下午10:29:46",
+        description: "@@@## Event Loop@@@@@@Event Loop是什么？@@@",
+        outline: ["## Event Loop","## Node事件循环","## 浏览器事件循环","## 浏览器中的宏任务","## 浏览器中的微任务","## 总结 & 补充"],
       },{
         hash: "bd681f9c5c6dac29aabfc58870e2c442acd92766",
         fileName: "659ab64bf80576344bc780a7a88dc0bc7b34e127",
