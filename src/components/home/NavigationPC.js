@@ -80,7 +80,7 @@ function NavigationPC({ activeType, nav = [] }) {
   return (
     <div className={styles.navigationPC}>
       <header className={styles.top}>
-        <img src={LOGO} alt="logo" width='230px' />
+        <img src={LOGO} alt="logo" width='230px' height="113px"/>
       </header>
       {
         isDetail ?

@@ -31,6 +31,10 @@
   }
   .descript {
     padding: 0 15px;
+    img {
+      max-width: 800px;
+      max-height: 800px;
+    }
   }
 }
 .articleItem:hover {
