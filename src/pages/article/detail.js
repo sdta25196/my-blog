@@ -5,6 +5,7 @@ import Prism from 'prismjs'
 import styles from '../../components/article/sass/detail.module.scss'
 import { getArticleByHash } from "../../tools"
 import { ArticleLoading } from '../../components/common'
+import useLazyLoad from "../../hooks/useLazyLoad"
 
 let hasListener = false
 
@@ -13,6 +14,12 @@ function Detaile(props) {
   const [articleItem] = useState(() => getArticleByHash(type, hash))
   const [fixed, setFixed] = useState(false)
   const [detail, setDetail] = useState("")
+  const [loadListen, removeLoadListen] = useLazyLoad()
+  /** lazyLoad */
+  useEffect(() => {
+    loadListen()
+    return removeLoadListen
+  }, [loadListen, removeLoadListen])
 
   useEffect(() => {
     // 详情页重置描述
