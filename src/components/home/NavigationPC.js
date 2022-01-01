@@ -10,8 +10,7 @@ function NavigationPC({ activeType, nav = [] }) {
   const [fixed, setFixed] = useState(false)
   const [isDetail, setIsDetail] = useState(false)
   const [outline, setOutline] = useState([])
-  const history = useHistory()
-  const { hash } = window.location
+  const { location: { pathname }, replace } = useHistory()
   /** 监听吸顶滚动 */
   useEffect(() => {
     function scrollLienter() {
@@ -50,15 +49,16 @@ function NavigationPC({ activeType, nav = [] }) {
   }, [outline])
 
   useEffect(() => {
-    if (hash.startsWith('#/detail')) {
-      const [type, articleHash] = (hash.split('/')).slice(2, 4)
+    if (pathname.startsWith('/detail')) {
+      const [type, articleHash] = (pathname.split('/')).slice(2, 4)
+      console.log(type, articleHash)
       const { outline } = getArticleByHash(type, articleHash)
       setIsDetail(true)
       setOutline(outline)
     } else {
       setIsDetail(false)
     }
-  }, [hash])
+  }, [pathname])
 
   const handlerID = (id) => {
     return id.replace(/#+\s*/, '').replace(/\s/g, '-').replace(/&|%|#|@|!|:|（|）|(|)|,|，|。|.|\?/, '').toLowerCase()
@@ -77,15 +77,18 @@ function NavigationPC({ activeType, nav = [] }) {
     }
     return str
   }
+  const goList = () => {
+    replace('/' + (pathname.split('/')[2] || ''))
+  }
   return (
     <div className={styles.navigationPC}>
       <header className={styles.top}>
-        <img src={LOGO} alt="logo" width='230px' height="113px"/>
+        <img src={LOGO} alt="logo" width='230px' height="113px" />
       </header>
       {
         isDetail ?
           <aside className={`${styles.bottom} ${fixed ? styles.fixed : ""}`}>
-            <div className={styles.back} onClick={() => { history.goBack() }}>
+            <div className={styles.back} onClick={() => { goList() }}>
               返回列表
             </div>
             <div className={styles.bottomDetail}>
