@@ -37,6 +37,13 @@ a:focus {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+ul {
+  padding: 0;
+}
+
 /* 重置md样式 */
 article table {
   border-collapse: collapse;
