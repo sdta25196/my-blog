@@ -72,6 +72,7 @@ article table tr:nth-child(2n) {
 }
 article img {
   max-width: 100%;
+  display: block;
 }
 
 article p {
