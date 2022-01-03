@@ -1,5 +1,13 @@
 
 const know = [{
+        hash: "9f1f7141a3bb1973e6b1dd884167f763f72ce6c0",
+        fileName: "86b8f03d81d0c27da931c64e4bda9c750b3fabd3",
+        title: "node进程守护-pm2",
+        filePath: "/blogs/know/",
+        date: "Mon Jan 03 2022 10:00:46 GMT+0800 (中国标准时间)",
+        description: "## 简介@@@@@@  pm2 node的生产环境管理器（管理开发环境也行啊），用来守护node启动的服务@@@  pm2 有两种模式 fork（创建一个进程） 和 class（集群模式，IO的多路复用）@@@@@@## 安装@@@  * npm install pm2@@@  * yarn add pm2@@@",
+        outline: ["## 简介","## 安装","## 基础命令","## pm2 配置文件","### 配置项","## pm2 + nginx","## pm2.io：监控和诊断 Web 界面","## 更多"],
+      },{
         hash: "e50c91428363efa7f078c53cc47bea5303fcae53",
         fileName: "783ce45fa081ce7e5c0f71f3e2eafe972568065b",
         title: "富文本编辑器内核 - slate",
@@ -39,14 +47,6 @@ const know = [{
         date: "Tue Dec 14 2021 12:41:50 GMT+0800 (中国标准时间)",
         description: "## microdiff 简介@@@@@@Microdiff 是一个小型（目前<1kb）、快速、零依赖对象和数组比较库。它比大多数其他深度比较库要快得多，并且具有完整的 TypeScript 支持。@@@@@@## 使用@@@```js@@@  import diff from \"microdiff\";@@@",
         outline: ["## microdiff 简介","## 使用","## type","## 对数组的支持","## 为啥要用microdiff","## 更多"],
-      },{
-        hash: "911b558624af5eca5b2d9be8dde47f92959e654b",
-        fileName: "86b8f03d81d0c27da931c64e4bda9c750b3fabd3",
-        title: "node进程守护-pm2",
-        filePath: "/blogs/know/",
-        date: "Tue Dec 14 2021 12:41:50 GMT+0800 (中国标准时间)",
-        description: "## 简介@@@@@@  pm2 node的生产环境管理器（管理开发环境也行啊），用来守护node启动的服务@@@  pm2 有两种模式 fork（创建一个进程） 和 class（集群模式，IO的多路复用）@@@@@@## 安装@@@  * npm install pm2@@@  * yarn add pm2@@@",
-        outline: ["## 简介","## 安装","## 基础命令","## pm2 + nginx","## pm2.io：监控和诊断 Web 界面","## 更多"],
       },{
         hash: "9db467b45747b76943038ab89ed9ec31e8476454",
         fileName: "8547bf4505a24b112e4f90140b65c4b43b6bdfa4",
