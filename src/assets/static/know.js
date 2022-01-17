@@ -1,5 +1,29 @@
 
 const know = [{
+        hash: "e50c91428363efa7f078c53cc47bea5303fcae53",
+        fileName: "783ce45fa081ce7e5c0f71f3e2eafe972568065b",
+        title: "富文本编辑器内核 - slate",
+        filePath: "/blogs/know/",
+        date: "Thu Jan 06 2022 11:38:13 GMT+0800 (中国标准时间)",
+        description: "## slate简介@@@  **当前版本号0.66.5**@@@@@@  >  slate is a completely customizable framework for building rich text editors.@@@  @@@  slate 是一个用于构建富文本编辑器的完全可定制的框架。@@@@@@  个人理解，slate可用来作为一个富文本编辑器内核，在此基础上，可以完全自主的开发自己的富文本编辑器@@@",
+        outline: ["## slate简介","## 安装","## 常用核心概念","## 一些常用操作","### 指定编辑器获取焦点","### 编辑器全部选中","### 设置编辑器选区","### 给编辑器选区添加指定的标记","### 给编辑器选区删除指定的标记","### 获取指定属性的Node","### 把选区合并","### 替换文案","## slate架构","### model（模型）","### selection（选区）","### Transforms（变换）","### 插件机制","### slate-react","## 更多"],
+      },{
+        hash: "9db467b45747b76943038ab89ed9ec31e8476454",
+        fileName: "8547bf4505a24b112e4f90140b65c4b43b6bdfa4",
+        title: "函数式编程工具库 - ramdaJS",
+        filePath: "/blogs/know/",
+        date: "Thu Jan 06 2022 11:38:10 GMT+0800 (中国标准时间)",
+        description: "## Ramda @@@@@@  > 一款实用的 JavaScript 函数式编程库 - 也是目前最理想的js函数式编程工具库。@@@@@@  > 与其他函数式的库相比，Ramda 的目标更为专注：专门为函数式编程风格而设计，更容易创建函数式 pipeline、且从不改变用户已有数据。@@@",
+        outline: ["## Ramda ","## 安装","## 示例","## 部分API","## 应用场景","## 一些函数式编程中重要的概念","## 其他函数式工具库","## 更多"],
+      },{
+        hash: "255db67e2ef88f5a4e451d3b3161e6e10f0fe81e",
+        fileName: "7e18a9b345fbda87051d9f878d7ad556813e735e",
+        title: "现代应用管理手段-Docker",
+        filePath: "/blogs/know/",
+        date: "Thu Jan 06 2022 11:38:02 GMT+0800 (中国标准时间)",
+        description: "@@@Docker是一种管理应用的现代手段，让应用管理变得可以预测和高效。@@@@@@简单讲，Docker不隔离计算， 只隔离环境。@@@",
+        outline: ["## 什么是环境？什么是计算？","##  Docker是一种隔离技术而非虚拟化","## docker镜像与容器的关系","## 常用命令行","## 修改docker镜像的源","## docker - mysql","## 更多 "],
+      },{
         hash: "9f1f7141a3bb1973e6b1dd884167f763f72ce6c0",
         fileName: "86b8f03d81d0c27da931c64e4bda9c750b3fabd3",
         title: "node进程守护-pm2",
@@ -7,14 +31,6 @@ const know = [{
         date: "Tue Jan 04 2022 09:19:03 GMT+0800 (中国标准时间)",
         description: "## 简介@@@@@@  pm2 node的生产环境管理器（管理开发环境也行啊），用来守护node启动的服务@@@  pm2 有两种模式 fork（创建一个进程） 和 class（集群模式，IO的多路复用）@@@@@@## 安装@@@  * npm install pm2@@@  * yarn add pm2@@@",
         outline: ["## 简介","## 安装","## 基础命令","## pm2 配置文件","### 配置项","## pm2 + nginx","## pm2.io：监控和诊断 Web 界面","## 更多"],
-      },{
-        hash: "e50c91428363efa7f078c53cc47bea5303fcae53",
-        fileName: "783ce45fa081ce7e5c0f71f3e2eafe972568065b",
-        title: "富文本编辑器内核 - slate",
-        filePath: "/blogs/know/",
-        date: "Thu Dec 30 2021 16:54:55 GMT+0800 (中国标准时间)",
-        description: "## slate简介@@@  **当前版本号0.66.5**@@@@@@  >  slate is a completely customizable framework for building rich text editors.@@@  @@@  slate 是一个用于构建富文本编辑器的完全可定制的框架。@@@@@@  个人理解，slate可用来作为一个富文本编辑器内核，在此基础上，可以完全自主的开发自己的富文本编辑器@@@",
-        outline: ["## slate简介","## 安装","## 常用核心概念","## 一些常用操作","### 指定编辑器获取焦点","### 编辑器全部选中","### 设置编辑器选区","### 给编辑器选区添加指定的标记","### 给编辑器选区删除指定的标记","### 获取指定属性的Node","### 把选区合并","### 替换文案","## slate架构","### model（模型）","### selection（选区）","### Transforms（变换）","### 插件机制","### slate-react","## 更多"],
       },{
         hash: "97787d951c5925ca88c2410c65dbe27e500540f6",
         fileName: "ecd8beedef623f5b19f0586e357e47a6c979ffc9",
@@ -31,14 +47,6 @@ const know = [{
         date: "Sat Dec 25 2021 10:31:09 GMT+0800 (中国标准时间)",
         description: "## 简介@@@whistle(读音 [ˈwɪsəl]，拼音 [wēisǒu] )是基于 Node 实现的跨平台抓包调试代理工具，有以下基本功能：@@@  * 查看 HTTP、HTTPS、HTTP2、WebSocket、TCP 请求响应数据@@@  * 修改 HTTP、HTTPS、HTTP2、WebSocket、TCP 请求响应数据@@@  * 修改请求 url、方法、头部、内容等@@@  * 修改响应状态码、头部、内容，并支持本地替换等@@@  * 修改 WebSocket 和 TCP 收发的帧数据@@@  * 设置 hosts（支持 IPv6）、http-proxy、https-proxy、socks@@@  * 作为HTTP代理或反向代理@@@  * 集成常用的 web 调试工具，如 weinre 和 log 等@@@  * 支持用 Node 编写插件扩展@@@@@@## 安装@@@@@@  yarn: `yarn add whistle` @@@",
         outline: ["## 简介","## 安装","## 基本操作与配套设置","## 本地服务配置代理","## 配置规则","## 过滤条件设置","## 更多","## 关于chrome的跨域"],
-      },{
-        hash: "255db67e2ef88f5a4e451d3b3161e6e10f0fe81e",
-        fileName: "7e18a9b345fbda87051d9f878d7ad556813e735e",
-        title: "现代应用管理手段-Docker",
-        filePath: "/blogs/know/",
-        date: "Sat Dec 25 2021 10:30:37 GMT+0800 (中国标准时间)",
-        description: "@@@Docker是一种管理应用的现代手段，让应用管理变得可以预测和高效。@@@@@@简单讲，Docker不隔离计算， 只隔离环境。@@@",
-        outline: ["## 什么是环境？什么是计算？","##  Docker是一种隔离技术而非虚拟化","## docker镜像与容器的关系","## 常用命令行","## 修改docker镜像的源","## docker - mysql","## 更多 "],
       },{
         hash: "1315dcee534d5552aa2a396f62d3d0a57ef44287",
         fileName: "1696cc762fd1efa41316217f4b733a3c29e020fe",
@@ -71,14 +79,6 @@ const know = [{
         date: "Fri Dec 10 2021 16:39:23 GMT+0800 (中国标准时间)",
         description: "## web-vitals简介@@@@@@web-vitals 是google chrome团队开发，用来协助开发者优化网站性能得工具，它会按照chrome的评判标准，直观的返回一些性能指标@@@@@@> react的脚手架cra中，默认安装了这个库@@@",
         outline: ["## web-vitals简介","## 安装","### 使用cdn引入","## 基本用法","### 示例 ","### 性能指标对象","## polyfill使用方法","## 注意事项","## 一次发送多个报告","## 配套设施","## 兼容性","## 限制","## 更多"],
-      },{
-        hash: "9db467b45747b76943038ab89ed9ec31e8476454",
-        fileName: "8547bf4505a24b112e4f90140b65c4b43b6bdfa4",
-        title: "函数式编程工具库 - ramdaJS",
-        filePath: "/blogs/know/",
-        date: "Fri Dec 10 2021 16:39:14 GMT+0800 (中国标准时间)",
-        description: "## Ramda @@@@@@  > 一款实用的 JavaScript 函数式编程库 - 也是目前最理想的js函数式编程工具库。@@@@@@  > 与其他函数式的库相比，Ramda 的目标更为专注：专门为函数式编程风格而设计，更容易创建函数式 pipeline、且从不改变用户已有数据。@@@",
-        outline: ["## Ramda ","## 安装","## 示例","## 部分API","## 应用场景","## 一些函数式编程中重要的概念","## 其他函数式工具库","## 更多"],
       }]
 
 export default know
