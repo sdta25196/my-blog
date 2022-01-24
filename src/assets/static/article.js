@@ -1,12 +1,28 @@
 
 const article = [{
-        hash: "331a783653e404ce43643364b5131b2bf334491f",
-        fileName: "272cb1153693e2e5595f4b34e992f8ed835b238a",
-        title: "Rust笔记1-4章",
+        hash: "cea26334af55dc1766ccece18ad94932866b484e",
+        fileName: "2835013a00426e53b65ee10af3800ab91cba38e6",
+        title: "Rust-2.结构体",
         filePath: "/blogs/article/",
-        date: "Tue Jan 18 2022 21:38:57 GMT+0800 (中国标准时间)",
+        date: "Sun Jan 23 2022 19:04:38 GMT+0800 (中国标准时间)",
+        description: "# 第5章 chapter 5@@@@@@## struct 结构体@@@  定义结构体，需要使用 `struct` 关键字并为整个结构体提供一个名字。结构体的名字需要描述它所组合的数据的意义。在大括号中，定义每一部分数据的名字和类型，我们称为 **字段（field）**。@@@@@@```rust@@@  struct User {@@@    username: String,@@@    email: String,@@@    sign_in_count: u64,@@@    active: bool,@@@  }@@@",
+        outline: ["# 第5章 chapter 5","## struct 结构体","## 结构体更新语法（struct update syntax）","## 元组结构体（tuple structs）","## 类单元结构体（unit-like structs）","## 打印结构体","## 方法语义","### 方法可与字段重名","## 关联函数（associated functions）"],
+      },{
+        hash: "331a783653e404ce43643364b5131b2bf334491f",
+        fileName: "12140bd1794a63a9aef266096097ec807670672b",
+        title: "Rust-1.Rust中的基础概念",
+        filePath: "/blogs/article/",
+        date: "Sun Jan 23 2022 18:45:06 GMT+0800 (中国标准时间)",
         description: "# 第1-3章 chapter 1-3@@@@@@## 安装@@@@@@  linux 或者 macos 执行如下代码：@@@",
         outline: ["# 第1-3章 chapter 1-3","## 安装","## rustc 和 cargo","## 变量可变性","## 数据类型","## 函数","## 表达式","## 控制流 control flow","# 第4章 chapter 4","## 所有权 （ownership）","## 引用和借用","## Slice类型"],
+      },{
+        hash: "de06324a1222ed9a53c8ef601f1fc31d4af7e57e",
+        fileName: "113ec85a07ef4951ba8871d23def556ad5ef7d98",
+        title: "chrome控制台使用",
+        filePath: "/blogs/article/",
+        date: "Thu Jan 20 2022 21:42:18 GMT+0800 (中国标准时间)",
+        description: "@@@## 27 预览请求的时间分解@@@@@@时序故障阶段解释@@@",
+        outline: ["## 27 预览请求的时间分解"],
       },{
         hash: "867034e7c716f581fa6d2e7d3e563f4538e5e153",
         fileName: "6c2bc4ffbc7f92ab2a23ae31f3a14b5a06f61e4c",
