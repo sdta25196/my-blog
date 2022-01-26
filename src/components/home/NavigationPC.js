@@ -61,11 +61,11 @@ function NavigationPC({ activeType, nav = [] }) {
   }, [pathname])
 
   const handlerID = (id) => {
-    return id.replace(/#+\s*/, '').replace(/\s/g, '-').replace(/&|%|#|@|!|:|（|）|(|)|,|，|。|.|\?/, '').toLowerCase()
+    return id.replace(/#+\s*/, '').replace(/\s/g, '-').replace(/&|%|#|@|!|:|（|）|\(|\)|,|，|。|\.|\?/g, '').toLowerCase()
   }
   const handlerOutlineClick = (id) => {
     let item = document.getElementById(handlerID(id))
-    window.scrollTo(0, item.offsetTop - 80);
+    window.scrollTo(0, item?.offsetTop - 80);
   }
 
   /**处理缩进 */
