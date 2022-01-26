@@ -1,5 +1,13 @@
 
 const translate = [{
+        hash: "3a7557d1fc034b089b083518194a5dd26eae1775",
+        fileName: "f50e6bf695613b5af7c898025767dd19611a8843",
+        title: "Is Vite the Killer of Webpack",
+        filePath: "/blogs/translate/",
+        date: "Wed Jan 26 2022 23:11:24 GMT+0800 (中国标准时间)",
+        description: "## Is Vite the Killer of Webpack?@@@@@@> vite是webpack的杀手么？@@@@@@To build a website you need HTML, CSS, and JavaScript. It seems quite simple but nobody just sticks to these three. You may want to switch JS for TypeScript, add a frontend library like Reach for the UI, use a CSS processor like SASS, and a bunch of other modules so you do not have to start from scratch.@@@",
+        outline: ["## Is Vite the Killer of Webpack?","## What are module bundlers?","## Why Vite?","## How about Snowpack?","## What about the speed?","## Final thoughts"],
+      },{
         hash: "4734eb85f0e851ddc244ee63d37faa89f7f59216",
         fileName: "e919341c71771ea9dc14ad522ad2c7eda5227db9",
         title: "Activating Prior Knowledge With English Language Learners",
