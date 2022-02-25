@@ -164,4 +164,6 @@ fn main(){
   let sq = Rectangle::square(3);
 }
 ```
+## 更多
 
+* [rust枚举文档](https://kaisery.github.io/trpl-zh-cn/ch05-00-structs.html)
