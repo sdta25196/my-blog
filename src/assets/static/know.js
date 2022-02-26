@@ -1,10 +1,10 @@
 
 const know = [{
-        hash: "567c52bb2913c6de4cbb3bbf94641a105b1aaf84",
+        hash: "3e3cfdbbb17d4d51802efeccf338aa00aecd03cf",
         fileName: "e2e32548f21597f0e1f199ddcb2b39d04d8fd32f",
         title: "搭建项目中的组件文档 - storybook",
         filePath: "/blogs/know/",
-        date: "Tue Feb 08 2022 14:10:10 GMT+0800 (中国标准时间)",
+        date: "Fri Feb 25 2022 21:24:26 GMT+0800 (中国标准时间)",
         description: "## storybook@@@@@@Storybook 是一个 UI 开发工具。它通过隔离组件使开发更快、更容易。这允许您一次处理一个组件。您可以开发整个 UI，而无需启动复杂的开发堆栈、将某些数据强制输入数据库或在应用程序中导航。@@@@@@> 简单说，Storybook可以让我们在项目启动一个组件文档，可以有效地防止多人开发重复造轮子的问题。当然还有其他的一些作用例如开发文档等，都可以实现@@@",
         outline: ["## storybook","## 安装","## 编写组件story示例","## 编写纯文档示例","## PropTypes","## 常见操作","## 更多"],
       },{
