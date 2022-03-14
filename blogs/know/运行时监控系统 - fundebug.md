@@ -135,6 +135,50 @@ fundebug.init({
 
 等等... 其他请翻阅文档
 
+**一套基础配置** 
+```js
+let fundebug = require("fundebug-javascript")
+require("fundebug-revideo")
+fundebug.init({
+  apikey: "your object apikey", // 项目id
+  appversion: `${new Date().getFullYear()}${new Date().getMonth() + 1}${new Date().getDate()}`, // 设置版本号
+  silentDev: true,  // 不抓取开发期间错误
+  setHttpBody: true, // 抓取http请求的参数数据
+  silentConsole: process.env.NODE_ENV !== 'production', // 开发环境关闭fundebug对console对象的改写
+  sampleRate: 0.4, // 设置上传采样比例为0.4
+  maxRevideoSizeInByte: "500", // 最大记录500kb录屏
+  breadcrumbSize: 30, // 用户行为记录30
+  filters: [
+    {
+      message: /Script error/  // 过滤script error
+    },
+    {
+      type: /httpError/,   // 过滤px.effirst.com
+      req: {
+        url: /px.effirst.com/
+      },
+    },
+    {
+      type: /httpError/,    // 过滤tags.growingio.com
+      req: {
+        url: /tags.growingio.com/
+      },
+    },
+    {
+      type: /httpError/,    // 过滤baidu.com
+      req: {
+        url: /baidu.com/
+      },
+    },
+    {
+      type: /httpError/,    // 过滤cnzz.com
+      req: {
+        url: /cnzz.com/
+      },
+    },
+  ]
+})
+```
 ## 更多
 
 [fundebug官方文档](https://docs.fundebug.com/)
