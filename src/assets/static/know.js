@@ -1,5 +1,13 @@
 
 const know = [{
+        hash: "8e98b043212abfdba40dab3afb5b266adad130cd",
+        fileName: "ab89e82aeaa01ff8a6be30d70622b9764a691001",
+        title: "react-router-v6",
+        filePath: "/blogs/know/",
+        date: "Tue Mar 22 2022 10:48:07 GMT+0800 (中国标准时间)",
+        description: "## react-router-v6@@@@@@需要react 16.8+的环境，安装命令：`yarn add react-router-dom@6`@@@@@@## 示例@@@",
+        outline: ["## react-router-v6","## 示例","## 取消了withRouter","## 使用`element`进行渲染","## 取消了<Switch>","## v6的路由匹配机制和二级路由","## v6如何添加404路由","## V6不再支持正则路由","## Route","## Link","## useRoutes - 路由配置","## useNavigate - 导航","## useMatch","## Outlet","## useOutletContext","## useSearchParams - 使用url上的参数","## 更多"],
+      },{
         hash: "64795258c6ab6fed552a2fa37d683de0418fd064",
         fileName: "2882213d7fdb6293f5853a38ac6ae8d1a303b9f4",
         title: "H5前端调试工具 - vConsole",
