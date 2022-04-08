@@ -3,6 +3,8 @@
   pm2 node的生产环境管理器（管理开发环境也行啊），用来守护node启动的服务
   pm2 有两种模式 fork（创建一个进程） 和 class（集群模式，IO的多路复用）
 
+**当前版本号5.1.2**
+
 ## 安装
   * npm install pm2
   * yarn add pm2

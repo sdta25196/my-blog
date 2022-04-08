@@ -6,6 +6,8 @@
   Rollup 对代码模块使用新的标准化格式，这些标准都包含在 JavaScript 的 ES6 版本中，而不是以前的特殊解决方案，如 CommonJS 和 AMD。
   > 意思就是说：Rollup支持打包ESM，webpack的话，是不支持打包ESM的
 
+  **当前版本号2.65.0**
+  
 ## 安装
 
   `npm install rollup -g` 全局安装，之后即可使用`rollup`命令
