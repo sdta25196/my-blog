@@ -99,3 +99,52 @@
     })
   }, [props.a])
 ```
+
+5. s
+
+useEffect 中使用state 可以使用箭头函数的形式
+
+场景：分页加载数据时，第二页数据需要跟第一页数据拼接在一起，此时又不能把数据状态写进依赖中，否则就会死循环。
+```js
+  let [schoolList,setSchoolList] = useState([])
+  useEffect(() => {
+    setTimeout(() => {
+      let res = {
+        data: [1, 2, 3, 4]
+      }
+      setSchoolList(schoolList.concat(res.data))
+    },1000)
+  }, [])
+```
+
+解决方案：使用setState的函数式赋值方式
+
+```js
+  let [schoolList,setSchoolList] = useState([])
+  useEffect(() => {
+    setTimeout(() => {
+      let res = {
+        data: [1, 2, 3, 4]
+      }
+      setSchoolList(schoolList => {
+        schoolList.push(...res.data)
+        return schoolList
+      })
+    },1000)
+  }, [])
+```
+
+上面那么写,页面是不会渲染的...
+
+```js
+let [schoolList,setSchoolList] = useState([])
+  useEffect(() => {
+    setTimeout(() => {
+      let res = {
+        data: [1, 2, 3, 4]
+      }
+      setSchoolList(schoolList=>[...schoolList,...res.data])  
+    },1000)
+  }, [])
+
+```
