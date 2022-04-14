@@ -93,7 +93,7 @@
   let initState = ""
   let [state] = useState(initState)
   useEffect(() => {
-    request({
+    request({ // 模拟网络请求
       data: initState,
       xxx: props.a
     })
@@ -108,7 +108,7 @@ useEffect 中使用state 可以使用箭头函数的形式
 ```js
   let [schoolList,setSchoolList] = useState([])
   useEffect(() => {
-    setTimeout(() => {
+    setTimeout(() => { // 模拟网络请求
       let res = {
         data: [1, 2, 3, 4]
       }
@@ -122,7 +122,7 @@ useEffect 中使用state 可以使用箭头函数的形式
 ```js
   let [schoolList,setSchoolList] = useState([])
   useEffect(() => {
-    setTimeout(() => {
+    setTimeout(() => { // 模拟网络请求
       let res = {
         data: [1, 2, 3, 4]
       }
@@ -134,12 +134,12 @@ useEffect 中使用state 可以使用箭头函数的形式
   }, [])
 ```
 
-上面那么写,页面是不会渲染的...
+你要按照上面那么写,页面是不会渲染的...
 
 ```js
 let [schoolList,setSchoolList] = useState([])
   useEffect(() => {
-    setTimeout(() => {
+    setTimeout(() => { // 模拟网络请求
       let res = {
         data: [1, 2, 3, 4]
       }
