@@ -1,19 +1,257 @@
 ## useState
 
-将 React 中的所有状态视为不可变的。
+使用useState是为了让函数式组件中有状态可用，所有state(状态)都被视为不可变的。
 
-哪些是状态？哪些不是：
+```js
+const [state,setState] = useState()
+```
 
-它会随着时间的推移保持不变吗？如果是这样，它不是状态。
-它是通过props从父母那里传递过来的吗？如果是这样，它不是状态。
-您可以根据组件中的现有状态或道具来计算它吗？如果是这样，那绝对不是状态！
-
-setState建议永远使用函数式，可以少踩无数坑。
+# 这里还缺useState
 
 
+### 哪些属性才是状态
 
-为什么不建议用嵌套state，因为嵌套的state的修改是非常麻烦且容易出错的
+* 它会随着时间的推移保持不变吗？如果是，它不是状态。- 他是个常量
+* 它是通过props从父组件那里传递过来的吗？如果是，它不是状态。- 他是props
+* 我们可以根据组件中的现有state或props来计算它吗？如果是，它不是状态！ - 他是普通变量
 
+完全不符合以上三点的属性，才能作为状态使用
+
+> state应当越少越好，通常更多的state就代表着更多的bug。
+
+## state编写的原则
+
+* **合并相关状态**。如果总是同时更新两个或多个状态变量，可以考虑将它们合并到单个状态变量中。
+* **避免状态矛盾**。当state与一个或多个state存在相互矛盾时，就容易出错。应尽量避免这种情况。
+* **避免状态冗余**。如果可以从props或现有的state变量中计算出一些信息，那么就不应该把这些信息放到组件的状态中。
+* **避免状态重复**。当相同的数据在多个状态变量之间或嵌套对象中复制时，我们会很难保持它们的同步。
+* **避免状态深度嵌套**。深度分层状态既不方便更新还容易带来bug。应该尽可能采用扁平的方式来构造状态。不过`immer`可以解决这个问题
+
+### 合并相关状态
+
+假设我们有一个监控鼠标坐标相关的需求，需要使用状态**坐标点x**和**坐标点y**，感受一下下面两种写法
+
+```js
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
+  
+  const handle=(x,y)=>{
+    setX(x);
+    setY(y);
+  }
+```
+和
+```js
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  
+  setPosition(nextPosition)
+```
+
+### 避免状态矛盾
+
+依然是刚才那个监控鼠标坐标相关的需求，我们有两个状态:**鼠标移动**、**鼠标停止**
+
+```js
+  const [isMoving, setIsMoving] = useState(false);
+  const [isStop, setIsStop] = useState(true);
+  
+  useEffect(()=>{
+    if(isMoving){ /** 如果鼠标移动触发的逻辑*/ }
+    if(isStop){ /** 如果鼠标停止触发的逻辑*/ }
+  },[isStop,isMoving])
+
+  // 某个处理逻辑A
+  const handleA=()=>{
+    setIsMoving(true)
+    setIsStop(false)
+  }
+
+  // 某个处理逻辑B
+  const handleB=()=>{
+    setIsMoving(false)
+    setIsStop(true)
+  }
+```
+以上代码会给我们的程序留下一个非常坑的漏洞。**某人可以将`isMoving`和`isStop`设置成同样的值！**。而且随着我们组件的复杂度上升，这件事情发生的概率就越大。
+
+这种需求应该改成如下代码：
+```js
+const [moveState, setMoveState] = useState('stop'); // stop、moving
+  
+  useEffect(()=>{
+    if(moveState === 'stop'){ /** 如果鼠标移动触发的逻辑*/ }
+    if(moveState === 'stop、moving'){ /** 如果鼠标停止触发的逻辑*/ }
+  },[moveState])
+
+  // 某个处理逻辑A
+  const handleA=()=>{
+    setMoveState('moving')
+  }
+
+  // 某个处理逻辑B
+  const handleB=()=>{
+    setMoveState('stop')
+  }
+```
+
+再例如，一个表单组件中我们需要对`输入中`和`提交中`中进行分别处理逻辑，那么他们也应当被写成一个state。
+
+### 避免状态冗余
+
+假设我们有一个获取用户`姓`+`名`的需求，需要使用状态**姓**和**名**和**姓名**
+
+```js
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [fullName, setFullName] = useState('');
+
+  function handleFirstNameChange(e) {
+    setFirstName(e.target.value);
+    setFullName(e.target.value + ' ' + lastName);
+  }
+
+  function handleLastNameChange(e) {
+    setLastName(e.target.value);
+    setFullName(firstName + ' ' + e.target.value);
+  }
+```
+
+以上代码中`fullName`就显得非常多余，且会带来更多脑力负担，制造bug。此处`fullName`应该作为一个普通变量存在而不是state
+
+```js
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const fullName = firstName + lastName
+
+  function handleFirstNameChange(e) {
+    setFirstName(e.target.value);
+  }
+
+  function handleLastNameChange(e) {
+    setLastName(e.target.value);
+  }
+```
+
+### 避免状态重复
+
+以下代码中，展示了因为状态重复而带来的bug。用户选择了某个元素之后，进行修改的话，用户的选择是不会变的。
+
+```js
+import { useState } from 'react';
+
+const initialItems = [
+  { title: 'pretzels', id: 0 },
+  { title: 'crispy seaweed', id: 1 },
+  { title: 'granola bar', id: 2 },
+];
+
+export default function Menu() {
+  const [items, setItems] = useState(initialItems);
+  const [selectedItem, setSelectedItem] = useState(
+    items[0]
+  );
+
+  function handleItemChange(id, e) {
+    setItems(items.map(item => {
+      if (item.id === id) {
+        return {
+          ...item,
+          title: e.target.value,
+        };
+      } else {
+        return item;
+      }
+    }));
+  }
+
+  return (
+    <>
+      <ul>
+        {items.map((item, index) => (
+          <li key={item.id}>
+            <input
+              value={item.title}
+              onChange={e => {
+                handleItemChange(item.id, e)
+              }}
+            />
+            {' '}
+            <button onClick={() => {
+              setSelectedItem(item);
+            }}>Choose</button>
+          </li>
+        ))}
+      </ul>
+      <p>You picked {selectedItem.title}.</p>
+    </>
+  );
+}
+```
+
+实际上删除重复状态，仅保存`id`即可解决这个bug
+
+```js
+import { useState } from 'react';
+
+const initialItems = [
+  { title: 'pretzels', id: 0 },
+  { title: 'crispy seaweed', id: 1 },
+  { title: 'granola bar', id: 2 },
+];
+
+export default function Menu() {
+  const [items, setItems] = useState(initialItems);
+  const [selectedId, setSelectedId] = useState(0);
+
+  const selectedItem = items.find(item =>
+    item.id === selectedId
+  );
+
+  function handleItemChange(id, e) {
+    setItems(items.map(item => {
+      if (item.id === id) {
+        return {
+          ...item,
+          title: e.target.value,
+        };
+      } else {
+        return item;
+      }
+    }));
+  }
+
+  return (
+    <>
+      <ul>
+        {items.map((item, index) => (
+          <li key={item.id}>
+            <input
+              value={item.title}
+              onChange={e => {
+                handleItemChange(item.id, e)
+              }}
+            />
+            {' '}
+            <button onClick={() => {
+              setSelectedId(item.id);
+            }}>Choose</button>
+          </li>
+        ))}
+      </ul>
+      <p>You picked {selectedItem.title}.</p>
+    </>
+  );
+}
+
+```
+
+
+
+## 避免状态深度嵌套
+
+嵌套的state的修改是非常麻烦且容易出错的，感受一下代码
+
+示例一：深度嵌套的对象使用第三者变量来进行辅助修改
 ```js
 const [person, setPerson] = useState({
   name: 'Niki de Saint Phalle',
@@ -23,10 +261,13 @@ const [person, setPerson] = useState({
     image: 'https://i.imgur.com/Sd1AgUOm.jpg',
   }
 });
-const nextArtwork = { ...person.artwork, city: 'New Delhi' };
-const nextPerson = { ...person, artwork: nextArtwork };
+const nextArtwork = { ...person.artwork, city: 'beijing' }; // 展开二级操作
+const nextPerson = { ...person, artwork: nextArtwork };    // 把二级对象合并回去
 setPerson(nextPerson);
 ```
+
+示例一：深度嵌套的对象需要多次**展开操作**来进行修改
+
 ```js
 const [person, setPerson] = useState({
   name: 'Niki de Saint Phalle',
@@ -37,13 +278,39 @@ const [person, setPerson] = useState({
   }
 });
 setPerson({
-  ...person, // Copy other fields
-  artwork: { // but replace the artwork
-    ...person.artwork, // with the same one
-    city: 'New Delhi' // but in New Delhi!
+  ...person, // 展开属性
+  artwork: { 
+    ...person.artwork, // 展开二级属性
+    city: 'beijing' // 修改city属性
   }
+});
+```
+> 关于扁平化，可以自行深入学习，这里就不提了
+
+### immer
+
+顺便说一下`immer`非常好的解决状态嵌套问题，当然，这不代表着我们支持深度嵌套的state。
+
+```js
+import { useImmer } from "use-immer";
+
+const [person, setPerson] = useImmer({
+  name: 'Niki de Saint Phalle',
+  artwork: {
+    title: 'Blue Nana',
+    city: 'Hamburg',
+    image: 'https://i.imgur.com/Sd1AgUOm.jpg',
+  }
+});
+
+setPerson((draft) => {
+  draft.artwork.title="changeing~"
 });
 ```
 
 
-简单说一下 Immer，用来解决这个问题非常好
+# 这里还缺setState
+
+## setState
+
+setState建议永远使用函数式，可以少踩无数坑。
