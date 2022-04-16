@@ -233,6 +233,7 @@ function TodoList({ length }) {
 
 如果真的遇到这类问题，给`parent`组件添加`key={length}`可以解决。
 
+或者使用`useEffect`去依赖对应的`props`即可
 
 ### 避免状态重复
 
