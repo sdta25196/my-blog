@@ -2,13 +2,68 @@
 
 使用useState是为了让函数式组件中有状态可用，所有state(状态)都被视为不可变的。
 
+hooks 只能在**函数式组件的顶层**或者在**自定义hook**中调用。
+
 ```js
-const [state,setState] = useState()
+// useState普通用法
+const [state,setState] = useState(initialState)
+
+// useState的函数签名
+function useState<S>(initialState: S | (() => S)): [S, Dispatch<SetStateAction<S>>];
+
+// setState的函数签名
+type Dispatch<A> = A => void;
+type BasicStateAction<S> = (S => S) | S;
 ```
 
-# 这里还缺useState
+* 通过useState的函数签名我们可以看到useState初始值有两种方式：传值和传回调函数。
 
+**传值**
 
+传值是我们最常用的方式`const [state,setState] = useState(initialState)`，每次组件被重新渲染的时候，都会重新执行一次
+
+**传回调函数**
+
+传回调函数的使用场景为：当我们需要**避免重新创建初始状态**时，就是用传回调函数的方式
+
+```js
+function createInitialTodos() {
+  const initialTodos = [];
+  for (let i = 0; i < 50; i++) {
+    initialTodos.push({
+      id: i,
+      text: 'Item ' + (i + 1)
+    });
+  }
+  return initialTodos;
+}
+
+const [todos, setTodos] = useState(createInitialTodos);
+
+```
+
+两种初始化state的方式，主要差距在效率上。建议在没有明显卡顿之类体验不好的组件中，尽量少用回调函数式的写法。
+
+* 通过setState的函数签名我们可以看到setState有两种使用方式：传值和传回调函数。其最主要的区别是回调函数会保留上一次的state。
+
+我们建议在不熟练的情况下永远使用回调函数，可以少踩无数坑。
+
+假设`age`是42，下面两段程序可看到明显差异。
+```js
+// 传值的方式
+function handleClick() {
+  setAge(age + 1); // setAge(42 + 1)
+  setAge(age + 1); // setAge(42 + 1)
+  setAge(age + 1); // setAge(42 + 1)
+}
+
+// 传回调函数
+function handleClick() {
+  setAge(a => a + 1); // setAge(42 => 43)
+  setAge(a => a + 1); // setAge(43 => 44)
+  setAge(a => a + 1); // setAge(44 => 45)
+}
+```
 ### 哪些属性才是状态
 
 * 它会随着时间的推移保持不变吗？如果是，它不是状态。- 他是个常量
@@ -131,6 +186,53 @@ const [moveState, setMoveState] = useState('stop'); // stop、moving
     setLastName(e.target.value);
   }
 ```
+
+示例: 一个状态冗余带来的bug, 渲染`<Parent>`组件，点击按钮会发现，不生效。
+
+```js
+function createInitialTodos(x) {
+  const initialTodos = [];
+  for (let i = 0; i < x; i++) {
+    initialTodos.push({
+      id: i,
+      text: 'Item ' + (i + 1)
+    });
+  }
+  return initialTodos;
+}
+
+function Parent() {
+  let [length, setLength] = useState(5)
+
+  return (
+    <>
+      <TodoList length={length} />
+      <button onClick={() => {
+        setLength(x => x + 5)
+      }}>增加5</button>
+    </>
+  )
+}
+
+function TodoList({ length }) {
+
+  const [todos, setTodos] = useState(createInitialTodos(length));
+  return (
+    <>
+      <ul>
+        {todos.map(item => (
+          <li key={item.id}>
+            {item.text}
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+```
+
+如果真的遇到这类问题，给`parent`组件添加`key={length}`可以解决。
+
 
 ### 避免状态重复
 
@@ -309,8 +411,66 @@ setPerson((draft) => {
 ```
 
 
-# 这里还缺setState
 
-## setState
+## useState常见问题及解决方案
 
-setState建议永远使用函数式，可以少踩无数坑。
+1. 当我们想要使用nextState时, 却发现无论如何都拿不到新的值。
+```js
+
+function handleClick() {
+  console.log(count);  // 0
+  setCount(count + 1); 
+  console.log(count);  //  0!
+
+  setTimeout(() => {
+    console.log(count); //  0!
+  }, 5000);
+}
+```
+
+需要我们单独存一下数据去使用
+```js
+const nextCount = count + 1;
+setCount(nextCount);
+
+console.log(count);     // 0
+console.log(nextCount); // 1
+```
+
+2. 修改数据但是不生效
+
+```js
+  let [arr,setArr] = useState([1,2,3])
+  setArr(arr=>{
+    arr.push(5)
+    return arr
+  })
+
+```
+
+应该这么写：
+
+```js
+  let [arr,setArr] = useState([1,2,3])
+  setArr(arr=>[...arr,5])
+```
+
+
+3. setState使用函数的时候
+
+```js
+const [fn, setFn] = useState(someFunction);
+
+function handleClick() {
+  setFn(someOtherFunction);
+}
+```
+
+应该这么写：
+```js
+const [fn, setFn] = useState(() => someFunction);
+
+function handleClick() {
+  setFn(() => someOtherFunction);
+}
+```
