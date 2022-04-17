@@ -1,5 +1,37 @@
 
 const article = [{
+        hash: "0d676fa0ee782a133d80e2ec8fce9f5c8f55a912",
+        fileName: "1ed9cee2e0f9de2ba55fc11dac16ffcf68a46cb4",
+        title: "react-17.0.2-useState",
+        filePath: "/blogs/article/",
+        date: "Sun Apr 17 2022 14:18:47 GMT+0800 (中国标准时间)",
+        description: "## useState@@@@@@使用useState是为了让函数式组件中有状态可用，所有state(状态)都被视为不可变的。@@@@@@hooks 只能在**函数式组件的顶层**或者在**自定义hook**中调用。@@@",
+        outline: ["## useState","### 哪些属性才是状态","## state编写的原则","### 合并相关状态","### 避免状态矛盾","### 避免状态冗余","### 避免状态重复","## 避免状态深度嵌套","### immer","## useState常见问题及解决方案"],
+      },{
+        hash: "c2dc28b2b9d650f83895ee96d6d9cb8473e0db1c",
+        fileName: "62950158fe12d0535c8f074aac713f2d24ca27b5",
+        title: "react-17.0.2-useEffect",
+        filePath: "/blogs/article/",
+        date: "Sat Apr 16 2022 10:54:19 GMT+0800 (中国标准时间)",
+        description: "## useEffect@@@@@@## 依赖报警问题与解决方案@@@@@@以下几种情形会被react内置的eslint规则提出警告:`React Hook useEffect has a missing dependency: ''. Either include it or remove the dependency array`，而通常我们解决方案都是从思考**此处使用state的原因是什么？**开始：@@@",
+        outline: ["## useEffect","## 依赖报警问题与解决方案"],
+      },{
+        hash: "efbd66b4a2453b073da0409d8358f1d8f38e47fe",
+        fileName: "9a3b417b54e7d13d4958d8ca0e9dfd60b24b4e9b",
+        title: "react-17.0.2-组件化原则",
+        filePath: "/blogs/article/",
+        date: "Sat Apr 16 2022 10:54:19 GMT+0800 (中国标准时间)",
+        description: "## react组件化@@@@@@> 这个组件化划分的方式是根据我的经验以及我的知识体系总结出的结论，并非组件化铁律。@@@@@@首先排除一个误区：组件分类曾经被普遍分为：展示组件，容器组件。 国内也提出过智能组件，木偶组件其实是一样的东西，换了个名字而已@@@",
+        outline: ["## react组件化","## 搭积木","## 实现搜索功能组件","## 官方示例解读","## 补充"],
+      },{
+        hash: "87fe563287d4305ff8c8333abe2a741d8f879af5",
+        fileName: "aae0d5877a8c4f53b5f27b3f115c601199414979",
+        title: "react数据传递的几种方式",
+        filePath: "/blogs/article/",
+        date: "Sat Apr 16 2022 10:54:19 GMT+0800 (中国标准时间)",
+        description: "## react的数据传递的几种方式@@@@@@@@@React 是单向数据流的，禁止从子组件往父组件传数据！@@@",
+        outline: ["## react的数据传递的几种方式"],
+      },{
         hash: "a9b324d681122676778a17c179244a9949b8cbe7",
         fileName: "c8c5e9db545c1c29709dea5349775be9d6ff3f9e",
         title: "javascript中的unicode",

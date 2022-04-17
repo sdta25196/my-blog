@@ -1,10 +1,9 @@
 ## useState
 
-使用useState是为了让函数式组件中有状态可用，所有state(状态)都被视为不可变(Immutable)的。
+使用useState是为了让函数式组件中有状态可用，所有state(状态)都被视为不可变的。
 
 hooks 只能在**函数式组件的顶层**或者在**自定义hook**中调用。
 
-我们从函数签名开始：
 ```js
 // useState普通用法
 const [state,setState] = useState(initialState)
@@ -17,13 +16,15 @@ type Dispatch<A> = A => void;
 type BasicStateAction<S> = (S => S) | S;
 ```
 
+***
+
 通过useState的函数签名我们可以看到useState初始值有两种方式：传值和传回调函数。
 
-1. **传值**
+**传值**
 
 传值是我们最常用的方式`const [state,setState] = useState(initialState)`，每次组件被重新渲染的时候，都会重新执行一次
 
-2. **传回调函数**
+**传回调函数**
 
 传回调函数的使用场景为：当我们需要**避免重新创建初始状态**时，就是用传回调函数的方式
 
@@ -45,6 +46,7 @@ const [todos, setTodos] = useState(createInitialTodos);
 
 两种初始化state的方式，主要差距在效率上。建议在没有明显卡顿之类体验不好的组件中，尽量少用回调函数式的写法。
 
+***
 
 通过setState的函数签名我们可以看到setState有两种使用方式：传值和传回调函数。其最主要的区别是回调函数会保留上一次的state。
 
@@ -66,15 +68,15 @@ function handleClick() {
   setAge(a => a + 1); // setAge(44 => 45)
 }
 ```
-
-
 ### 哪些属性才是状态
 
 * 它会随着时间的推移保持不变吗？如果是，它不是状态。- 他是个常量
 * 它是通过props从父组件那里传递过来的吗？如果是，它不是状态。- 他是props
 * 我们可以根据组件中的现有state或props来计算它吗？如果是，它不是状态！ - 他是普通变量
 
-完全不符合以上三点的属性，才能作为状态使用，且state应当越少越好，通常更多的state就代表着更多的bug。
+完全不符合以上三点的属性，才能作为状态使用
+
+> state应当越少越好，通常更多的state就代表着更多的bug。
 
 ## state编写的原则
 
@@ -221,12 +223,6 @@ function TodoList({ length }) {
   const [todos, setTodos] = useState(createInitialTodos(length));
   return (
     <>
-     <button onClick={() => {
-        setTodos([{
-          id: todos.length,
-          text: 'Item '
-        }, ...todos])
-      }}>增加一个</button>
       <ul>
         {todos.map(item => (
           <li key={item.id}>
@@ -238,8 +234,6 @@ function TodoList({ length }) {
   );
 }
 ```
-
-**传递给useState的参数是初始状态，就像在类组件的constructor中设置状态一样，组件不卸载重装就不会更新状态**
 
 如果真的遇到这类问题，给`parent`组件添加`key={length}`可以解决。
 
@@ -360,7 +354,7 @@ export default function Menu() {
 
 
 
-### 避免状态深度嵌套
+## 避免状态深度嵌套
 
 嵌套的state的修改是非常麻烦且容易出错的，感受一下代码
 
@@ -400,7 +394,7 @@ setPerson({
 ```
 > 关于扁平化，可以自行深入学习，这里就不提了
 
-## immer
+### immer
 
 顺便说一下`immer`非常好的解决状态嵌套问题，当然，这不代表着我们支持深度嵌套的state。
 

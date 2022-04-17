@@ -1,10 +1,5 @@
 ## useEffect
 
-
-## 关于useEffect中调用异步函数问题
-
-有些人会说useEffect中调用异步函数，可以使用自执行函数。花里胡哨，垃圾代码，花样百出
-
 ## 依赖报警问题与解决方案
 
 以下几种情形会被react内置的eslint规则提出警告:`React Hook useEffect has a missing dependency: ''. Either include it or remove the dependency array`，而通常我们解决方案都是从思考**此处使用state的原因是什么？**开始：
