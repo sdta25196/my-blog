@@ -1,9 +1,51 @@
 ## useEffect
 
+useState是用来在函数式组件中添加状态，而useEffect是用来处理函数组件中的副作用的。
+
+先说纯函数：react推荐函数式组件应该写成一个纯函数，既：固定的输入，会得到固定的输出。
+
+```js
+/** 纯函数示例 */
+fucntion App({num}){
+  return (
+    <div>
+      {num>10?<p>num大于10</p>:<p>num小于10</p>}
+    </div>
+  )
+}
+```
+
+但是在实际开发过程中，我们的函数组件会有大量的副作用，而`useEffect`就是用来集中处理这些副作用的地方。
+
+```js
+fucntion App({num}){
+  useEffect(()=>{
+    // todo....  
+  })
+
+  return (
+    <div>
+      {num>10?<p>num大于10</p>:<p>num小于10</p>}
+    </div>
+  )
+}
+```
+
+**重点：**
+
+学习`function component`、学习`useEffect`，一定要忘记`class component`中的知识，二者毫无关联性，一切强行去关联生命周期等概念的观点，都是错误的！
+> 国内之所以流行关联生命周期的概念，主要是因为react曾经的官网中提出了这方面的比较。
+
+**UI=Fn(state)**
+
+
 
 ## 关于useEffect中调用异步函数问题
 
 有些人会说useEffect中调用异步函数，可以使用自执行函数。花里胡哨，垃圾代码，花样百出
+
+踏踏实实用`.then`去解决问题。
+
 
 ## 依赖报警问题与解决方案
 
