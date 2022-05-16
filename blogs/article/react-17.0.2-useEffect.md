@@ -351,6 +351,34 @@ let [schoolList,setSchoolList] = useState([])
 
 > useReducer也可以用来绕过依赖项检查，useReducer也被称为hooks的作弊模式。不过没必要的话还是少用吧
 
+### useEffect批处理的bug
+
+useEffect仅对react事件进行批处理操作。v18之后修改了这个问题。
+
+```js
+  let [text, setText] = useState({})
+  let [text1, setText1] = useState({})
+
+  useEffect(() => {
+    console.log(text, text1)
+    console.log("触发网络请求")
+  }, [text, text1])
+
+  useEffect(() => {
+    console.log('批处理')
+    setText({ a: "1" })
+    setText1({ f: 2 })
+  }, [])
+  useEffect(() => {
+    console.log('非批处理')
+    setTimeout(() => {
+      setText({ a: "1" })
+      setText1({ f: 2 })
+    }, 1000)
+  }, [])
+```
+
+
 ### useLayoutEffect
 
 其函数签名与 useEffect 相同，但它会在所有的 DOM 变更之后同步调用 effect。会造成阻塞视觉更新
