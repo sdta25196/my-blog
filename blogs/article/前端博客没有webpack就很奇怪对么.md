@@ -126,25 +126,27 @@
   bundle文件中生成一个自执行函数，参数就是chunks。（以key-val的形式传入，每个chunk就是一个key-val）
 
 ##### 配置webpack使用的loader的路径
-  ```
-    resolveLoader: { 
-      modules: ["node_modules", "../myloader/"] // 数组第一项给第三方loader使用，第二项可以放自定义的loader路径
-    },
-  ```
+
+```
+  resolveLoader: { 
+    modules: ["node_modules", "../myloader/"] // 数组第一项给第三方loader使用，第二项可以放自定义的loader路径
+  },
+```
 ### 多页面打包通用方案
   * src下新建多目录，每个目录下有js.html有index.js(此为约定)
   * 使用函数去处理这些目录，在webpack配置中生成entry与html插件即可
   
 ### sourceMap 
-  > 源代码与打包后代码的关系影射
-  ```
-    // webpack.config.js
-    {
-      // none 不开启。 inline-source-map map直接生成到文件内部 //source-map 单独生成map文件
-      devtool: "source-map", 
-    }
+> 源代码与打包后代码的关系影射
 
-  ```
+```
+  // webpack.config.js
+  {
+    // none 不开启。 inline-source-map map直接生成到文件内部 //source-map 单独生成map文件
+    devtool: "source-map", 
+  }
+
+```
 
   
 ## 优化方案
