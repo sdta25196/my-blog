@@ -30,6 +30,10 @@ whistle(读音 [ˈwɪsəl]，拼音 [wēisǒu] )是基于 Node 实现的跨平�
   
   ![proxy](assets/proxy.webp)
 
+* 不下载插件的话，windows系统也可以直接在代理中配置，直接window功能搜索中搜索代理，打开代理功能，开启手动代理，端口设置8899即可
+
+  ![proxy](assets/daili.jpg)
+
 * 关于移动端抓包，手机需要跟电脑在同一网段，打开wifi手动配置代理：ip是电脑ip, 端口是8899即可
 
 * 对于开启https的抓包，PC跟移动端都需要下载whistle证书（下载地址看文末），放置到受信任的证书中。

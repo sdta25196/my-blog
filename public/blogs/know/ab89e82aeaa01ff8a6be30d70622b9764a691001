@@ -290,6 +290,15 @@ function Child() {
 > 就个人体验上来说，V6的确比V5更好用了。
 
 
+## 其他hooks
+
+`useNavigationType` 返回用户到当前页面的导航类型 `"POP" | "PUSH" | "REPLACE"`
+ > 注意POP代表两种情况：在浏览器直接打开了这个路由组件（刷新页面）和路由出栈。
+
+`useResolvedPath` 给定一个url，解析出path，hash，search（location对象）
+
+`useInRouterContext` 判断组件是否被Router包裹，可能有些第三方组件需要判断
+
 ## 更多
 
 * [老项目升级到V6](https://reactrouterdotcom.fly.dev/docs/en/v6/upgrading/v5)
