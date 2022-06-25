@@ -218,9 +218,10 @@ function Counter() {
   
 * 用来做网络请求，赋值一类的操作？直接使用初始化的值
 ```js
-  let initState = ""
-  let [state] = useState(initState)
+  let [state,setState] = useState('')
   useEffect(() => {
+    let initState = ""
+    setState(initState)
     request({
       data: initState
     })
@@ -292,9 +293,10 @@ function Counter() {
 解决方案：直接使用初始值。此处使用到的不应该是state。
 
 ```js
-  let initState = ""
-  let [state] = useState(initState)
+  let [state,setState] = useState('')
   useEffect(() => {
+    let initState = ""
+    setState(initState)
     request({ // 模拟网络请求
       data: initState,
       xxx: props.a
