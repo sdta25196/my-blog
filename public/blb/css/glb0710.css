@@ -1,0 +1,28 @@
+/*body {font:12px Verdana;color:#333;text-align:center;margin:0 auto;}
+ul,li{list-style:none;font-family:宋体;}
+a:link,a:visited {text-decoration:none;}
+a:hover,a:active {text-decoration:underline;}
+a img {border:0;}*/
+#glbtop {margin:0px auto;width:910px;position:relative;font:12px Verdana;}
+#glbt1 {line-height:26px;background:url(/images/cer.net/page/topbg.jpg) repeat-x #f3f3f3;height:26px;}
+#glbt1 a:link,#glbt1 a:visited {color:#8c8e8b;}
+#glbt1 a:hover,#glbt1 a:active {color:#c30;}
+a.a_e {float:left;padding-left:10px;margin-left:15px;}
+a.a_e:link,a.a_e:visited {background:url(/images/cer.net/page/dot_g.jpg) no-repeat left 9px;}
+a.a_e:hover,a.a_e:active {background:url(/images/cer.net/page/dot_r.jpg) no-repeat left 9px;}
+#a_sep,#a_home,#a_fav {float:right;margin-right:15px;padding-left:15px;}
+#a_sep {background:url(/images/cer.net/page/sep.jpg) no-repeat left 7px;}
+#a_home {background:url(/images/cer.net/page/home.jpg) no-repeat left 7px;}
+#a_fav {background:url(/images/cer.net/page/fav.jpg) no-repeat left 7px;}
+#glbt2 {clear:both;line-height:30px;border:1px solid #d7d7d7;text-align:left;padding-left:8px;}
+#glbt2 a:link,#glbt2 a:visited {color:#343434;}
+#glbt2 a:hover,#glbt2 a:active {color:#c30;}
+#glbdh {float:left;}
+#glbloc {float:right;margin:3px 2px 0 0;}
+#glbbot {margin:5px auto;border-top:1px solid #888;line-height:150%;width:910px;padding-top:10px;clear:both;}
+#glbbot a:link,#glbbot a:visited {color:#333;}
+#glbbot a:hover,#glbbot a:active {color:#c30;}
+#selloc {border:1px solid #d6d7d6;width:380px;height:76px;background:url(/images/cer.net/page/close.gif) no-repeat right 62px #f8f8f8;position:absolute;z-index:100;right:0;top:60px;font-size:12px;cursor:pointer;}
+#selloc li {float:left;margin:1px;padding:1px 0;width:40px;background:#fff;}
+#selloc a:link,#selloc a:visited {color:#333;text-decoration:none;}
+#selloc a:hover,#selloc a:active {color:#c30;text-decoration:underline;}

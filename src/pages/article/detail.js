@@ -25,6 +25,8 @@ function Detaile(props) {
     // 详情页重置描述
     const description = document.querySelector('meta[name="description"]')
     description.content = articleItem.title
+    const title = document.querySelector('title')
+    title.innerHTML = articleItem.title
   }, [articleItem.title])
 
   // 测试请求博客文章

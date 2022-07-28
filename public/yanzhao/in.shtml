@@ -1,0 +1,207 @@
+<link rel="stylesheet" href="http://www.eol.cn/html/ky/yanzhao/css/pc_ad.css">
+
+<script type="text/javascript" src="http://www.eol.cn/js/global/jQuery_latest.min.js" ignoreapd="false"></script>
+
+<script type="text/javascript" src="http://www.eol.cn/js/global/ad_tab.js"></script>
+
+<div class="adbox">
+
+	<!-- 半通栏图片 -->
+	<!-- <div class="fline">
+		<div class="fline-left">
+			<a href="http://www.eol.cn/html/ky/sylmd/">
+				<img src="https://img1.eol.cn/images/ed/kaoyan/syl590.jpg" alt="双一流">
+			</a>
+		</div>
+		<div class="fline-right">
+			<a href="http://kaoyan.eol.cn/nnews/201712/t20171229_1577415.shtml?from=singlemessage">
+				<img src="https://img1.eol.cn/images/ed/kaoyan/2017/pg590.png" alt="学科评估">
+			</a>
+		</div>
+	</div>-->
+
+	<!-- 第一排4张学校图片 -->
+	<!-- <div class="sline">
+		<div class="sline1">
+		    <a href="http://school.kaoyan.cn/HomePage/index_320.html">
+		        <img src="https://img1.eol.cn/e_busi/images/kaoyan/dlhs180905-290-90.jpg" alt="考研流程">
+		    </a>
+		</div>
+		<div class="sline1">
+		    <a href="http://www.yjszs.sdnu.edu.cn/">
+		        <img src="https://img2.eol.cn/e_busi/images/kaoyan/sdsf180920-290-90.jpg" alt="考研加分">
+		    </a>
+		</div>
+		<div class="sline1">
+		    <a href="http://school.kaoyan.cn/HomePage/index_276.html">
+		        <img src="https://img2.eol.cn/e_busi/images/kaoyan/jsdx180831-290-90.jpg" alt="">
+		    </a>
+		</div>
+		<div class="sline1">
+		    <a href="http://ct.img.eol.cnhttp://trssvn.eol.com.cn/svn/eol_files/old_files/html/1718_MDQxODI1.html?pid=110">
+		        <img src="https://www.eol.cn/e_busi/images/kaoyan/sygy180904-290-90.jpg" alt="研招报告">
+		    </a>
+		</div>
+	</div> -->
+
+	<!-- 第二排7张学校图片 -->
+	<div class="small-ad">
+
+		<div class="small-adul clearfix">
+			<div class="small-adli">
+				<a href="http://web.scau.edu.cn/yjsy/yzb/Article_List.asp?type=1&parentID=1">
+			        <img src="https://img.eol.cn/images/ed/kaoyan/2011/hnny180719-160-60.jpg">
+			    </a>
+
+				<a href="http://school.kaoyan.cn/HomePage/index_228.html">
+			        <img src="https://img.eol.cn/images/ed/kaoyan/2011/szdx180730-160-60.jpg">
+			    </a>
+			</div>
+		</div>
+
+		<div class="small-adul clearfix">
+			<div class="small-adli">
+				<a href="http://school.kaoyan.cn/HomePage/index_494.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/hnny180821-160-60.jpg">
+			    </a>
+				<a href="http://ct.img.eol.cn/html/1737_MDMxNzU3.html?pid=109">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/dlgy180822-160-60.jpg">
+			    </a>
+			</div>
+		</div>
+
+		<div class="small-adul clearfix">
+			<div class="small-adli">
+				<a href="http://school.kaoyan.cn/HomePage/index_457.html">
+			        <img src="https://img.eol.cn/images/ed/kaoyan/2011/ahyk180713-160-60.jpg">
+			    </a>
+				<a href="http://school.kaoyan.cn/HomePage/index_161.html">
+			        <img src="https://img.eol.cn/images/ed/kaoyan/2011/ahsf180713-160-60.jpg">
+			    </a>
+			</div>
+		</div>
+
+		<div class="small-adul clearfix">
+			<div class="small-adli">
+				<a href="http://school.kaoyan.cn/HomePage/index_1046.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/cdxx180831-160-60.jpg">
+			    </a>
+				<a href="http://school.kaoyan.cn/HomePage/index_327.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/dljt180921-160-60.jpg">
+			    </a>
+			</div>
+		</div>
+
+		<div class="small-adul clearfix">
+			<div class="small-adli">
+				<a href="http://school.kaoyan.cn/HomePage/index_138.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/hfgy180904-160-60.jpg">
+			    </a>
+				<a href="http://school.kaoyan.cn/HomePage/index_455.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/ahcj180904-160-60.jpg">
+			    </a>
+			</div>
+		</div>
+
+		<div class="small-adul clearfix">
+			<div class="small-adli">
+				<a href="http://school.kaoyan.cn/HomePage/index_430.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/hbkj180921-160-60.jpg">
+			    </a>
+				<a href="http://school.kaoyan.cn/HomePage/index_25.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/zzdx180904-160-60.jpg">
+			    </a>
+			</div>
+		</div>
+
+		<div class="small-adul clearfix">
+			<div class="small-adli">
+				<a href="http://school.kaoyan.cn/HomePage/index_320.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/dlhs180904-160-60.jpg">
+			    </a>
+				<a href="https://school.kaoyan.cn/HomePage/index_1049.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/cbyxy180905-160-60.jpg">
+			    </a>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- 第三排7张学校图片 -->
+	<div class="small-ad">
+
+		<div class="small-adul clearfix">
+			<div class="small-adli">
+				<a href="http://school.kaoyan.cn/HomePage/index_1379.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/cqsx180906-160-60.jpg">
+			    </a>
+				<a href="http://school.kaoyan.cn/HomePage/index_340.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/dlyk180905-160-60.jpg">
+			    </a>
+			</div>
+		</div>
+
+		<div class="small-adul clearfix">
+			<div class="small-adli">
+				<a href="http://school.kaoyan.cn/HomePage/index_148.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/lnsf180905-160-60.jpg">
+			    </a>
+				<a href="https://gs.bjtu.edu.cn/cms/zszt/">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/bjjt180911-160-60.jpg">
+			    </a>
+			</div>
+		</div>
+
+		<div class="small-adul clearfix">
+			<div class="small-adli">
+				<a href="http://school.kaoyan.cn/HomePage/index_408.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/shzyy180921-160-60.jpg">
+			    </a>
+				<a href="http://school.kaoyan.cn/HomePage/index_550.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/sxkj180917-160-60.jpg">
+			    </a>				
+			</div>
+		</div>
+
+		<div class="small-adul clearfix">
+			<div class="small-adli">
+				<a href="http://school.kaoyan.cn/HomePage/index_151.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/xbdx180917-160-60.jpg">
+			    </a>
+				<a href="http://school.kaoyan.cn/HomePage/index_234.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/xagy180917-160-60.jpg">
+			    </a>
+			</div>
+		</div>
+
+		<div class="small-adul clearfix">
+			<div class="small-adli">
+				<a href="http://school.kaoyan.cn/HomePage/index_227.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/xalg180917-160-60.jpg">
+			    </a>
+
+			    <a href="http://school.kaoyan.cn/HomePage/index_185.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/fjsf180919-160-60.jpg">
+			    </a>
+			</div>
+		</div>
+
+		<div class="small-adul clearfix">
+			<div class="small-adli">
+			    <a href="http://school.kaoyan.cn/HomePage/index_881.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/jfjkjgc180926-160-60.jpg">
+			    </a>
+			</div>
+		</div>
+
+		<div class="small-adul clearfix">
+			<div class="small-adli">
+				<a href="http://school.kaoyan.cn/HomePage/index_109.html">
+			        <img src="https://img.eol.cn/e_busi/images/kaoyan/hndx180925-160-60.jpg">
+			    </a>
+			</div>
+		</div>
+
+	</div>
+
+</div>

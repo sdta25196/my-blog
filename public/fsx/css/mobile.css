@@ -1,0 +1,28 @@
+#glbbot{
+	display: none;
+}
+.bottom{
+	display: block;
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	font-size: 40px;
+	margin-top: 20px;
+}
+
+.tuijian{
+	display: none;
+}
+.last{
+	display: none;
+}
+#return{
+	width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 26px;
+}
+.include{
+	display: block;
+}

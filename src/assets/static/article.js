@@ -1,5 +1,21 @@
 
 const article = [{
+        hash: "0fbb7b25883e23903ae4ab296da0e8be79d02e2d",
+        fileName: "9a3b417b54e7d13d4958d8ca0e9dfd60b24b4e9b",
+        title: "react-17.0.2-组件化原则",
+        filePath: "/blogs/article/",
+        date: "Wed Jul 20 2022 11:49:05 GMT+0800 (中国标准时间)",
+        description: "## react组件化@@@@@@首先排除一个误区：组件分类曾经被普遍分为：展示组件，容器组件。 国内也提出过智能组件，木偶组件，其实都是一样的东西，换了个名字而已@@@@@@展示组件，容器组件的来源由dan在2015年发布的一篇博客中提出的这两个概念。但是到了2019年，他自己本身也认为这两个概念是错误的，这样划分组件是不对的。主要是因为hooks的出现完全改变了react的生态，也完全改变了react的写法。@@@",
+        outline: ["## react组件化","## 搭积木","## 官方示例解读","## 关注点分离、最小知识原则","## 代码示例","## 补充"],
+      },{
+        hash: "2f49c76643e825cf6b50bce92b30d9cf847f39dd",
+        fileName: "62950158fe12d0535c8f074aac713f2d24ca27b5",
+        title: "react-17.0.2-useEffect",
+        filePath: "/blogs/article/",
+        date: "Sat Jun 25 2022 10:42:26 GMT+0800 (中国标准时间)",
+        description: "## useEffect@@@@@@useState是用来在函数式组件中添加状态，而useEffect是用来处理函数组件中的副作用的。而react希望我们尽量把函数组件写成纯函数。@@@@@@先说纯函数：既：固定的输入，会得到固定的输出。@@@",
+        outline: ["## useEffect","## useEffect返回函数, 依赖项数组","## useEffect的执行流程","## 关于useEffect中调用异步函数问题","## 依赖报警问题与解决方案","### useEffect批处理的bug","### useLayoutEffect","## Race condition"],
+      },{
         hash: "5f9234184afec726134e388efbd3ae0112a1ae16",
         fileName: "6469519068f37ac3e5996b01a296fae81d69ffb5",
         title: "前端博客没有webpack就很奇怪对么",
@@ -7,22 +23,6 @@ const article = [{
         date: "Mon Jun 06 2022 10:34:58 GMT+0800 (中国标准时间)",
         description: "## webpack的基础概念@@@@@@### entry@@@- 打包文件的入口，会以此入口文件开始，把相关联的文件全部打包@@@- 可以设置多个@@@@@@### output@@@- 打包文件的输出路径@@@",
         outline: ["## webpack的基础概念","### entry","### output","### loader ","### plugins","### .npmrc文件,配置项目统一使用源","### webpack 环境搭建","### webpack 启动  ","### weboack 配置文件","##### webpack 配置文件改名,自定义配置文件名","##### entry(入口)、output(出口)","##### mode(打包模式)","##### loader(扩展支持模块)","##### plugin(插件,功能扩展)","##### module(模块)","##### chunk(代码块)","##### bundle","##### bundle与chunk的关系","##### 配置webpack使用的loader的路径","### 多页面打包通用方案","### sourceMap ","## 优化方案","## webpack拆包，拆到多少算合适？","## wabpack hash指纹策略 ","### hash","### chunkhash","### contenthash","## 与其他打包工具的差异性","### Rollup","### vite - rollup - webpack ","## 更多"],
-      },{
-        hash: "912937dd3a134844c695fe758deec52e4de2de80",
-        fileName: "9a3b417b54e7d13d4958d8ca0e9dfd60b24b4e9b",
-        title: "react-17.0.2-组件化原则",
-        filePath: "/blogs/article/",
-        date: "Mon Jun 06 2022 10:26:15 GMT+0800 (中国标准时间)",
-        description: "## react组件化@@@@@@> 这个组件化划分的方式是根据我的经验以及我的知识体系总结出的结论，并非组件化铁律。@@@@@@首先排除一个误区：组件分类曾经被普遍分为：展示组件，容器组件。 国内也提出过智能组件，木偶组件其实是一样的东西，换了个名字而已@@@",
-        outline: ["## react组件化","## 搭积木","## 实现搜索功能组件","## 官方示例解读","## 补充","## 关注点分离"],
-      },{
-        hash: "7457795449e6c4bc02e6e54db59d1620b1c3fc6c",
-        fileName: "62950158fe12d0535c8f074aac713f2d24ca27b5",
-        title: "react-17.0.2-useEffect",
-        filePath: "/blogs/article/",
-        date: "Mon May 16 2022 10:17:41 GMT+0800 (中国标准时间)",
-        description: "## useEffect@@@@@@useState是用来在函数式组件中添加状态，而useEffect是用来处理函数组件中的副作用的。而react希望我们尽量把函数组件写成纯函数。@@@@@@先说纯函数：既：固定的输入，会得到固定的输出。@@@",
-        outline: ["## useEffect","## useEffect返回函数, 依赖项数组","## useEffect的执行流程","## 关于useEffect中调用异步函数问题","## 依赖报警问题与解决方案","### useEffect批处理的bug","### useLayoutEffect","## Race condition"],
       },{
         hash: "5d0cb4e76b4f742c73084980a43139725eb3d39f",
         fileName: "1ed9cee2e0f9de2ba55fc11dac16ffcf68a46cb4",

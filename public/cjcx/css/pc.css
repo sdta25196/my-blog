@@ -1,0 +1,227 @@
+@charset "utf-8";
+html,body,h1,h2,h3,h4,h5,h6,hr,p,iframe,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td,fieldset{margin:0; padding:0; list-style:none; text-decoration:none;}
+i,em{font-style:normal;}
+input, select{vertical-align:middle; font-family:"宋体";}
+a{color:#333; text-decoration:none;}
+a:hover{text-decoration:none; }
+a img{border:0 none;}
+a, input, textarea{outline:none;}
+input:focus, select:focus, textarea:focus{color:#666 !important;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit}
+.tl li{white-space:nowrap; overflow:hidden;}
+.fl{float:left;}
+.fr{float:right;}
+.clear{clear:both;}
+.clearfix:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.dian{white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.mtf_30{margin-left: 30px;}
+.mt_10{margin-top: 10px;}
+
+html{-webkit-text-size-adjust: none;-webkit-text-size-adjust: 100%;}
+body{font-family:"microsoft yahei"; color:#333;}
+
+.fixbox{
+	width: 1200px;
+	margin: 0 auto;
+}
+.adbox1{
+	padding: 15px 0 25px 0;
+}
+.adbox1 img{
+	width: 590px;
+	height: 60px;
+	display: block;
+}
+.banner img{
+	display: block;
+}
+.adli2+.adli2{
+	margin-left: 16.8px;
+}
+.adbox2{
+	margin-top: 10px;
+}
+.adul{
+	margin-top: 15px;
+}
+.adbox2 img{
+	width: 157px;
+	height: 60px;
+	display: block;
+}
+.nav{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 18px 0 18px 25px;
+	border: 1px solid #e5e5e5;
+	margin-top: 40px;
+}
+.nav-word{
+	font-size: 18px;
+	color: #333333;
+	margin-right: 30px;
+	line-height: 60px;
+}
+.city-li{
+	font-size: 16px;
+	line-height: 20px;
+	padding-right: 15px;
+}
+.city-li+.city-li{
+	padding-left: 15px;
+	border-left: 1px solid #333333;
+}
+.city-li span{
+	color: #08a6a8;
+}
+.city-li a{
+	margin-left: 8px;
+}
+.city-ul+.city-ul{
+	margin-top: 20px;
+}
+.diqubox{
+	margin-top: 55px;
+}
+.qk1{
+	width: 145px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+	background: #08a6a8;
+	border-left: 1px solid #028789;
+	box-sizing: border-box;
+}
+.qk2{
+	width: 320px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+	background: #08a6a8;
+	border-left: 1px solid #028789;
+	box-sizing: border-box;
+}
+.qk3{
+	width: 290px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+	background: #08a6a8;
+	border-left: 1px solid #028789;
+	box-sizing: border-box;
+}
+.qk4{
+	width: 445px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+	background: #08a6a8;
+	border-left: 1px solid #028789;
+	border-right: 1px solid #028789;
+	box-sizing: border-box;
+}
+.dq>.qk1{
+	color: #434343;
+	background: #fff;
+	border-bottom: 1px solid #028789;
+}
+.dq>.qk2{
+	color: #434343;
+	background: #fff;
+	border-bottom: 1px solid #028789;
+}
+.dq>.qk3{
+	color: #434343;
+	background: #fff;
+	border-bottom: 1px solid #028789;
+}
+.dq>.qk4{
+	color: #434343;
+	background: #fff;
+	border-bottom: 1px solid #028789;
+}
+.diqu-dq a{
+	color: #434343;
+}
+.kybox-icon{
+	width: 1010px;
+	margin: 60px auto 0;
+}
+.icon-item{
+	float: left;
+	text-align: center;
+}
+.icon-item img {
+    display: block;
+}
+.icon-item span {
+    display: block;
+    font-size: 20px;
+    color: #424242;
+    margin-top: 12px;
+}
+.icon-item+.icon-item {
+    margin-left: 110px;
+}
+.kylist-box {
+    width: 1010px;
+    margin: 50px auto 0;
+    border: 1px solid #e6e7e7;
+}
+.kylist-li {
+    float: left;
+    width: 150px;
+}
+.sicon {
+    float: left;
+    width: 32px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.sicon img {
+    vertical-align: middle;
+}
+.sword {
+    float: left;
+    font-size: 20px;
+    color: #424242;
+    line-height: 40px;
+    margin-left: 15px;
+}
+.kylist-ul {
+    padding: 10px 55px;
+}
+.kylist-li+.kylist-li {
+    margin-left: 95px;
+}
+.kylist-ul+.kylist-ul {
+    border-top: 1px solid #e6e7e7;
+}
+.copyright #glbbot{
+	margin: 0 auto;
+	border: none;
+	padding: 50px 0;
+	color: #fff;
+	line-height: 30px;
+}
+.copyright #glbbot a{
+	color: #fff;
+}
+.copyright #glbbot{
+	margin: 0 auto;
+	border: none;
+	padding: 20px 0;
+	color: #333;
+}
+.copyright #glbbot a{
+	color: #333;
+}

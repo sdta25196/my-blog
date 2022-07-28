@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>2019年考研_成绩查询|查分入口|国家线|复试调剂|复习备考—中国教育在线</title>
+	<meta name="keywords"
+		content="全国硕士研究生考试初试成绩即将公布，届时考生可通过热线电话、网络等途径查询考研国家线，政治英语数学，历年34所自划线高校分数线等分数线。中国教育在线将第一时间公布考研成绩查询方式。" />
+	<meta name="description" content="考研,考研查分,考研成绩,2019考研成绩,2019考研成绩查询,2019考研复试分数线,考研英语分数线,考研数学分数线,考研政治分数线,34所自划线高校分数线" />
+	<meta name="author" content="">
+	<base target="_blank" />
+	<link rel="stylesheet" type="text/css" href="http://www.eol.cn/html/ky/pc.css" />
+	<script type="text/javascript">
+		var ua = window.navigator.userAgent;
+		if (/Mobile|iP(hone|ad)|Android|BlackBerry|IEMobile/.test(ua)) {
+			window.location.href = 'http://chafen.kaoyan.eol.cn/index_m.shtml';
+		} else {
+
+		}
+	</script>
+	<script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1281142630&web_id=1281142630"></script>
+	<style>
+		a[title=站长统计] {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="fixbox">
+
+		<!--#include virtual="/html/ky/ad/chafen1.shtml"-->
+
+		<div class="banner">
+			<img src="https://img2.eol.cn/images/ed/kaoyan/2017/banner.png" />
+		</div>
+
+		<!--#include virtual="/html/ky/2012cj/in.shtml"-->
+
+		<div class="nav clearfix">
+			<div class="nav-word fl">快速导航：</div>
+			<div class="nav-city fl">
+				<div class="city-ul clearfix">
+					<div class="city-li fl">
+						<span>直辖</span>
+						<a href="#beijing" target="_self">北京</a>
+						<a href="#shanghai" target="_self">上海</a>
+						<a href="#tianjin" target="_self">天津</a>
+						<a href="#chongqing" target="_self">重庆</a>
+					</div>
+					<div class="city-li fl">
+						<span>华北</span>
+						<a href="#hebei" target="_self">河北</a>
+						<a href="#sanxi" target="_self">山西</a>
+						<a href="#neimenggu" target="_self">内蒙古</a>
+					</div>
+					<div class="city-li fl" style="width: 336px;box-sizing: border-box;">
+						<span>华东</span>
+						<a href="#shandong" target="_self">山东</a>
+						<a href="#jiangsu" target="_self">江苏</a>
+						<a href="#zhejiang" target="_self">浙江</a>
+						<a href="#jiangxi" target="_self">江西</a>
+						<a href="#fujian" target="_self">福建</a>
+						<a href="#anhui" target="_self">安徽</a>
+					</div>
+					<div class="city-li fl">
+						<span>华中</span>
+						<a href="#henan" target="_self">河南</a>
+						<a href="#hunan" target="_self">湖南</a>
+						<a href="#hebei" target="_self">河北</a>
+					</div>
+				</div>
+				<div class="city-ul clearfix">
+					<div class="city-li fl">
+						<span>云南</span>
+						<a href="#sichuan" target="_self">四川</a>
+						<a href="#yunnan" target="_self">云南</a>
+						<a href="#guizhou" target="_self">贵州</a>
+						<a href="#xizang" target="_self">西藏</a>
+					</div>
+					<div class="city-li fl">
+						<span>东北</span>
+						<a href="#liaoning" target="_self">辽宁</a>
+						<a href="#jilin" target="_self">吉林</a>
+						<a href="#heilongjiang" target="_self">黑龙江</a>
+					</div>
+					<div class="city-li fl" style="width: 336px;box-sizing: border-box;">
+						<span>西北</span>
+						<a href="#shanxi" target="_self">陕西</a>
+						<a href="#gansu" target="_self">甘肃</a>
+						<a href="#ningxia" target="_self">宁夏</a>
+						<a href="#qinghai" target="_self">青海</a>
+						<a href="#xinjiang" target="_self">新疆</a>
+					</div>
+					<div class="city-li fl">
+						<span>华南</span>
+						<a href="#hainan" target="_self">海南</a>
+						<a href="#guangdong" target="_self">广东</a>
+						<a href="#guangxi" target="_self">广西</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="diqubox">
+			<div class="diqu-head clearfix">
+				<div class="qk1 fl">地区</div>
+				<div class="qk2 fl">成绩查询时间</div>
+				<div class="qk3 fl">成绩查询入口</div>
+				<div class="qk4 fl">成绩查询方式</div>
+			</div>
+			<div class="diqu-dq">
+				<div class="dq clearfix" id="henan">
+					<div class="qk1 fl">河南</div>
+					<div class="qk2 fl">2月3日后</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/henan/he_nan/201802/t20180202_1583899.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网、高校研究生院</a></div>
+				</div>
+				<div class="dq clearfix" id="sichuan">
+					<div class="qk1 fl">四川</div>
+					<div class="qk2 fl">2月4日起</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/sichuan/si_chuan/201802/t20180202_1583906.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a>、高校研究生院</a></div>
+				</div>
+				<div class="dq clearfix" id="guangxi">
+					<div class="qk1 fl">广西</div>
+					<div class="qk2 fl">2月3日起</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/guangxi/guang_xi/201802/t20180202_1583896.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网、高校研究生院</a></div>
+				</div>
+				<div class="dq clearfix" id="shandong">
+					<div class="qk1 fl">山东</div>
+					<div class="qk2 fl">2月3日起</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/shandong/shan_dong/201802/t20180202_1583889.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网、高校研究生院</a></div>
+				</div>
+				<div class="dq clearfix" id="heilongjiang">
+					<div class="qk1 fl">黑龙江</div>
+					<div class="qk2 fl">2月3日</div>
+					<div class="qk3 fl">
+						<a
+							href="http://kaoyan.eol.cn/ge_di_kao_yan/heilongjiang/hei_long_jiang/201802/t20180202_1583887.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网、高校研究生院</a></div>
+				</div>
+				<div class="dq clearfix" id="jilin">
+					<div class="qk1 fl">吉林</div>
+					<div class="qk2 fl">2月3日起</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/jilin/ji_lin/201802/t20180202_1583912.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网、高校研究生院</a></div>
+				</div>
+				<div class="dq clearfix" id="jiangsu">
+					<div class="qk1 fl">江苏</div>
+					<div class="qk2 fl">2月3日15时</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/jiangsu/jiang_su/201802/t20180202_1583885.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网、高校研究生院</a></div>
+				</div>
+				<div class="dq clearfix" id="guangdong">
+					<div class="qk1 fl">广东</div>
+					<div class="qk2 fl">2月3日后</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/guangdong/guang_dong/201802/t20180202_1583894.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网、高校研究生院</a></div>
+				</div>
+				<div class="dq clearfix" id="ningxia">
+					<div class="qk1 fl">宁夏</div>
+					<div class="qk2 fl">2月3日后</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/ningxia/ning_xia/201802/t20180202_1583910.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网、高校研究生院</a></div>
+				</div>
+				<div class="dq clearfix" id="jiangxi">
+					<div class="qk1 fl">江西</div>
+					<div class="qk2 fl">2月3日</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/jiangxi/jiang_xi/201802/t20180202_1583911.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网、高校研究生院</a></div>
+				</div>
+				<div class="dq clearfix" id="zhejiang">
+					<div class="qk1 fl">浙江</div>
+					<div class="qk2 fl">2月3日</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/zhejiang/zhe_jiang/201802/t20180202_1583903.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="hainan">
+					<div class="qk1 fl">海南</div>
+					<div class="qk2 fl">2月4日</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/hainan/hai_nan/201802/t20180202_1583905.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="hubei">
+					<div class="qk1 fl">湖北</div>
+					<div class="qk2 fl">2月3日起</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/hubei/hu_bei/201802/t20180202_1583890.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="hebei">
+					<div class="qk1 fl">河北</div>
+					<div class="qk2 fl">2月3日起</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/hebei/he_bei/201802/t20180202_1583881.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="yunnan">
+					<div class="qk1 fl">云南</div>
+					<div class="qk2 fl">2月3日起</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/yunnan/yun_nan/201802/t20180202_1583882.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="chongqing">
+					<div class="qk1 fl">重庆</div>
+					<div class="qk2 fl">2月3日</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/chongqing/chong_qing/201802/t20180202_1583900.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="hunan">
+					<div class="qk1 fl">湖南</div>
+					<div class="qk2 fl">2月4日10点</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/hunan/hu_nan/201802/t20180202_1583913.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="qinghai">
+					<div class="qk1 fl">青海</div>
+					<div class="qk2 fl">2月5日17时</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/qinghai/qing_hai/201802/t20180202_1583915.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="sanxi">
+					<div class="qk1 fl">山西</div>
+					<div class="qk2 fl">2月3日</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/chongqing/chong_qing/201802/t20180202_1583900.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="tianjin">
+					<div class="qk1 fl">天津</div>
+					<div class="qk2 fl">2月4日10点</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/tianjin/tian_jin/201802/t20180202_1583897.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="shanghai">
+					<div class="qk1 fl">上海</div>
+					<div class="qk2 fl">2月3日起</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/shanghai/shang_hai/201802/t20180202_1583886.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="shanxi">
+					<div class="qk1 fl">陕西</div>
+					<div class="qk2 fl">2月3日起</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/shaanxi/shaan_xi/201802/t20180202_1583888.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="fujian">
+					<div class="qk1 fl">福建</div>
+					<div class="qk2 fl">2月3日起</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/fujian/fu_jian/201802/t20180202_1583892.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="gansu">
+					<div class="qk1 fl">甘肃</div>
+					<div class="qk2 fl">2月3日起</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/gansu/gan_su/201802/t20180202_1583902.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="beijing">
+					<div class="qk1 fl">北京</div>
+					<div class="qk2 fl">2月3日起</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/beijing/bei_jing/201802/t20180202_1583893.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="neimenggu">
+					<div class="qk1 fl">内蒙古</div>
+					<div class="qk2 fl">2月3日</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/neimenggu/nei_meng_gu/201802/t20180202_1583898.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="anhui">
+					<div class="qk1 fl">安徽</div>
+					<div class="qk2 fl">2月4日</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/anhui/an_hui/201802/t20180202_1583901.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+
+				<div class="dq clearfix" id="liaoning">
+					<div class="qk1 fl">辽宁</div>
+					<div class="qk2 fl">2月4日</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/liaoning/liao_ning/201802/t20180202_1583907.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="xinjiang">
+					<div class="qk1 fl">新疆</div>
+					<div class="qk2 fl">2月3日起</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/xinjiang/xin_jiang/201802/t20180202_1583909.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="guizhou">
+					<div class="qk1 fl">贵州</div>
+					<div class="qk2 fl">2月3日起</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/guizhou/gui_zhou/201802/t20180202_1583908.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+				<div class="dq clearfix" id="xizang">
+					<div class="qk1 fl">西藏</div>
+					<div class="qk2 fl">2月3日起</div>
+					<div class="qk3 fl">
+						<a href="http://kaoyan.eol.cn/ge_di_kao_yan/xizang/xi_zang/201802/t20180202_1583904.shtml">查分入口</a>
+					</div>
+					<div class="qk4 fl">中国研究生招生信息网</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="kybox">
+			<div class="kybox-icon clearfix">
+				<div class="icon-item">
+					<a href="https://school.kaoyan.cn/web/school/school_search">
+						<img src="https://img1.eol.cn/images/ed/kaoyan/2017/icon1.png" />
+						<span>搜学校</span>
+					</a>
+				</div>
+				<div class="icon-item">
+					<a href="https://school.kaoyan.cn/web/special/pcfindzy">
+						<img src="https://img2.eol.cn/images/ed/kaoyan/2017/icon2.png" />
+						<span>搜专业</span>
+					</a>
+				</div>
+				<div class="icon-item">
+					<a href="https://school.kaoyan.cn/web/tutor/pctutorlist">
+						<img src="https://img1.eol.cn/images/ed/kaoyan/2017//icon3.png" />
+						<span>找导师</span>
+					</a>
+				</div>
+				<div class="icon-item">
+					<a href="http://zhenti.kaoyan.eol.cn/">
+						<img src="https://img2.eol.cn/images/ed/kaoyan/2017/icon4.png" />
+						<span>考研真题</span>
+					</a>
+				</div>
+				<div class="icon-item">
+					<a href="http://www.eol.cn/html/ky/yanzhao/">
+						<img src="https://img3.eol.cn/images/ed/kaoyan/2017/icon4.png" />
+						<span>考研简章</span>
+					</a>
+				</div>
+			</div>
+			<div class="kylist-box">
+				<div class="kylist-ul clearfix">
+					<div class="kylist-li clearfix">
+						<div class="sicon"><img src="https://img2.eol.cn/images/ed/kaoyan/2017/si1.png" /></div>
+						<div class="sword">
+							<a href="http://school.kaoyan.cn/assess_result.php">学科评估</a>
+						</div>
+					</div>
+					<div class="kylist-li clearfix">
+						<div class="sicon"><img src="https://img1.eol.cn/images/ed/kaoyan/2017/si2.png" /></div>
+						<div class="sword">
+							<a href="http://www.eol.cn/html/ky/kydjt/index.shtml">考研讲堂</a>
+						</div>
+					</div>
+					<div class="kylist-li clearfix">
+						<div class="sicon"><img src="https://img1.eol.cn/images/ed/kaoyan/2017/si3.png" /></div>
+						<div class="sword">
+							<a href="http://www.eol.cn/html/ky/kylc/pc.shtml">考研流程</a>
+						</div>
+					</div>
+					<div class="kylist-li clearfix">
+						<div class="sicon"><img src="https://img1.eol.cn/images/ed/kaoyan/2017/si4.png" /></div>
+						<div class="sword">
+							<a href="http://www.eol.cn/html/ky/kybk/index.html">考研百科</a>
+						</div>
+					</div>
+				</div>
+				<div class="kylist-ul clearfix">
+					<div class="kylist-li clearfix">
+						<div class="sicon"><img src="https://img1.eol.cn/images/ed/kaoyan/2017/si5.png" /></div>
+						<div class="sword">
+							<a href="http://kaoyan.eol.cn/html/ky/09blbph/">报录比</a>
+						</div>
+					</div>
+
+					<div class="kylist-li clearfix">
+						<div class="sicon"><img src="https://img1.eol.cn/images/ed/kaoyan/2017/si6.png" /></div>
+						<div class="sword">
+							<a href="http://www.eol.cn/html/ky/2016qlc/index.shtml">考研月历</a>
+						</div>
+					</div>
+
+					<div class="kylist-li clearfix">
+						<div class="sicon"><img src="https://img1.eol.cn/images/ed/kaoyan/2017/si7.png" /></div>
+						<div class="sword">
+							<a href="http://www.eol.cn/html/ky/fsx/index.shtml">分数线</a>
+						</div>
+					</div>
+					<div class="kylist-li clearfix">
+						<div class="sicon"><img src="https://img1.eol.cn/images/ed/kaoyan/2017/si8.png" /></div>
+						<div class="sword">
+							<a href="http://kaoyan.eol.cn/html/ky/zyml/">专业目录</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="copyright"
+		style="width: 100%;background-color: #fff;text-align: center;border-top: 1px solid #333;margin-top: 40px;">
+		<!--<div id="glbbot">
+		      <a href="/html/cer.net/jj.htm">eol.cn简介</a>  | <a href="/html/cer.net/lx.htm">联系方式</a> | <a href="/html/cer.net/sm.htm">网站声明</a>   | <a href="/html/cer.net/zhaopinxinxi.htm">招聘信息</a> | <a href="http://www.miibeian.gov.cn/">京ICP备12045350号-1</a> | <a href="http://img.eol.cn/images/indexnew/www1024.jpg">文网文[2008]228号</a> |  京公网安备110108902063号 <br>
+		      版权所有 <a href="http://www.cernet.com">赛尔网络有限公司
+		  CERNET Corporation</a><br>
+		      Mail to: <a href="mailto:webmaster@cernet.com">webmaster@cernet.com</a>
+		  </div>-->
+
+		<!--#include virtual="/include/ed/page/2011/glb_bot1101.shtml"-->
+	</div>
+	<!--#include virtual="/include/logs/kaoyan_tongji.shtml"-->
+</body>
+
+</html>

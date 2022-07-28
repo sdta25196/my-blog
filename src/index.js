@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Switch } from "react-router-dom"
 import { Loading } from './components/common';
 import { routes, RouteWithSubRoutes } from './router'
+import RouterListen from './RouterListen';
 
 if (process.env.NODE_ENV === 'production') {
   const noop = () => undefined;
@@ -20,9 +21,11 @@ ReactDOM.render(
   <React.StrictMode>
     <Suspense fallback={<Loading />}>
       <Router>
-        <Switch>
-          {routes.map((route, i) => <RouteWithSubRoutes key={i} {...route} />)}
-        </Switch>
+        <RouterListen>
+          <Switch>
+            {routes.map((route, i) => <RouteWithSubRoutes key={i} {...route} />)}
+          </Switch>
+        </RouterListen>
       </Router>
     </Suspense>
   </React.StrictMode>,

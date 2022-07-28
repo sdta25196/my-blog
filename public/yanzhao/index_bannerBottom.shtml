@@ -1,0 +1,49 @@
+
+  <style lang="">
+      /* banner底部 开始 */
+      .big_icon div,.small_bottom div{
+        margin-top: 20px;
+        width: 100%;
+        padding: 0px 20px;
+        box-sizing: border-box;
+      }
+      .big_icon div img{
+        width: 48%;
+        height: 6rem;
+      }
+      .small_bottom div img{
+        width: 30%;
+        height: 4rem;
+      }
+      .small_bottom .mod{
+        margin: 0 2rem;
+      }
+      /* banner底部 结束 */
+    </style>
+
+
+
+  <!-- banner底部 -->
+  <div class="banner_bottom">
+    <!--招生简章专题 广告位 大图标 -->
+			<div class="big_icon">
+				<div>
+				<!-- 	<a href="https://www.eol.cn/html/ky/ysmdm/index.shtml"><img src="https://www.eol.cn/e_ky/images/index/md-108.png " alt="">
+          </a> 
+          <a href="http://yanzhao.eol.cn/ "><img src="https://www.eol.cn/e_ky/images/index/gyhd-108.png " alt="" style="float: right">
+          </a>	 -->
+
+				</div>
+				
+			</div>
+      <!--招生简章专题 广告位 小图标 -->
+			<div class="small_bottom">
+				<div>
+				<!-- 	<a href="https://daoshi.eol.cn/ "><img src="https://www.eol.cn/e_ky/images/index/dscxxt.png " alt=""></a> 
+					<a href="http://www.eol.cn/html/ky/2019report/index.html"><img src="http://img.eol.cn/images/ed/kaoyan/2017bg223-80.jpg" alt="" class="mod"></a> 
+					<a href="http://www.eol.cn/html/ky/zyml/index.shtml"><img src="http://img.eol.cn/images/ed/kaoyan/zsml230.png " alt="" style="float: right"></a> -->
+           
+				</div>
+				
+			</div>
+		</div>
