@@ -480,4 +480,97 @@ function DataDisplayer(props) {
 
 竞争条件：最终的结果取决于程序的精准时序。
 
-解决方案，通常为忽略请求的结果和取消请求的方式。例如上述示例代码中注释的代码就是材取的忽略结果的方式。
+解决方案，通常为忽略请求的结果和取消请求的方式。例如上述示例代码中注释的代码就是采取的忽略结果的方式。
+
+解决方案二：利用`Suspense`来立刻渲染的特性来解决竞态条件，具体可查阅文章：`react-17.0.2-Suspense`
+
+## 重点
+
+**useEffect并非react中需要经常使用的hook, 我们应该尽量减少对useEffect的使用，在无需使用useEffect的时候就不要使用**
+
+示例：
+
+**使用useEffect**
+
+```js
+  function SchoolPage(props) {
+    const { history } = props
+    const [activeTab, setActiveTab] = useState(0)
+    // 设置选中的tab
+    useEffect(() => {
+      switch (history.location.pathname.split('/')[3]) {
+        case "special":
+          setActiveTab(1)
+          break
+        case "future":
+          setActiveTab(2)
+          break
+        case "news":
+          setActiveTab(3)
+          break
+        case 'colleges':
+          setActiveTab(4)
+          break
+        default:
+          setActiveTab(0)
+          break
+      }
+    }, [history.location.pathname])
+  
+    return (
+      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 0 ? styles.active : ""\}\`}
+        onClick={() => history.replace(\`/school/\$\{schoolCode\}/\`)}>
+        学校概况
+      </span>
+      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 1 ? styles.active : ""\}\`}
+        onClick={() => history.replace(\`/school/\$\{schoolCode\}/special\`)}>
+        开设专业
+      </span>
+      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 2 ? styles.active : ""\}\`}
+        onClick={() => history.replace(\`/school/\$\{schoolCode\}/future\`)}>
+        升学方向
+      </span>
+      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 3 ? styles.active : ""\}\`}
+        onClick={() => history.replace(\`/school/\$\{schoolCode\}/news\`)}>
+        招生快讯
+      </span>
+      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 4 ? styles.active : ""\}\`}
+        onClick={() => history.replace(\`/school/\$\{schoolCode\}/colleges\`)}>
+        院校资讯
+      </span>
+    )
+  }
+```
+
+**不使用useEffect**
+
+```js
+  function SchoolPage(props) {
+    const { history } = props
+    // 设置选中的tab
+    const activeTab =history.location.pathname.split('/')[3]
+  
+    return (
+      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 'gaikuang' ? styles.active : ""\}\`}
+        onClick={() => history.replace(\`/school/\$\{schoolCode\}/\`)}>
+        学校概况
+      </span>
+      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 'zhuanye' ? styles.active : ""\}\`}
+        onClick={() => history.replace(\`/school/\$\{schoolCode\}/special\`)}>
+        开设专业
+      </span>
+      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 'fangxiang' ? styles.active : ""\}\`}
+        onClick={() => history.replace(\`/school/\$\{schoolCode\}/future\`)}>
+        升学方向
+      </span>
+      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 'zhaosheng' ? styles.active : ""\}\`}
+        onClick={() => history.replace(\`/school/\$\{schoolCode\}/news\`)}>
+        招生快讯
+      </span>
+      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 'zixun' ? styles.active : ""\}\`}
+        onClick={() => history.replace(\`/school/\$\{schoolCode\}/colleges\`)}>
+        院校资讯
+      </span>
+    )
+  }
+```

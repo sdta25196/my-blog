@@ -1,5 +1,13 @@
 
 const know = [{
+        hash: "af47f46d71a5b2896f7df30c58cee977b8d780a8",
+        fileName: "8735cd5d6e47b691a72b2d0e73f7556064a72cd0",
+        title: "运行时监控系统 - fundebug",
+        filePath: "/blogs/know/",
+        date: "Wed Aug 10 2022 09:37:12 GMT+0800 (中国标准时间)",
+        description: "## fundebug@@@@@@运行时监控系统，Fundebug 可以通过邮件或者第三方工具立即给开发者发送报警，这样能够帮助开发者及时发现并且修复应用 BUG，从而提升用户体验。@@@@@@**当前版本号2.8.0**@@@",
+        outline: ["## fundebug","## 支持程度","## 安装","### react","### 小程序","## 常用属性","## Script Error","## status 0","## 一套基础配置","## 更多"],
+      },{
         hash: "31926ffce9941b1e7d9274a4ee902d1842b04a60",
         fileName: "218910252930db0d76af7079eb6064e99079c904",
         title: "抓包和代理神器 - whistle",
@@ -31,14 +39,6 @@ const know = [{
         date: "Fri Apr 08 2022 11:21:09 GMT+0800 (中国标准时间)",
         description: "## 简介@@@@@@  pm2 node的生产环境管理器（管理开发环境也行啊），用来守护node启动的服务@@@  pm2 有两种模式 fork（创建一个进程） 和 class（集群模式，IO的多路复用）@@@@@@**当前版本号5.1.2**@@@",
         outline: ["## 简介","## 安装","## 基础命令","## pm2 配置文件","### 配置项","## pm2 + nginx","## pm2.io：监控和诊断 Web 界面","## 更多"],
-      },{
-        hash: "af47f46d71a5b2896f7df30c58cee977b8d780a8",
-        fileName: "8735cd5d6e47b691a72b2d0e73f7556064a72cd0",
-        title: "运行时监控系统 - fundebug",
-        filePath: "/blogs/know/",
-        date: "Fri Apr 08 2022 11:05:27 GMT+0800 (中国标准时间)",
-        description: "## fundebug@@@@@@运行时监控系统，Fundebug 可以通过邮件或者第三方工具立即给开发者发送报警，这样能够帮助开发者及时发现并且修复应用 BUG，从而提升用户体验。@@@@@@**当前版本号2.8.0**@@@",
-        outline: ["## fundebug","## 支持程度","## 安装","### react","### 小程序","## 常用属性","## Script Error","## status 0","## 一套基础配置","## 更多"],
       },{
         hash: "5b8090bf387dc8df216a1f8998a44c04aafb434c",
         fileName: "2882213d7fdb6293f5853a38ac6ae8d1a303b9f4",
