@@ -89,7 +89,7 @@ react推荐优先使用受控组建
           <Search />
           A组件中有一个输入框
           <input>
-        <div>
+        </div>
       )
     }
     function B(){
@@ -105,7 +105,7 @@ react推荐优先使用受控组建
             <li>4</li>
           </ul>
           <Search />
-        <div>
+        </div>
       )
     }
     // 公共的Search组件
@@ -113,7 +113,7 @@ react推荐优先使用受控组建
       return (
         <div>
           这个是搜索组件
-        <div>
+        </div>
       )
     }
   ```

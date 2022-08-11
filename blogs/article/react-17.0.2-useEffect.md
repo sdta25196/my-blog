@@ -518,26 +518,28 @@ function DataDisplayer(props) {
     }, [history.location.pathname])
   
     return (
-      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 0 ? styles.active : ""\}\`}
-        onClick={() => history.replace(\`/school/\$\{schoolCode\}/\`)}>
-        学校概况
-      </span>
-      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 1 ? styles.active : ""\}\`}
-        onClick={() => history.replace(\`/school/\$\{schoolCode\}/special\`)}>
-        开设专业
-      </span>
-      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 2 ? styles.active : ""\}\`}
-        onClick={() => history.replace(\`/school/\$\{schoolCode\}/future\`)}>
-        升学方向
-      </span>
-      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 3 ? styles.active : ""\}\`}
-        onClick={() => history.replace(\`/school/\$\{schoolCode\}/news\`)}>
-        招生快讯
-      </span>
-      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 4 ? styles.active : ""\}\`}
-        onClick={() => history.replace(\`/school/\$\{schoolCode\}/colleges\`)}>
-        院校资讯
-      </span>
+      <div>
+        <span className={\`\$\{styles.tabBar\} \$\{activeTab === 0 ? styles.active : ""\}\`}
+          onClick={() => history.replace(\`/school/\$\{schoolCode\}/\`)}>
+          学校概况
+        </span>
+        <span className={\`\$\{styles.tabBar\} \$\{activeTab === 1 ? styles.active : ""\}\`}
+          onClick={() => history.replace(\`/school/\$\{schoolCode\}/special\`)}>
+          开设专业
+        </span>
+        <span className={\`\$\{styles.tabBar\} \$\{activeTab === 2 ? styles.active : ""\}\`}
+          onClick={() => history.replace(\`/school/\$\{schoolCode\}/future\`)}>
+          升学方向
+        </span>
+        <span className={\`\$\{styles.tabBar\} \$\{activeTab === 3 ? styles.active : ""\}\`}
+          onClick={() => history.replace(\`/school/\$\{schoolCode\}/news\`)}>
+          招生快讯
+        </span>
+        <span className={\`\$\{styles.tabBar\} \$\{activeTab === 4 ? styles.active : ""\}\`}
+          onClick={() => history.replace(\`/school/\$\{schoolCode\}/colleges\`)}>
+          院校资讯
+        </span>
+      </div>
     )
   }
 ```
@@ -551,26 +553,28 @@ function DataDisplayer(props) {
     const activeTab =history.location.pathname.split('/')[3]
   
     return (
-      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 'gaikuang' ? styles.active : ""\}\`}
-        onClick={() => history.replace(\`/school/\$\{schoolCode\}/\`)}>
-        学校概况
-      </span>
-      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 'zhuanye' ? styles.active : ""\}\`}
-        onClick={() => history.replace(\`/school/\$\{schoolCode\}/special\`)}>
-        开设专业
-      </span>
-      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 'fangxiang' ? styles.active : ""\}\`}
-        onClick={() => history.replace(\`/school/\$\{schoolCode\}/future\`)}>
-        升学方向
-      </span>
-      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 'zhaosheng' ? styles.active : ""\}\`}
-        onClick={() => history.replace(\`/school/\$\{schoolCode\}/news\`)}>
-        招生快讯
-      </span>
-      <span className={\`\$\{styles.tabBar\} \$\{activeTab === 'zixun' ? styles.active : ""\}\`}
-        onClick={() => history.replace(\`/school/\$\{schoolCode\}/colleges\`)}>
-        院校资讯
-      </span>
+      <div>
+        <span className={\`\$\{styles.tabBar\} \$\{activeTab === 'gaikuang' ? styles.active : ""\}\`}
+          onClick={() => history.replace(\`/school/\$\{schoolCode\}/\`)}>
+          学校概况
+        </span>
+        <span className={\`\$\{styles.tabBar\} \$\{activeTab === 'zhuanye' ? styles.active : ""\}\`}
+          onClick={() => history.replace(\`/school/\$\{schoolCode\}/special\`)}>
+          开设专业
+        </span>
+        <span className={\`\$\{styles.tabBar\} \$\{activeTab === 'fangxiang' ? styles.active : ""\}\`}
+          onClick={() => history.replace(\`/school/\$\{schoolCode\}/future\`)}>
+          升学方向
+        </span>
+        <span className={\`\$\{styles.tabBar\} \$\{activeTab === 'zhaosheng' ? styles.active : ""\}\`}
+          onClick={() => history.replace(\`/school/\$\{schoolCode\}/news\`)}>
+          招生快讯
+        </span>
+        <span className={\`\$\{styles.tabBar\} \$\{activeTab === 'zixun' ? styles.active : ""\}\`}
+          onClick={() => history.replace(\`/school/\$\{schoolCode\}/colleges\`)}>
+          院校资讯
+        </span>
+      </div>
     )
   }
 ```
