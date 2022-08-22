@@ -192,3 +192,24 @@ String.fromCodePoint() // 从Unicode码点返回对应字符
 String.prototype.codePointAt() // 从字符返回对应的码点
 String.prototype.at() // 返回字符串给定位置的字符
 ```
+
+## emoji的字符串拼接
+
+emoji作为字符串自然是可以进行拼接操作的，不过如果是利用`\u200D`进行拼接的话，还可以实现图片组合功能，示例如下：
+
+```js
+
+console.log('👩‍❤️‍💋‍👨'.length) // 11
+console.log([...'👩‍❤️‍💋‍👨']) // => ['👩', '‍', '❤', '️', '‍', '💋', '‍', '👨']
+
+const a = '👩'  // length = 2
+const a1 = '❤'
+const a2 = '💋'
+const a3 = '👨'
+const m = '\u200D'
+
+console.log(a+m+a1)  // => 👩‍❤'
+console.log(a+m+a1+m+a2+m+a3)  // => 👩‍❤️‍💋‍👨
+
+```
+
