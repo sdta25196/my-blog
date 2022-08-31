@@ -170,7 +170,8 @@
   * tree shaking 摇树, 或者叫剪枝
   * sourcemap 源码映射配置
     * [sourcemap配置](https://webpack.js.org/configuration/devtool/#devtool)
-
+  * 使用缓存来增加构建速度
+    * [hard-source-webpack-plugin](https://www.npmjs.com/package/hard-source-webpack-plugin)
 
 ## webpack拆包，拆到多少算合适？
   拆包的目的一部分是按需加载，一部分是减少初始chunk的下载压力，单纯把一个大的包拆分成多个小包并不是最合理的，这里也要看http协议版本。
