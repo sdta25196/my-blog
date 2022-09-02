@@ -29,7 +29,7 @@ export default function Home({ str }) {
   }, [])
   return (
     <div className={styles.container}>
-      {str}
+      {/* {str} */}
       {str1}
       <br/>
       <br/>
