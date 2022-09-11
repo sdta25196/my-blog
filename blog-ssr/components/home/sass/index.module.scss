@@ -1,0 +1,48 @@
+@import "../../../assets/style/theme.scss";
+
+.mainBox {
+  min-height: 100vh;
+  min-width: $content-width;
+  background-image: url(/image/blog-bg.webp);
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+}
+.main {
+  width: $content-width;
+  margin: 0 auto;
+  padding: 15px 0;
+  padding-bottom: 0;
+}
+.loading {
+  height: 50vh;
+  position: relative;
+}
+.icp {
+  background: rgba(0, 0, 0, 0.5);
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #ccc;
+}
+
+/* 移动端样式*/
+@media screen and (max-width: $content-width) {
+  .mainBox {
+    min-height: 100vh;
+    min-width: $content-width-mobile;
+    background-image: url(/image/blog-bg.webp);
+    background-size: cover;
+  }
+  .main {
+    width: $content-width-mobile;
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 0.2rem;
+  }
+  .icp {
+    height: 0.5rem;
+    line-height: 0.5rem;
+    font-size: 0.2rem;
+  }
+}

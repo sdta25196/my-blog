@@ -3,8 +3,8 @@ import type { NextRequest } from 'next/server'
 
 // This function can be marked `async` if using `await` inside
 export function middleware(request: NextRequest) {
-  console.log(userAgent(request))
-  console.log('----------------------')
+  // console.log(userAgent(request))
+  // console.log('----------------------')
   // return NextResponse.redirect(new URL('/about-2', request.url))
 }
 
