@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { getArticleByHash } from "../../tools"
 import styles from './sass/navigation.module.scss'
 import LOGO from '../../public/image/logo.webp'
@@ -53,7 +53,7 @@ function NavigationMobile({ activeType, nav = [] }) {
       <div className={styles.mobileNav}>
         {
           nav.map((item) => {
-            return <Link to={item.router} key={item.title}>
+            return <Link href={item.router} key={item.title}>
               <p className={`${styles.articleType} ${activeType === item.active ? styles.active : ''}`}>
                 <span>{item.title}</span>
               </p>

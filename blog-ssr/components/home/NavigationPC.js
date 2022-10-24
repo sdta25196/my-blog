@@ -4,7 +4,6 @@ import GITHUB from '../../public/image/github.png'
 import CSDN from '../../public/image/csdn.png'
 import LOGO from '../../public/image/logo.webp'
 import Link from 'next/link'
-// import { Link, useHistory } from 'react-router-dom'
 import { getArticleByHash } from '../../tools'
 
 function NavigationPC({ activeType, nav = [] }) {
