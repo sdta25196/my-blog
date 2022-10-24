@@ -231,3 +231,20 @@ function ProfileDetails({ resource }) {
 export default App
 
 ```
+
+
+## 补充lazy预渲染简单版本
+
+```js
+const LazyDemo = lazy(async () => {
+  const a = { x: 1 }
+  await new Promise(resolve => {
+    a.x = 200666
+    setTimeout(resolve, 2000); // 模拟异步请求
+  });
+  return Promise.resolve({
+    default: () => <div>这里a.x == {a.x}</div>
+  });
+});
+
+```
