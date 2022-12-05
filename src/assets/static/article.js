@@ -1,12 +1,12 @@
 
 const article = [{
-        hash: "cd7c0e4e6ac60ef267aedb68fcaf8fb2bc1fe574",
-        fileName: "a14927d76728c806e429d727c6418fb55226464f",
-        title: "详述前端CSR、SSR、SSG、ISR、DPR",
+        hash: "83a5f70e7eeca7d5fe40359306fa4c781291f43c",
+        fileName: "edf571242e2a57a2deb85050b1902c6fbfcb1552",
+        title: "关于前端CSR、SSR、SSG、ISR、DPR",
         filePath: "/blogs/article/",
-        date: "Mon Dec 05 2022 16:21:07 GMT+0800 (中国标准时间)",
-        description: "## 详述前端CSR、SSR、SSG、ISR、DPR@@@@@@![7tz9q1ngpp](assets/csr.png)@@@@@@## CSR Client Side Rendering - 客户端渲染@@@",
-        outline: ["## 详述前端CSR、SSR、SSG、ISR、DPR","## CSR Client Side Rendering - 客户端渲染","## SSR Server Side Rendering，服务端渲染","## SSG Static Site Generation，静态网站生成","## ISR Incremental Site Rendering，增量式的网站渲染","## DPR Distributed Persistent Rendering，分布式的持续渲染"],
+        date: "Mon Dec 05 2022 16:47:01 GMT+0800 (中国标准时间)",
+        description: "## 关于前端CSR、SSR、SSG、ISR、DPR@@@@@@![7tz9q1ngpp](assets/csr.png)@@@@@@## CSR Client Side Rendering - 客户端渲染@@@",
+        outline: ["## 关于前端CSR、SSR、SSG、ISR、DPR","## CSR Client Side Rendering - 客户端渲染","## SSR Server Side Rendering，服务端渲染","## SSG Static Site Generation，静态网站生成","## ISR Incremental Site Rendering，增量式的网站渲染","## DPR Distributed Persistent Rendering，分布式的持续渲染"],
       },{
         hash: "6c072da1e7c29cbe4878fe788c7727816e18b819",
         fileName: "52cf4b36a8805130b5a522a2eeb406905fa9b783",
