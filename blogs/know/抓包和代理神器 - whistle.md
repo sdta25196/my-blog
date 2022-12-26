@@ -139,6 +139,9 @@ www.test.com/xxx http://www.abc.com
 
   > 可以通过右键 Filter -> This URL 或 This Host 快速过滤当前URL或host的请求
 
+## Q&A
+
+  * IOS14及以上版本，需要开启**本地网络**的权限，否则无法进行抓包
 ## 更多
   
   * [whistle中文文档](http://wproxy.org/whistle/install.html)
