@@ -1,5 +1,13 @@
 
 const article = [{
+        hash: "94f3d4dc556602ab0185ba116bc22ffb62768014",
+        fileName: "514371b5cdb9b3fe7e03e0c55ea73b63ba834f8a",
+        title: "认识一下前端各种编码与转义符",
+        filePath: "/blogs/article/",
+        date: "Wed Feb 08 2023 14:07:23 GMT+0800 (中国标准时间)",
+        description: "@@@## 认识一下前端各种编码与转义符@@@### html实体@@@`&、&#、&#x` html的转义符，叫做**html实体**；@@@例如：@@@* `&nbsp;` @@@* `&gt;`  @@@* `&#60 === $lt === &#x3c`（十进制60等于十六进制3c）；@@@@@@> 相关文档：[https://www.w3school.com.cn/charsets/ref_html_symbols.asp](https://www.w3school.com.cn/charsets/ref_html_symbols.asp)@@@",
+        outline: ["## 认识一下前端各种编码与转义符","### html实体","### encode编码","### base64","### unicode","### 数字"],
+      },{
         hash: "83a5f70e7eeca7d5fe40359306fa4c781291f43c",
         fileName: "edf571242e2a57a2deb85050b1902c6fbfcb1552",
         title: "关于前端CSR、SSR、SSG、ISR、DPR",
