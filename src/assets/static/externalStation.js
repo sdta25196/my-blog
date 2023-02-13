@@ -19,6 +19,8 @@ import english from '../image/english.svg'
 import cssReference from '../image/cssReference.png'
 import bzk from '../image/bzk.gif'
 import devTool from '../image/devtool.svg'
+import bxm from '../image/bxm.png'
+import git from '../image/git.png'
 
 const EXTERNAL = [
   {
@@ -152,6 +154,18 @@ const EXTERNAL = [
     link: "https://devtool.tech/",
     logo: devTool,
     description: "各种各样的开发者工具",
+  },
+  {
+    title: "帮小忙",
+    link: "https://tool.browser.qq.com/",
+    logo: bxm,
+    description: "帮小忙：腾讯开发的小工具群",
+  },
+  {
+    title: "testApi",
+    link: "https://github.com/AutumnFish/testApi",
+    logo: git,
+    description: "testApi：提供在线测试数据",
   },
 ]
 
