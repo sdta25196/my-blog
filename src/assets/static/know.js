@@ -1,5 +1,13 @@
 
 const know = [{
+        hash: "1fcaa7b50aa5fcf5b239f1f492a72d4214acaaca",
+        fileName: "8e860a1a36c91c19ad3a23aebb7e4791c903d15e",
+        title: "web录制与回放 - rrweb",
+        filePath: "/blogs/know/",
+        date: "Tue Feb 14 2023 16:12:03 GMT+0800 (中国标准时间)",
+        description: "## rrweb介绍@@@@@@rrweb是由smartx开源的web录制、回放基础库。它可以将⻚⾯中的 DOM 以及⽤户操作保存为可序列化的数据，以实现远程回放。@@@@@@## rrweb应用场景@@@",
+        outline: ["## rrweb介绍","## rrweb应用场景","## 实现思路","## 应用","### 录制","### 回放","### 示例：","## 更多"],
+      },{
         hash: "b936781f552e930d18abbe0e2b8108110515b397",
         fileName: "3518753c1947250e1cab75867773e6ec7732e227",
         title: "git钩子工具 - husky",
