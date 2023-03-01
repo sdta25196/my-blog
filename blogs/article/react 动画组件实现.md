@@ -6,10 +6,12 @@
 
 核心状态有四个： 退出完成`EXITED`、 进入中`ENTERING`、 进入完成`ENTERED`、 退出中`EXITING`。利用不同状态切换不同class，即可实现对应状态下的动画效果。
 
+而具体需要操作的dom,可以直接由`nodeRef`传如`dom的ref`即可。
+
 代码如下：
 
 ```js
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 
 // 强制回流，在此之前修改了dom的className, 此处触发了一次读取属性，来强制浏览器回流
 const forceReflow = (node) => node.scrollTop
@@ -39,6 +41,7 @@ const Transition = ({
   ...childProps
 }) => {
 
+
   const [status, setStatus] = useState(() => {
     let initialStatus
     if (_in) {
@@ -57,6 +60,69 @@ const Transition = ({
     return initialStatus
   })
 
+  const timeouts = (() => {
+    let exit, enter, appear
+
+    exit = enter = appear = _timeout
+
+    if (_timeout != null && typeof _timeout !== 'number') {
+      exit = _timeout.exit
+      enter = _timeout.enter
+      appear = _timeout.appear !== undefined ? _timeout.appear : enter
+    }
+    return { exit, enter, appear }
+  })()
+
+  const performEnter = useCallback(() => {
+    const [maybeNode, maybeAppearing] = [undefined]
+
+    _onEnter(maybeNode, maybeAppearing)
+
+    setStatus(ENTERING)
+    setTimeout(() => {
+      _onEntering(maybeNode, maybeAppearing)
+      setTimeout(() => {
+        setStatus(ENTERED)
+        setTimeout(() => {
+          _onEntered(maybeNode, maybeAppearing)
+        })
+      }, timeouts.enter)
+    })
+  }, [_onEnter, _onEntering, _onEntered, timeouts])
+
+  const performExit = useCallback(() => {
+    const maybeNode = undefined
+
+    _onExit(maybeNode)
+
+    setStatus(EXITING)
+    setTimeout(() => {
+      _onExiting(maybeNode)
+      setTimeout(() => {
+        setStatus(EXITED)
+        setTimeout(() => {
+          _onExited(maybeNode)
+        })
+      }, timeouts.exit)
+    })
+  }, [_onExit, _onExiting, _onExited, timeouts])
+
+  const updateStatus = useCallback((nextStatus) => {
+    if (nextStatus !== null) {
+      if (nextStatus === ENTERING) {
+        if (_unmountOnExit || _mountOnEnter) {
+          const node = _nodeRef.current
+          if (node) forceReflow(node)
+        }
+        performEnter()
+      } else {
+        performExit()
+      }
+    } else if (_unmountOnExit && status === EXITED) {
+      setStatus(UNMOUNTED)
+    }
+  }, [_unmountOnExit, _mountOnEnter, _nodeRef, status, performEnter, performExit])
+
   useEffect(() => {
     console.log(status)
     let nextStatus = null
@@ -73,76 +139,8 @@ const Transition = ({
     if (_in && status === UNMOUNTED) {
       setStatus(EXITED)
     }
-  }, [_in, status])
+  }, [_in, status, updateStatus])
 
-
-  function updateStatus(nextStatus) {
-    if (nextStatus !== null) {
-      if (nextStatus === ENTERING) {
-        if (_unmountOnExit || _mountOnEnter) {
-          const node = _nodeRef.current
-          if (node) forceReflow(node)
-        }
-        performEnter()
-      } else {
-        performExit()
-      }
-    } else if (_unmountOnExit && status === EXITED) {
-      setStatus(UNMOUNTED)
-    }
-  }
-
-
-  function performEnter() {
-    const [maybeNode, maybeAppearing] = [undefined]
-
-    const timeouts = getTimeouts()
-
-    _onEnter(maybeNode, maybeAppearing)
-
-    setStatus(ENTERING)
-    setTimeout(() => {
-      _onEntering(maybeNode, maybeAppearing)
-      setTimeout(() => {
-        setStatus(ENTERED)
-        setTimeout(() => {
-          _onEntered(maybeNode, maybeAppearing)
-        })
-      }, timeouts.enter)
-    })
-  }
-
-  function performExit() {
-    const timeouts = getTimeouts()
-    const maybeNode = undefined
-
-    _onExit(maybeNode)
-
-    setStatus(EXITING)
-    setTimeout(() => {
-      _onExiting(maybeNode)
-      setTimeout(() => {
-        setStatus(EXITED)
-        setTimeout(() => {
-          _onExited(maybeNode)
-        })
-      }, timeouts.exit)
-    })
-  }
-
-  function getTimeouts() {
-    let exit, enter, appear
-
-    exit = enter = appear = _timeout
-
-    if (_timeout != null && typeof _timeout !== 'number') {
-      exit = _timeout.exit
-      enter = _timeout.enter
-      // TODO: remove fallback for next major
-      appear = _timeout.appear !== undefined ? _timeout.appear : enter
-    }
-    return { exit, enter, appear }
-  }
 
   if (status === UNMOUNTED) {
     return null
