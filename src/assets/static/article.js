@@ -1,10 +1,18 @@
 
 const article = [{
-        hash: "fe5af6cf7a7b7dd442520fdaef7d6304c8f2c48e",
-        fileName: "5f896a800aa438d178d777ac077c4fa8d927b8da",
-        title: "react 动画组件实现",
+        hash: "08b3879188f8eb246bfdbf90405f2159d1ae635f",
+        fileName: "3b56af5772d90ed82260b84847cf9e06d225e8c3",
+        title: "react 动画组件实现-CSSTransition",
         filePath: "/blogs/article/",
-        date: "Wed Mar 01 2023 16:43:57 GMT+0800 (中国标准时间)",
+        date: "Thu Mar 02 2023 14:07:10 GMT+0800 (中国标准时间)",
+        description: "## react 动画组件实现@@@@@@复现了`Transition`组件后，继续复现`CSSTransition`,来实现通过class控制动画功能@@@@@@实现`onEnter`、`onEntering`、`onEntered`、`onExit`、`onExiting`、`onExited`，来分别控制dom的className。@@@",
+        outline: ["## react 动画组件实现"],
+      },{
+        hash: "d0bc0210e8423577fea789d0399d7b1b6cd1568c",
+        fileName: "ecbb7e5c401062e308b9815b09d8b3063c705a90",
+        title: "react 动画组件实现-Transition",
+        filePath: "/blogs/article/",
+        date: "Thu Mar 02 2023 13:49:58 GMT+0800 (中国标准时间)",
         description: "## react 动画组件实现@@@@@@学习了`react-transition-group`源码之后，复现了一个`Transition`组件@@@@@@实现动画的核心逻辑其实很简单：**根据状态的变化，利用setTimeout设置不同的class，来实现组件的移动**@@@",
         outline: ["## react 动画组件实现"],
       },{
