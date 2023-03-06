@@ -1,5 +1,13 @@
 
 const article = [{
+        hash: "bc6d1d7fb8dd059e414f70cf6039f1cfa38f4b9f",
+        fileName: "2338a7698e3beb6ed8000efeeed6ff7a47e21438",
+        title: "react-18-flushSync",
+        filePath: "/blogs/article/",
+        date: "Mon Mar 06 2023 15:23:57 GMT+0800 (中国标准时间)",
+        description: "## flushSync@@@@@@react 提供了一个可以同步刷新 DOM 的 API：`flushSync`。@@@@@@```js@@@  import { flushSync } from 'react-dom';@@@ @@@  flushSync(() => {@@@    setSomething(123);  // 任意的更新，此处的更新会同步执行。@@@  });@@@  //  到了这一行，dom已经更新完成@@@```@@@",
+        outline: ["## flushSync","## 使用场景","## 示例"],
+      },{
         hash: "08b3879188f8eb246bfdbf90405f2159d1ae635f",
         fileName: "3b56af5772d90ed82260b84847cf9e06d225e8c3",
         title: "react 动画组件实现-CSSTransition",
