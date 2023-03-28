@@ -173,6 +173,12 @@ react包中还导出了**startTransition**函数。可以代替 useTransition。
 
 ```
 
+**如果需要得到列表中的每个元素的ref怎么办？**
+
+此时再使用普通的ref写法就无法满足需求了，这时需要使用 ref的第二种写法 **ref回调**：`<div ref={node=>console.log(node)}></div>`
+
+ref回调函数中可以把node存起来，等需要使用的时候再调用即可。
+
 ## useDebugValue
 
 当我们使用自定义hook时，如果未使用 useDebugValue 的情况下，DevTools中是不会显示自定义hook的值的。
