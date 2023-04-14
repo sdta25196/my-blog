@@ -1,20 +1,20 @@
 
 const article = [{
-        hash: "3e0221db7a685c0376c24c3107ed79f11ec87fa5",
-        fileName: "581e08980bdd337da7d11c2607d162a04ea6de4a",
-        title: "实现js异步任务队列",
-        filePath: "/blogs/article/",
-        date: "Fri Apr 14 2023 10:11:32 GMT+0800 (中国标准时间)",
-        description: "## 使用队列实现一个异步任务逐一执行的功能@@@@@@```js@@@    // 简单搞一个队列 @@@	class Queue {@@@	  constructor() {@@@	    this.arr = [];@@@	    this.head = 0;@@@	    this.tail = 0;@@@	  }@@@	@@@	  push(x) {@@@	    this.arr.push(x);@@@	    this.tail++;@@@	  }@@@	@@@	  top() {@@@	    return this.arr[this.head];@@@	  }@@@	  pop() {@@@	    this.head++@@@	  }@@@	@@@	  getAll() {@@@	    return this.arr.slice(this.head, this.tail)@@@	  }@@@	@@@	  size() {@@@	    return this.head == this.tail@@@	  }@@@	}@@@	// 给队列里面加异步任务，然后逐一执行@@@	async function fn() {@@@	  let q = new Queue()@@@	  for (let i = 0; i < 5; i++) {@@@	    q.push(() => {@@@	      return new Promise((resolve, reject) => {@@@	        setTimeout(() => {@@@	          console.log(i);@@@	          resolve();@@@	        }, 2000)@@@	      })@@@	    })@@@	  }@@@	  while (!q.size()) {@@@	    let c = q.top();@@@	    await c();@@@	    q.pop();@@@	  }@@@	}@@@	fn() // 每隔两秒输出0-4@@@```@@@@@@## 使用普通for循环也可以简单实现@@@",
-        outline: ["## 使用队列实现一个异步任务逐一执行的功能","## 使用普通for循环也可以简单实现"],
-      },{
-        hash: "f47b32344a6feae39b46e6ba21a11e4ffd5e383e",
+        hash: "89d5e680b4906056db38e0f1ccf28d9b5e140b36",
         fileName: "43f9becd1413571d0b359833ebc7f52f9d60dd6d",
         title: "javascript正则表达式中的贪婪匹配和惰性匹配",
         filePath: "/blogs/article/",
-        date: "Fri Apr 14 2023 10:06:51 GMT+0800 (中国标准时间)",
-        description: "## 首先：js中的正则表达式引擎，默认是贪婪模式@@@@@@>  我们期望匹配两个双引号中的单词```\"witch\" ```和```\"broom\"```，但实际上确实匹配到了```\"witch\" and her \"broom\"```@@@@@@```js@@@let reg = /\".+\"/g;@@@",
-        outline: ["## 首先：js中的正则表达式引擎，默认是贪婪模式","## 第二：我们要开启惰性匹配","## 第三：不开启惰性匹配，我们使用替代方案","## 第四：替代方案与惰性匹配适用场景"],
+        date: "Fri Apr 14 2023 10:47:17 GMT+0800 (中国标准时间)",
+        description: "## 正则表达式引擎，默认是贪婪模式@@@@@@先看下面这个正则：@@@@@@```js@@@let reg = /\".+\"/g;@@@ @@@let str = 'a \"witch\" and her \"broom\" is one';@@@ @@@console.log( str.match(reg) ); //\"witch\" and her \"broom\"@@@```@@@ @@@我们期望匹配两个双引号中的单词`\"witch\" `和`\"broom\"`，但实际上确实匹配到了`\"witch\" and her \"broom\"`@@@",
+        outline: ["## 正则表达式引擎，默认是贪婪模式","## 开启惰性匹配","## 惰性匹配的替代方案","## 替代方案与惰性匹配分别的适用场景"],
+      },{
+        hash: "53b2a4a9251a7356b88604df46f592dfe7c1aaab",
+        fileName: "581e08980bdd337da7d11c2607d162a04ea6de4a",
+        title: "实现js异步任务队列",
+        filePath: "/blogs/article/",
+        date: "Fri Apr 14 2023 10:36:54 GMT+0800 (中国标准时间)",
+        description: "## 使用队列实现一个异步任务依次执行@@@@@@先简单实现一个队列，利用队列 + Promise 来实现对任务的依次执行@@@@@@首先搞一个队列：@@@",
+        outline: ["## 使用队列实现一个异步任务依次执行","## 使用普通for循环也可以简单实现"],
       },{
         hash: "87631dd6fb41d91d1777175a2bbe9dce58e649ea",
         fileName: "514371b5cdb9b3fe7e03e0c55ea73b63ba834f8a",

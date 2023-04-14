@@ -1,7 +1,10 @@
-## 使用队列实现一个异步任务逐一执行的功能
+## 使用队列实现一个异步任务依次执行
+
+先简单实现一个队列，利用队列 + Promise 来实现对任务的依次执行
+
+首先搞一个队列：
 
 ```js
-    // 简单搞一个队列 
 	class Queue {
 	  constructor() {
 	    this.arr = [];
@@ -29,7 +32,11 @@
 	    return this.head == this.tail
 	  }
 	}
-	// 给队列里面加异步任务，然后逐一执行
+```
+
+把异步任务依次加入到队列中：
+
+```js
 	async function fn() {
 	  let q = new Queue()
 	  for (let i = 0; i < 5; i++) {
