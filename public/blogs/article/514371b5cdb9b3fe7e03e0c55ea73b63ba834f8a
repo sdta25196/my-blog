@@ -9,6 +9,19 @@
 
 > 相关文档：[https://www.w3school.com.cn/charsets/ref_html_symbols.asp](https://www.w3school.com.cn/charsets/ref_html_symbols.asp)
 
+**html实体转换算法**
+
+```js
+const t = (str)=>{
+  return str.replace(/&#(?:x([0-9a-z]{1,4})|([0-9]{1,4}));/gi, function (_, hex, numStr) {
+      var num = parseInt(hex || numStr, hex ? 16 : 10);
+      return String.fromCharCode(num);
+    });
+}
+
+t('&#x25bc;') // => '▼'
+```
+
 ### encode编码
 
 `%42`  URI经过`encodeURI()`函数对`B`编码得到的字符串；`decodeURI('%42')`
