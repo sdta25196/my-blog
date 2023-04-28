@@ -21,6 +21,7 @@ import bzk from '../image/bzk.gif'
 import devTool from '../image/devtool.svg'
 import bxm from '../image/bxm.png'
 import git from '../image/git.png'
+import clipdrop from '../image/clipdrop.png'
 
 const EXTERNAL = [
   {
@@ -166,6 +167,12 @@ const EXTERNAL = [
     link: "https://github.com/AutumnFish/testApi",
     logo: git,
     description: "testApi：提供在线测试数据",
+  },
+  {
+    title: "clipdrop",
+    link: "https://clipdrop.co/relight",
+    logo: clipdrop,
+    description: "clipdrop：处理图片文案、背景、灯光等",
   },
 ]
 
