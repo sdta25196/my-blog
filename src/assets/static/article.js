@@ -1,5 +1,21 @@
 
 const article = [{
+        hash: "bf7ea8205f3304f76917aa7ba3b02cb2f951d75b",
+        fileName: "87a1b88ffbc92a88883181791898d89cc0e00184",
+        title: "学习之道",
+        filePath: "/blogs/article/",
+        date: "Tue May 09 2023 16:11:30 GMT+0800 (中国标准时间)",
+        description: "# 学习之道@@@@@@Q：池塘里的藻每天繁殖，多久覆盖一半，多久全部覆盖？@@@@@@A：第29天覆盖一半，但第30天全部覆盖。@@@",
+        outline: ["# 学习之道","## 学习为什么会放弃？","## 只是简单的1.01^365么？","## 学习之道"],
+      },{
+        hash: "4ce4c2708f1eefac06f58c81c25cd6df206b2d33",
+        fileName: "c8c5e9db545c1c29709dea5349775be9d6ff3f9e",
+        title: "javascript中的unicode",
+        filePath: "/blogs/article/",
+        date: "Fri Apr 28 2023 18:19:18 GMT+0800 (中国标准时间)",
+        description: "## ASCII@@@@@@[ASCII](https://www.runoob.com/w3cnote/ascii.html)，最基础的编码，是由美国人定义的，他们用1字节（8位）来定义他们使用的所有字符@@@@@@由于英文就26个字母，256（2^8）个映射位足矣标识所有字符@@@",
+        outline: ["## ASCII","## unicode ","### utf32","### utf8","### utf16","## JavaScript使用哪一种编码？","### UCS-2编码","### JavaScript字符函数的局限性","## ES6","## emoji的字符串拼接","## 补充"],
+      },{
         hash: "89d5e680b4906056db38e0f1ccf28d9b5e140b36",
         fileName: "43f9becd1413571d0b359833ebc7f52f9d60dd6d",
         title: "javascript正则表达式中的贪婪匹配和惰性匹配",
@@ -151,14 +167,6 @@ const article = [{
         date: "Tue Aug 30 2022 11:15:07 GMT+0800 (中国标准时间)",
         description: "## webpack的基础概念@@@@@@### entry@@@- 打包文件的入口，会以此入口文件开始，把相关联的文件全部打包@@@- 可以设置多个@@@@@@### output@@@- 打包文件的输出路径@@@",
         outline: ["## webpack的基础概念","### entry","### output","### loader ","### plugins","### .npmrc文件,配置项目统一使用源","### webpack 环境搭建","### webpack 启动  ","### weboack 配置文件","##### webpack 配置文件改名,自定义配置文件名","##### entry(入口)、output(出口)","##### mode(打包模式)","##### loader(扩展支持模块)","##### plugin(插件,功能扩展)","##### module(模块)","##### chunk(代码块)","##### bundle","##### bundle与chunk的关系","##### 配置webpack使用的loader的路径","### 多页面打包通用方案","### sourceMap ","## 优化方案","## webpack拆包，拆到多少算合适？","## wabpack hash指纹策略 ","### hash","### chunkhash","### contenthash","## 与其他打包工具的差异性","### Rollup","### vite - rollup - webpack ","## 更多"],
-      },{
-        hash: "80c7e58fc2d3c80923c40d4cfdc1cb464ccd9998",
-        fileName: "c8c5e9db545c1c29709dea5349775be9d6ff3f9e",
-        title: "javascript中的unicode",
-        filePath: "/blogs/article/",
-        date: "Fri Aug 05 2022 10:51:27 GMT+0800 (中国标准时间)",
-        description: "## ASCII@@@@@@最基础的编码，是由美国人定义的，他们用1字节（8位）来定义他们使用的所有字符@@@@@@由于英文就26个字母，256（2^8）个映射位足矣标识所有字符@@@",
-        outline: ["## ASCII","## unicode ","### utf32","### utf8","### utf16","## JavaScript使用哪一种编码？","### UCS-2编码","### JavaScript字符函数的局限","## ES6","## emoji的字符串拼接"],
       },{
         hash: "fc66e67420ce88e42386dab4111d4150d6ef0162",
         fileName: "2835013a00426e53b65ee10af3800ab91cba38e6",
