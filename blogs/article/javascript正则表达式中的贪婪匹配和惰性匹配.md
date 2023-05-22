@@ -190,4 +190,41 @@ function a1(h){
 4 真正使用正则之前，先进行预判断和预处理。例如正则要求字符串长度的话，可以先判断长度。正则要求包含某字符，也可以先处理字符串。
 
 6 提取公共字符串 th(?:is|at)  比(?:this|that)效率高
+
+
+
+## demo
+
+联想搜索
+```js
+function searchLink(keyword) {
+  // 模拟后端返回数据
+  let list = ['abc', 'ab', 'a', 'bcd', 'edf', 'abd'];
+  let reg = new RegExp(keyword, 'i');
+  return list.filter(item => reg.test(item))
+}
+```
+
+包含中文
+```js
+function hasCn(str) {
+  let reg = /[\u4e00-\u9fff]/g // \u9fa5 是8.0版本的事情了。未来 \u9fff 也会不够用。
+  return reg.test(str)
+}
+
+function hasCn1(str) {
+  let reg = /\p{sc=Han}/gu  // 启用unicode支持，匹配书写系统为中文的字符。Han 代表中文。
+  return reg.test(str)
+}
+```
+
+删除url中空的参数。
+```js
+const trimParmas = (parmaStr) => {
+  return parmaStr.replace(/((\w*?)=&|(&\w*?=)$)/g, '')
+}
+```
+
+
+
 ----------------------------------------------------------------
