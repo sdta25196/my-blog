@@ -261,3 +261,8 @@ function trimTag(tagName, htmlStr) {
   return htmlStr.replace(reg, '')
 }
 ```
+
+匹配字符串中第一个不是2的数字
+```js
+'xxaa21321'.match(/[^\D2]/)
+```
