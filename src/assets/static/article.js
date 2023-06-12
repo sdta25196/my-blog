@@ -1,10 +1,18 @@
 
 const article = [{
-        hash: "bf7ea8205f3304f76917aa7ba3b02cb2f951d75b",
+        hash: "d9e0c76196e275f903fb948b9fcf1493a990a225",
+        fileName: "ca02e714abb4c56e2f30b6376c2ccc55f438fad1",
+        title: "javascript中的正则表达式",
+        filePath: "/blogs/article/",
+        date: "Mon Jun 12 2023 15:29:42 GMT+0800 (中国标准时间)",
+        description: "## 正则中的引擎@@@@@@正则表达式分为三种引擎：@@@* Traditional NFA(传统型NFA): 非确定性有限状态自动机， 拥有忽略优先的功能。@@@* DFA : 确定性有限状态自动机，永远都是匹配优先。@@@* POSIX NFA ： 主要指符合POSIX标准的NFA引擎，它的特点主要是提供longest-leftmost匹配，也就是在找到最左侧最长匹配之前，它将继续回溯。同DFA一样，忽略优先量词对于POSIX NFA同样是没有意义的。@@@@@@JavaScript 中的正则表达式使用的是传统型NFA引擎@@@",
+        outline: ["## 正则中的引擎","## 正则的规则与边界","## 匹配优先和忽略优先","### 正则表达式引擎，默认是匹配优先（贪婪匹配）","### 开启忽略优先（惰性匹配）","### 惰性匹配的替代方案","### 替代方案与惰性匹配分别的适用场景","## 占有优先","## 回溯","## 环视、断言、零宽断言","## lastIndex ","## 优化","## demo"],
+      },{
+        hash: "3f0f2b1aa2360aa5db55cb686a6df63ab458228d",
         fileName: "87a1b88ffbc92a88883181791898d89cc0e00184",
         title: "学习之道",
         filePath: "/blogs/article/",
-        date: "Tue May 09 2023 16:11:30 GMT+0800 (中国标准时间)",
+        date: "Mon May 15 2023 14:16:36 GMT+0800 (中国标准时间)",
         description: "# 学习之道@@@@@@Q：池塘里的藻每天繁殖，多久覆盖一半，多久全部覆盖？@@@@@@A：第29天覆盖一半，但第30天全部覆盖。@@@",
         outline: ["# 学习之道","## 学习为什么会放弃？","## 只是简单的1.01^365么？","## 学习之道"],
       },{
@@ -15,14 +23,6 @@ const article = [{
         date: "Fri Apr 28 2023 18:19:18 GMT+0800 (中国标准时间)",
         description: "## ASCII@@@@@@[ASCII](https://www.runoob.com/w3cnote/ascii.html)，最基础的编码，是由美国人定义的，他们用1字节（8位）来定义他们使用的所有字符@@@@@@由于英文就26个字母，256（2^8）个映射位足矣标识所有字符@@@",
         outline: ["## ASCII","## unicode ","### utf32","### utf8","### utf16","## JavaScript使用哪一种编码？","### UCS-2编码","### JavaScript字符函数的局限性","## ES6","## emoji的字符串拼接","## 补充"],
-      },{
-        hash: "89d5e680b4906056db38e0f1ccf28d9b5e140b36",
-        fileName: "43f9becd1413571d0b359833ebc7f52f9d60dd6d",
-        title: "javascript正则表达式中的贪婪匹配和惰性匹配",
-        filePath: "/blogs/article/",
-        date: "Fri Apr 14 2023 10:47:17 GMT+0800 (中国标准时间)",
-        description: "## 正则表达式引擎，默认是贪婪模式@@@@@@先看下面这个正则：@@@@@@```js@@@let reg = /\".+\"/g;@@@ @@@let str = 'a \"witch\" and her \"broom\" is one';@@@ @@@console.log( str.match(reg) ); //\"witch\" and her \"broom\"@@@```@@@ @@@我们期望匹配两个双引号中的单词`\"witch\" `和`\"broom\"`，但实际上确实匹配到了`\"witch\" and her \"broom\"`@@@",
-        outline: ["## 正则表达式引擎，默认是贪婪模式","## 开启惰性匹配","## 惰性匹配的替代方案","## 替代方案与惰性匹配分别的适用场景"],
       },{
         hash: "53b2a4a9251a7356b88604df46f592dfe7c1aaab",
         fileName: "581e08980bdd337da7d11c2607d162a04ea6de4a",
