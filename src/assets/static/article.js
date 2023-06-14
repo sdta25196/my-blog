@@ -1,5 +1,29 @@
 
 const article = [{
+        hash: "cc78cbd3d49ed548e1effb6b056cb297b8d528de",
+        fileName: "e71fee3dfe71f1ddb1febf7cade07186b5b0bb3d",
+        title: "提示工程师prompt-engineering",
+        filePath: "/blogs/article/",
+        date: "Tue Jun 13 2023 22:58:04 GMT+0800 (中国标准时间)",
+        description: "## LLM优点@@@@@@总结、推理、转换、扩展@@@@@@## LLM弱点@@@",
+        outline: ["## LLM优点","## LLM弱点","## 宗旨","## 提示指南","## 提示迭代","## 提示摘要","## 提示推理","## 提示转换","## 提示扩展","### 温度","## 聊天机器人","## 如何完成提示通用 ","## 应用场景"],
+      },{
+        hash: "de18255e22e34ec111e33d55218deb2d14cacfe3",
+        fileName: "e99c7740e17a8bd2cbb1e26af2eb8cdf96a203fc",
+        title: "前端分词方案",
+        filePath: "/blogs/article/",
+        date: "Tue Jun 13 2023 22:49:17 GMT+0800 (中国标准时间)",
+        description: "## 前端分词方案@@@@@@使用 Intl API@@@@@@Intl.Segmenter 对象支持语言敏感的文本分割，允许你将一个字符串分割成有意义的片段（字、词、句）@@@",
+        outline: ["## 前端分词方案","## 语法","## 用例"],
+      },{
+        hash: "54683e5c1308d287f1ed8cd6858dbe1165b541cd",
+        fileName: "3f1d9f52f42f367b46fdd80475363d138abdd4bb",
+        title: "前端监控方案",
+        filePath: "/blogs/article/",
+        date: "Tue Jun 13 2023 21:38:30 GMT+0800 (中国标准时间)",
+        description: "## 通过新建img标签来上传数据@@@@@@兼容性好，无需挂载到页面上@@@@@@img的加载不会阻塞html的解析@@@",
+        outline: ["## 通过新建img标签来上传数据","## Navigator.sendBeacon上传数据","## 常见埋点行为"],
+      },{
         hash: "d9e0c76196e275f903fb948b9fcf1493a990a225",
         fileName: "ca02e714abb4c56e2f30b6376c2ccc55f438fad1",
         title: "javascript中的正则表达式",
@@ -303,14 +327,6 @@ const article = [{
         date: "Mon Oct 11 2021 14:47:51 GMT+0800 (中国标准时间)",
         description: "## 前端为什么要用模块@@@@@@* 减少全局变量，有效避免命名污染@@@* 更好的分离和按需加载@@@* 提高复用性和可维护性@@@@@@## 模块之初@@@",
         outline: ["## 前端为什么要用模块","## 模块之初","### 定义各种各样的全局函数","### 使用命名空间 ","### 使用自执行函数（闭包）","### 使用自执行函数添加参数（添加依赖）","### 以上定义模块的方式，有缺陷","## CommonJS","## AMD","## CMD","## es6模块","## ESM 与 CommonJS区别","## 总结"],
-      },{
-        hash: "46a8a514f2075791250cd8391191b6671fae3f1f",
-        fileName: "3f1d9f52f42f367b46fdd80475363d138abdd4bb",
-        title: "前端监控方案",
-        filePath: "/blogs/article/",
-        date: "Sat Oct 09 2021 17:50:26 GMT+0800 (中国标准时间)",
-        description: "## 前端监控方案@@@@@@下面两个API配合使用，收集大部分错误信息@@@@@@  * `window.addEventListener('error')`@@@    * error 可以监听所有同步、异步的运行时错误，但无法监听语法、接口、资源加载错误。@@@",
-        outline: ["## 前端监控方案","## react内置监控方案"],
       },{
         hash: "be8b87c706ad9efe185699f8c2d4f4093c6b47c0",
         fileName: "3dae20f9d98bb4462216dd64e4c14c262a65d7bb",
