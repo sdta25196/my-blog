@@ -26,6 +26,10 @@ var resultBuffer = encoding.convert(text, toCharset, fromCharset);
 ## 例子
 
 ```js
-var result = encoding.convert("ÕÄÖÜ", "Latin_1");
-console.log(result); //<Buffer d5 c4 d6 dc>
+var encoding = require("encoding");
+
+var resultBuffer = encoding.convert('瀛﹂櫌姒傚喌', 'gbk', 'utf-8'); // 瀛﹂櫌姒傚喌 是gbk编码的文案。用utf8编码显示了。结果是转换为gbk编码后的Buffer
+
+console.log(resultBuffer)
+console.log(resultBuffer.toString()) // 学院概况
 ```
