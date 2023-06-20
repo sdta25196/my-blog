@@ -1,5 +1,13 @@
 
 const know = [{
+        hash: "994ba2be4c86658f382722ac88fe86c136d416cb",
+        fileName: "13d0eb56f2df5c753b348eee15b2feeae47479bc",
+        title: "转换文案编码 - encoding",
+        filePath: "/blogs/know/",
+        date: "Tue Jun 20 2023 17:43:08 GMT+0800 (中国标准时间)",
+        description: "## encoding@@@@@@encoding是iconv-lite的简单包装器，用于将字符串从一种编码转换为另一种编码。@@@@@@## 安装@@@",
+        outline: ["## encoding","## 安装","## 用法","## 例子"],
+      },{
         hash: "7772e4cc20162a96448d335f4b27aae10814a563",
         fileName: "3518753c1947250e1cab75867773e6ec7732e227",
         title: "git钩子工具 - husky",
