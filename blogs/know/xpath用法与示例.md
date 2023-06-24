@@ -74,9 +74,9 @@ function readXPath(element) {
     return '//*[@class=\"' + element.className + '\"]';
   }
 
-  //递归到body处，结束递归
-  if (element === document.body) {
-    return '/html/' + element.tagName;
+  //递归到 html 处，结束递归
+  if (element === document.documentElement) {
+    return '/' + element.tagName
   }
 
   //在nodelist中的位置，且每次点击初始化
