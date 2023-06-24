@@ -58,21 +58,32 @@ XPath 使用路径表达式来选取 XML 文档中的节点或节点集。节点
 * 获取元素的 `xpath`
 
 ```js
-// 获取元素xpath
-function readXPath(element) {
+// 获取元素xpath , type: 1 full xpath , 2 xpath。默认获取 full xpath
+function readXPath(element, type = 1) {
   if (element.nodeType > 8) {
-    throw new Error("传入的element不合法")
+    console.error("传入的element不合法")
+    return
   }
 
-  // 如果这个元素有 id，则显示 //*[@id="element.id"] 形式内容
-  if (element.id !== '') {
-    return '//*[@id="' + element.id + '"]';
+  // 不获取 full xpath 的时候，可以直接使用 class、id
+  if (type === 2) {
+    if (element.id !== '') {
+      return `//*[@id="${element.id}"]`
+    }
+
+    if (element.className !== '') {
+      // class 需要处理重复的情况
+      let index = 1
+      const allElement = Array.from(document.querySelectorAll('.' + element.className))
+      for (let i = 0; i < allElement.length; i++) {
+        if (allElement[i] === element) {
+          index = i + 1
+        }
+      }
+      return `//*[@class="${element.className}"]${index > 1 ? '[' + index + ']' : ''}`
+    }
   }
 
-  // 如果这个元素有 class，则显示 //*[@class="element.className"]  形式内容
-  if (element.className !== '') {
-    return '//*[@class=\"' + element.className + '\"]';
-  }
 
   //递归到 html 处，结束递归
   if (element === document.documentElement) {
@@ -83,19 +94,19 @@ function readXPath(element) {
   let index = 1
 
   //同级的子元素
-  let siblings = element.parentNode.childNodes;
+  let siblings = element.parentNode.childNodes
 
   for (let i = 0, l = siblings.length; i < l; i++) {
-    let sibling = siblings[i];
+    let sibling = siblings[i]
     if (sibling == element) {
       // 找到当前元素后，开始向上递归。并且标记当前元素名称与下标位置
-      return readXPath(element.parentNode) + '/' + element.tagName + (index > 1 ? '[' + index + ']' : '');
+      return readXPath(element.parentNode) + '/' + element.tagName + (index > 1 ? '[' + index + ']' : '')
     } else if (sibling.nodeType == 1 && sibling.tagName == element.tagName) {
       // 开始累加下标，计算元素的位置
-      index++;
+      index++
     }
   }
-};
+}
 ```
 
 * 据 `xpath` 获取元素
