@@ -58,15 +58,15 @@ XPath 使用路径表达式来选取 XML 文档中的节点或节点集。节点
 * 获取元素的 `xpath`
 
 ```js
-// 获取元素xpath , type: 1 full xpath , 2 xpath。默认获取 full xpath
-function readXPath(element, type = 1) {
+// 获取元素xpath , xpathType: 1 full xpath , 2 xpath。默认获取 full xpath
+function readXPath(element, xpathType = 1) {
   if (element.nodeType > 8) {
     console.error("传入的element不合法")
     return
   }
 
   // 不获取 full xpath 的时候，可以直接使用 class、id
-  if (type === 2) {
+  if (xpathType === 2) {
     if (element.id !== '') {
       return `//*[@id="${element.id}"]`
     }
@@ -100,7 +100,7 @@ function readXPath(element, type = 1) {
     let sibling = siblings[i]
     if (sibling == element) {
       // 找到当前元素后，开始向上递归。并且标记当前元素名称与下标位置
-      return readXPath(element.parentNode) + '/' + element.tagName + (index > 1 ? '[' + index + ']' : '')
+      return readXPath(element.parentNode,xpathType) + '/' + element.tagName + (index > 1 ? '[' + index + ']' : '')
     } else if (sibling.nodeType == 1 && sibling.tagName == element.tagName) {
       // 开始累加下标，计算元素的位置
       index++
@@ -132,6 +132,12 @@ function getElement(xpath) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
+<!-- 
+
+实现鼠标划入元素时出现选中圈，并且点击获取xpath。 选中圈使用 shadow dom 进行样式隔离。 
+
+ -->
 
 <body>
 
@@ -186,15 +192,15 @@ function getElement(xpath) {
       }, false)
     }
 
-    // 获取元素xpath , type: 1 full xpath , 2 xpath。默认获取 full xpath
-    function readXPath(element, type = 1) {
+    // 获取元素xpath , xpathType: 1 full xpath , 2 xpath。默认获取 full xpath
+    function readXPath(element, xpathType = 1) {
       if (element.nodeType > 8) {
         console.error("传入的element不合法")
         return
       }
 
       // 不获取 full xpath 的时候，可以直接使用 class、id
-      if (type === 2) {
+      if (xpathType === 2) {
         if (element.id !== '') {
           return `//*[@id="${element.id}"]`
         }
@@ -228,7 +234,7 @@ function getElement(xpath) {
         let sibling = siblings[i]
         if (sibling == element) {
           // 找到当前元素后，开始向上递归。并且标记当前元素名称与下标位置
-          return readXPath(element.parentNode) + '/' + element.tagName + (index > 1 ? '[' + index + ']' : '')
+          return readXPath(element.parentNode, xpathType) + '/' + element.tagName + (index > 1 ? '[' + index + ']' : '')
         } else if (sibling.nodeType == 1 && sibling.tagName == element.tagName) {
           // 开始累加下标，计算元素的位置
           index++
@@ -241,10 +247,10 @@ function getElement(xpath) {
       const style = document.createElement("style")
       style.innerHTML = `
       #shadow-dom {
-        position: fixed;
+        position: absolute;
         border: 1px solid red;
-        pointerEvents: none;
-        zIndex: 999999;
+        pointer-events: none;
+        z-index: 999999;
         padding:0;
         margin:0;
       }

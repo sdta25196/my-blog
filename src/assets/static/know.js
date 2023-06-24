@@ -1,10 +1,10 @@
 
 const know = [{
-        hash: "e1425a515e00a1d1c6f9a999309c92578a4f4775",
+        hash: "89f7c9f5cf1b7d0b7a55d9344a89b31c0aec8839",
         fileName: "6914c751886d2c08980583beaa6aedb6a980e6f8",
         title: "xpath用法与示例",
         filePath: "/blogs/know/",
-        date: "Sat Jun 24 2023 16:00:30 GMT+0800 (中国标准时间)",
+        date: "Sat Jun 24 2023 16:56:08 GMT+0800 (中国标准时间)",
         description: "## xpath@@@@@@XPath 使用路径表达式来选取 XML 文档中的节点或节点集。节点是通过沿着路径 (path) 或者步 (steps) 来选取的。@@@@@@## 用法@@@",
         outline: ["## xpath","## 用法","### 选取节点","### 谓语（Predicates）","### 选取未知节点","### 选取若干路径","## xpath使用示例","## 案例","## 更多"],
       },{
