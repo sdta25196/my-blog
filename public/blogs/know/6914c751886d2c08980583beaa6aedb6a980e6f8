@@ -53,49 +53,60 @@ XPath 使用路径表达式来选取 XML 文档中的节点或节点集。节点
 * `//title | //price`	选取文档中的所有 title 和 price 元素。
 * `/bookstore/book/title | //price`	选取属于 bookstore 元素的 book 元素的所有 title 元素，以及文档中所有的 price 元素。
 
-## 示例
+## xpath使用示例
 
 * 获取元素的 `xpath`
 
 ```js
-// 获取元素xpath
-function readXPath(element) {
+// 获取元素xpath , type: 1 full xpath , 2 xpath。默认获取 full xpath
+function readXPath(element, type = 1) {
   if (element.nodeType > 8) {
-    throw new Error("传入的element不合法")
+    console.error("传入的element不合法")
+    return
   }
 
-  // 如果这个元素有 id，则显示 //*[@id="element.id"] 形式内容
-  if (element.id !== '') {
-    return '//*[@id="' + element.id + '"]';
+  // 不获取 full xpath 的时候，可以直接使用 class、id
+  if (type === 2) {
+    if (element.id !== '') {
+      return `//*[@id="${element.id}"]`
+    }
+
+    if (element.className !== '') {
+      // class 需要处理重复的情况
+      let index = 1
+      const allElement = Array.from(document.querySelectorAll('.' + element.className))
+      for (let i = 0; i < allElement.length; i++) {
+        if (allElement[i] === element) {
+          index = i + 1
+        }
+      }
+      return `//*[@class="${element.className}"]${index > 1 ? '[' + index + ']' : ''}`
+    }
   }
 
-  // 如果这个元素有 class，则显示 //*[@class="element.className"]  形式内容
-  if (element.className !== '') {
-    return '//*[@class=\"' + element.className + '\"]';
-  }
 
-  //递归到body处，结束递归
-  if (element === document.body) {
-    return '/html/' + element.tagName;
+  //递归到 html 处，结束递归
+  if (element === document.documentElement) {
+    return '/' + element.tagName
   }
 
   //在nodelist中的位置，且每次点击初始化
   let index = 1
 
   //同级的子元素
-  let siblings = element.parentNode.childNodes;
+  let siblings = element.parentNode.childNodes
 
   for (let i = 0, l = siblings.length; i < l; i++) {
-    let sibling = siblings[i];
+    let sibling = siblings[i]
     if (sibling == element) {
       // 找到当前元素后，开始向上递归。并且标记当前元素名称与下标位置
-      return readXPath(element.parentNode) + '/' + element.tagName + (index > 1 ? '[' + index + ']' : '');
+      return readXPath(element.parentNode) + '/' + element.tagName + (index > 1 ? '[' + index + ']' : '')
     } else if (sibling.nodeType == 1 && sibling.tagName == element.tagName) {
       // 开始累加下标，计算元素的位置
-      index++;
+      index++
     }
   }
-};
+}
 ```
 
 * 据 `xpath` 获取元素
@@ -105,6 +116,172 @@ function readXPath(element) {
 function getElement(xpath) {
   return document.evaluate(xpath, document).iterateNext()
 }
+```
+
+## 案例
+
+实现鼠标划入元素时出现选中圈，并且点击获取xpath。 选中圈使用 shadow dom 进行样式隔离。 
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="aa">
+    <strong>Original</strong>
+    <p>
+      <span>Paragraph that spans multiple lines</span>
+    </p>
+  </div>
+
+  <div class="aa">
+    <strong>p's rect</strong>
+    <p class="withClientRectsOverlay">
+      <span>Paragraph that spans multiple lines</span>
+    </p>
+  </div>
+
+  <div class="aa">
+    <strong>span's rect</strong>
+    <p>
+      <span class="withClientRectsOverlay">Paragraph that spans multiple lines</span>
+    </p>
+  </div>
+
+  <script>
+
+    run()
+
+    function run() {
+
+      const eleId = 'shadow-wrapper'
+
+      // 鼠标进入后元素点击事件 
+      function eleClick(e) {
+        console.log(readXPath(e.target))
+        e.preventDefault()
+      }
+      // 鼠标进入事件
+      function onMouseover(e) {
+        const target = e.target
+        const rect = target.getBoundingClientRect?.()
+        if (!rect || target.tagName === 'HTML') return
+        addLayerBox(rect, eleId)
+        target.addEventListener("click", eleClick, false)
+      }
+
+      window.addEventListener("mouseover", onMouseover, false)
+      document.addEventListener("mouseout", (e) => {
+        const target = e.target
+        document.querySelector('#' + eleId)?.remove()
+        target.removeEventListener("click", eleClick, false)
+      }, false)
+    }
+
+    // 获取元素xpath , type: 1 full xpath , 2 xpath。默认获取 full xpath
+    function readXPath(element, type = 1) {
+      if (element.nodeType > 8) {
+        console.error("传入的element不合法")
+        return
+      }
+
+      // 不获取 full xpath 的时候，可以直接使用 class、id
+      if (type === 2) {
+        if (element.id !== '') {
+          return `//*[@id="${element.id}"]`
+        }
+
+        if (element.className !== '') {
+          // class 需要处理重复的情况
+          let index = 1
+          const allElement = Array.from(document.querySelectorAll('.' + element.className))
+          for (let i = 0; i < allElement.length; i++) {
+            if (allElement[i] === element) {
+              index = i + 1
+            }
+          }
+          return `//*[@class="${element.className}"]${index > 1 ? '[' + index + ']' : ''}`
+        }
+      }
+
+
+      //递归到 html 处，结束递归
+      if (element === document.documentElement) {
+        return '/' + element.tagName
+      }
+
+      //在nodelist中的位置，且每次点击初始化
+      let index = 1
+
+      //同级的子元素
+      let siblings = element.parentNode.childNodes
+
+      for (let i = 0, l = siblings.length; i < l; i++) {
+        let sibling = siblings[i]
+        if (sibling == element) {
+          // 找到当前元素后，开始向上递归。并且标记当前元素名称与下标位置
+          return readXPath(element.parentNode) + '/' + element.tagName + (index > 1 ? '[' + index + ']' : '')
+        } else if (sibling.nodeType == 1 && sibling.tagName == element.tagName) {
+          // 开始累加下标，计算元素的位置
+          index++
+        }
+      }
+    }
+
+    // 添加选中样式元素
+    function addLayerBox(rect, eleId) {
+      const style = document.createElement("style")
+      style.innerHTML = `
+      #shadow-dom {
+        position: fixed;
+        border: 1px solid red;
+        pointerEvents: none;
+        zIndex: 999999;
+        padding:0;
+        margin:0;
+      }
+      #shadow-dom * {
+        box-sizing: border-box;
+      }
+    `
+      // 挂载到 body 上的元素
+      const wrapper = document.createElement("div")
+      wrapper.id = eleId
+      wrapper.style.pointerEvents = "none";
+      // 影子 dom
+      const shadow = wrapper.attachShadow({ mode: "open" })
+      // 选中的元素样式
+      const layer = document.createElement("div")
+      layer.id = "shadow-dom"
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      const scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft
+      layer.style.top = `${rect.top + scrollTop}px`
+      layer.style.left = `${rect.left + scrollLeft}px`
+      layer.style.width = `${rect.width}px`
+      layer.style.height = `${rect.height}px`
+
+      shadow.appendChild(style)
+      shadow.appendChild(layer)
+      // 样式隔离在shadow中，把元素最终添加到body里
+      document.body.appendChild(wrapper)
+    }
+
+    // 根据xpath获取元素
+    function getElement(xpath) {
+      return document.evaluate(xpath, document).iterateNext()
+    }
+  </script>
+</body>
+
+</html>
 ```
 
 ## 更多
