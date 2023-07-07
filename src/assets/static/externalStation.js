@@ -22,6 +22,7 @@ import devTool from '../image/devtool.svg'
 import bxm from '../image/bxm.png'
 import git from '../image/git.png'
 import clipdrop from '../image/clipdrop.png'
+import pag from '../image/pag.png'
 
 const EXTERNAL = [
   {
@@ -173,6 +174,12 @@ const EXTERNAL = [
     link: "https://clipdrop.co/relight",
     logo: clipdrop,
     description: "clipdrop：处理图片文案、背景、灯光等",
+  },
+  {
+    title: "PAG",
+    link: "https://pag.art/docs/pag-flow.html",
+    logo: pag,
+    description: "PAG：AE直接导出动效，前端调用SDK使用",
   },
 ]
 
