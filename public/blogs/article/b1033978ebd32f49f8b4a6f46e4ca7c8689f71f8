@@ -132,6 +132,10 @@ display:none 会触发 reflow，而 visibility:hidden 只会触发 repaint，因
 
 没有js的理想情况下，html与css会并行解析，分别生成DOM与CSSOM，然后合并成Render Tree，进入Rendering Pipeline；但如果有js，css加载会阻塞后面js语句的执行，而（同步）js脚本执行会阻塞其后的DOM解析（所以通常会把css放在头部，js放在body尾）
 
+**利用css阻塞来解决：无样式内容的闪光（FOUC）**
+
+如果浏览器在下载和处理样式表的时候没有阻止渲染，那么无样式的状态就会在瞬间发生。所以，可以让css阻塞来保证不会出现FOUC
+
 ### JavaScript具体如何阻塞资源的
 
 JavaScript 的情况比 CSS 要更复杂一些。如果没有 defer 或 async，浏览器会立即加载并执行指定的脚本，“立即”指的是在渲染该 script 标签之下的HTML元素之前，也就是说不等待后续载入的HTML元素，读到就加载并执行。观察下面的代码：
