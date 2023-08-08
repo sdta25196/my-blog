@@ -1,5 +1,21 @@
 
 const article = [{
+        hash: "6250fcd85aaa89ee3614aa0df417bda7081515ea",
+        fileName: "0ce4074ba697347068b088867703d79a978a32a5",
+        title: "前端的程序设计",
+        filePath: "/blogs/article/",
+        date: "Mon Aug 07 2023 16:29:40 GMT+0800 (中国标准时间)",
+        description: "## 前端设计模式@@@@@@设计模式的意图大于结构，非标准结构实现满足设计模式的意图也是设计模式的实现@@@@@@**什么是设计模式？**@@@",
+        outline: ["## 前端设计模式","### 单例(singleton)","### 工厂(Factory)","###  观察者(Observer)","### 构造器(Builder)","### 代理模式（Proxy）","### 适配器模式(Adapter)-包装模式(wrapper)","###  外观模式(Facade)","### 状态机(StateMachine)","### 装饰器(Decorator)","### 迭代器(Iterator/Generator)","### 组件化","##  思从深行从简","## 前端设计原则","### 单向数据流","### 密封性和单一职责","### SSOT原则","### 最小交互（知识）原则","### 开闭原则","### 领域设计原则","### 插件模式","###  Immutable"],
+      },{
+        hash: "62ef37fe6819ae010683c8206222a3290cbb705f",
+        fileName: "6932ef9393604c8935fd33d13a4ae59f48c8cced",
+        title: "Javascript中的Proxy和Reflect",
+        filePath: "/blogs/article/",
+        date: "Mon Aug 07 2023 16:16:03 GMT+0800 (中国标准时间)",
+        description: "## Proxy@@@@@@@@@",
+        outline: ["## Proxy","## Reflect"],
+      },{
         hash: "54e9043b17729d579e4ab4053101abb3645ade5e",
         fileName: "b1033978ebd32f49f8b4a6f46e4ca7c8689f71f8",
         title: "html渲染原理及其优化思路",
