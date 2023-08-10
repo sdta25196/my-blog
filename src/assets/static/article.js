@@ -1,20 +1,20 @@
 
 const article = [{
-        hash: "6250fcd85aaa89ee3614aa0df417bda7081515ea",
-        fileName: "0ce4074ba697347068b088867703d79a978a32a5",
-        title: "前端的程序设计",
-        filePath: "/blogs/article/",
-        date: "Mon Aug 07 2023 16:29:40 GMT+0800 (中国标准时间)",
-        description: "## 前端设计模式@@@@@@设计模式的意图大于结构，非标准结构实现满足设计模式的意图也是设计模式的实现@@@@@@**什么是设计模式？**@@@",
-        outline: ["## 前端设计模式","### 单例(singleton)","### 工厂(Factory)","###  观察者(Observer)","### 构造器(Builder)","### 代理模式（Proxy）","### 适配器模式(Adapter)-包装模式(wrapper)","###  外观模式(Facade)","### 状态机(StateMachine)","### 装饰器(Decorator)","### 迭代器(Iterator/Generator)","### 组件化","##  思从深行从简","## 前端设计原则","### 单向数据流","### 密封性和单一职责","### SSOT原则","### 最小交互（知识）原则","### 开闭原则","### 领域设计原则","### 插件模式","###  Immutable"],
-      },{
-        hash: "62ef37fe6819ae010683c8206222a3290cbb705f",
+        hash: "50b8e93f23b26296d9e3da598970974e2faea97c",
         fileName: "6932ef9393604c8935fd33d13a4ae59f48c8cced",
         title: "Javascript中的Proxy和Reflect",
         filePath: "/blogs/article/",
-        date: "Mon Aug 07 2023 16:16:03 GMT+0800 (中国标准时间)",
-        description: "## Proxy@@@@@@@@@",
-        outline: ["## Proxy","## Reflect"],
+        date: "Tue Aug 08 2023 11:58:53 GMT+0800 (中国标准时间)",
+        description: "## Proxy@@@@@@Proxy（代理）用于修改某些操作的默认行为，等同于在语言层面做出修改，所以属于一种`元编程`（meta programming），即对编程语言进行编程。@@@@@@使用 Proxy 构造函数，用来生成 Proxy 实例。`var proxy = new Proxy(target, handler)`，target参数表示所要拦截的目标对象，handler参数也是一个对象，用来定制拦截行为。@@@",
+        outline: ["## Proxy","### revocable方法","### this的问题","### 使用场景","## Reflect","## Proxy实现观察者模式"],
+      },{
+        hash: "bb4abd7358c0fa49fa9571e514a8b7510306872d",
+        fileName: "1cb13f99f19f86aa43b1e14163e2b0babb45f565",
+        title: "前端常用设计模式与设计原则",
+        filePath: "/blogs/article/",
+        date: "Mon Aug 07 2023 16:44:45 GMT+0800 (中国标准时间)",
+        description: "## 前端设计模式@@@@@@设计模式的意图大于结构，非标准结构实现满足设计模式的意图也是设计模式的实现@@@@@@**什么是设计模式？**@@@",
+        outline: ["## 前端设计模式","### 单例(singleton)","### 工厂(Factory)","###  观察者(Observer)","### 构造器(Builder)","### 代理模式（Proxy）","### 适配器模式(Adapter)-包装模式(wrapper)","###  外观模式(Facade)","### 状态机(StateMachine)","### 装饰器(Decorator)","### 迭代器(Iterator/Generator)","### 组件化","##  思从深行从简","## 前端设计原则","### 单向数据流","### 密封性和单一职责","### SSOT原则","### 最小交互（知识）原则","### 开闭原则","### 领域设计原则","### 插件模式","###  Immutable"],
       },{
         hash: "54e9043b17729d579e4ab4053101abb3645ade5e",
         fileName: "b1033978ebd32f49f8b4a6f46e4ca7c8689f71f8",
