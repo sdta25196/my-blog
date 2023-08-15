@@ -13,6 +13,7 @@
   * `pm2 log --raw --lines 100 0` pm2日志，查看原始日志, 打印100行，编号为0的进程
   * `pm2 stop `  停止 需要制定服务id
   * `pm2 start myServer.js` pm2 启动一个服务文件 
+    - `pm2 start myServer.js -i 0`  开启负载均衡， `-i 0` 代表开启等于cpu数量的服务
   * `pm2 reload`   重启 需要制定服务id
   * `pm2 --watch`  监听，如果文件改变就重启
   * `pm2 list`     查看列表
