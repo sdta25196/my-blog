@@ -23,6 +23,7 @@ import bxm from '../image/bxm.png'
 import git from '../image/git.png'
 import clipdrop from '../image/clipdrop.png'
 import pag from '../image/pag.png'
+import shinescanicon from '../image/shinescanicon.png'
 
 const EXTERNAL = [
   {
@@ -180,6 +181,12 @@ const EXTERNAL = [
     link: "https://pag.art/docs/pag-flow.html",
     logo: pag,
     description: "PAG：AE直接导出动效，前端调用SDK使用",
+  },
+  {
+    title: "baimiaoapp",
+    link: "https://web.baimiaoapp.com/",
+    logo: shinescanicon,
+    description: "在线OCR",
   },
 ]
 
