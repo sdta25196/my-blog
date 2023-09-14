@@ -68,6 +68,28 @@ page.$eval
   console.log(content)
 ```
 
+### 使用本地的chrome浏览器
+
+1. 右键chrome快捷方式，选择属性 -> 目标，在最后添加内容：` --remote-debugging-port=9222`
+
+2. puppeteer程序中，要获取chrome信息：
+
+```js
+  const axios  = require('axios');
+  const puppeteer=require('puppeteer');
+
+  (async()=>{
+      let wsKey = await axios.get('http://localhost:9222/json/version'); // 请求信息
+      let browser=await puppeteer.connect({
+          browserWSEndpoint: wsKey.data.webSocketDebuggerUrl,  // 把chrome信息给puppeteer
+          defaultViewport:null
+      });
+      let page=await browser.newPage()
+      await page.goto('https://900t.cn');
+
+  })()
+```
+3. 需要注意，运行程序时，需要先启动配置了目标的chrome浏览器。
 
 ## 更多
 
