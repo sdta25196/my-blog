@@ -74,6 +74,8 @@ no-store 比较绝情，顾名思义就是不使用任何缓存策略。在 no-c
 
   最后，配置协商缓存需要用到的 Etag、Last-Modified 等参数。
 
+ > 如果没有 `Cache-Contorl` 和 `Expires` 的 header，但有`Last-Modified`，很多浏览器会这样计算 `(current time - last modified time) / 10 `
+
 ## Cache-Control示例
   | Cache-Control value      | 解释                                                                    |
   | ------------------------ | ----------------------------------------------------------------------- |

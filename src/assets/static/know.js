@@ -1,5 +1,13 @@
 
 const know = [{
+        hash: "de4b598240e0c3980a725397b19b2483fca9a3c4",
+        fileName: "1696cc762fd1efa41316217f4b733a3c29e020fe",
+        title: "爬虫-puppeteer",
+        filePath: "/blogs/know/",
+        date: "Thu Sep 14 2023 09:40:44 GMT+0800 (中国标准时间)",
+        description: "## 简介@@@  Puppeteer 是一个 Node 库，它提供了一个高级 API 来通过 DevTools 协议控制 Chromium 或 Chrome。Puppeteer 默认以 headless 模式运行，但是可以通过修改配置文件运行\"有头\"模式。 @@@  通常用来做为爬虫使用，但是只要与chrome有关的工作都可以使用，比如自动化测试，扩展测试等。@@@@@@## 示例@@@```js@@@  const puppeteer = require('puppeteer');@@@@@@  (async () => {@@@    const browser = await puppeteer.launch();@@@    const page = await browser.newPage();@@@    await page.goto('https://example.com');@@@    await page.screenshot({path: 'example.png'});@@@",
+        outline: ["## 简介","## 示例","### 开启“有头”模式","### 复制操作","### 屏幕截图","### 元素操作","### 使用本地的chrome浏览器","## 更多"],
+      },{
         hash: "5108b9bbe8ffd78e536d25f5d50406205c4f3114",
         fileName: "86b8f03d81d0c27da931c64e4bda9c750b3fabd3",
         title: "node进程守护-pm2",
@@ -143,14 +151,6 @@ const know = [{
         date: "Mon Dec 27 2021 14:54:11 GMT+0800 (中国标准时间)",
         description: "## 简介@@@@@@Immutable collections for JavaScript@@@@@@> JavaScript 的不可变集合@@@",
         outline: ["## 简介","## 安装","## 代码示例","### Map","### List","### merge和concat","### toJS","### fromJS","### 判断相等性","### 深度嵌套","### Lazy Seq","## 更多"],
-      },{
-        hash: "1315dcee534d5552aa2a396f62d3d0a57ef44287",
-        fileName: "1696cc762fd1efa41316217f4b733a3c29e020fe",
-        title: "爬虫-puppeteer",
-        filePath: "/blogs/know/",
-        date: "Fri Dec 10 2021 16:41:21 GMT+0800 (中国标准时间)",
-        description: "## 简介@@@  Puppeteer 是一个 Node 库，它提供了一个高级 API 来通过 DevTools 协议控制 Chromium 或 Chrome。Puppeteer 默认以 headless 模式运行，但是可以通过修改配置文件运行\"有头\"模式。 @@@  通常用来做为爬虫使用，但是只要与chrome有关的工作都可以使用，比如自动化测试，扩展测试等。@@@@@@## 示例@@@```js@@@  const puppeteer = require('puppeteer');@@@@@@  (async () => {@@@    const browser = await puppeteer.launch();@@@    const page = await browser.newPage();@@@    await page.goto('https://example.com');@@@    await page.screenshot({path: 'example.png'});@@@",
-        outline: ["## 简介","## 示例","### 开启“有头”模式","### 复制操作","### 屏幕截图","### 元素操作","## 更多"],
       },{
         hash: "32992d08ce27a96e10a4d29d9998a65076ecfd20",
         fileName: "0ccafe9b9cd7f2ed8c276454a58d66a72adf8f20",
