@@ -76,4 +76,13 @@
 ![snippets](./assets/snippets.jpg)
 
 
+## 请求日志记录
+
+适用于浏览器限制导致了某些请求在控制台上看不到的情况。
+
+访问[chrome://net-export/](chrome://net-export/), 点击`Start Logging to Disk`， 再去网站上发起请求，就可以把请求记录到文件中。
+
+随后可以使用[https://netlog-viewer.appspot.com/#import](https://netlog-viewer.appspot.com/#import)，导入文件进行详细分析。
+
+
 【未完待续.....】
