@@ -24,6 +24,7 @@ import git from '../image/git.png'
 import clipdrop from '../image/clipdrop.png'
 import pag from '../image/pag.png'
 import dnsCheck from '../image/dnsCheck.png'
+import xuanfangyi from '../image/xuanfangyi.png'
 import shinescanicon from '../image/shinescanicon.png'
 
 const EXTERNAL = [
@@ -194,6 +195,18 @@ const EXTERNAL = [
     link: "https://myssl.com/dns_check.html",
     logo: dnsCheck,
     description: "DNS在线查询",
+  },
+  {
+    title: "济南市住宅和房地产信息",
+    link: "https://124.128.246.22:8090/",
+    logo: chrome,
+    description: "查询济南楼盘信息",
+  },
+  {
+    title: "选房易",
+    link: "https://xuanfangyi.com/",
+    logo: xuanfangyi,
+    description: "选房易-光照模拟",
   },
 ]
 
