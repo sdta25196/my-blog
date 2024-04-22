@@ -1,12 +1,12 @@
 
 const article = [{
-        hash: "03ec882c330e61b11bf4e47c14e2f7b56010bea2",
+        hash: "ddc3f15ede6734fc0d903e04e5a1bc62dce8d21f",
         fileName: "113ec85a07ef4951ba8871d23def556ad5ef7d98",
         title: "chrome控制台使用",
         filePath: "/blogs/article/",
-        date: "Fri Sep 15 2023 11:38:15 GMT+0800 (中国标准时间)",
+        date: "Mon Apr 22 2024 13:38:17 GMT+0800 (中国标准时间)",
         description: "## chrome 控制台使用技巧@@@@@@以下技巧随时间更新，存在于不同版本的chrome上，建议更新至最新版本chrome后，再进行学习。@@@## 预览请求的时间分解@@@@@@时序故障阶段解释@@@",
-        outline: ["## chrome 控制台使用技巧","## 预览请求的时间分解","## 截图","## 录屏与重放","## 重新请求","## mock请求","## 脚本记事本"],
+        outline: ["## chrome 控制台使用技巧","## 预览请求的时间分解","## 截图","## 录屏与重放","## 重新请求","## mock请求","## 脚本记事本","## 请求日志记录"],
       },{
         hash: "b09d465f3d92685b28696054ef1599b96d6f47e6",
         fileName: "2eb8add3da46383c06f244240c573a2584e75229",
