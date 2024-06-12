@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "yarn build:article && react-scripts build",
+    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && yarn build:article && react-scripts build",
     "test": "react-scripts test",
     "build:article": "node script/buildArticle.js",
     "server": "node ./server/index.js",

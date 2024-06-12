@@ -1,5 +1,29 @@
 
 const article = [{
+        hash: "4df7dd534f024f055d5ff4234441072bd84dc187",
+        fileName: "e676e624b47604e28791f09ade5e03b01e23e16b",
+        title: "提示工程师2 进阶学习",
+        filePath: "/blogs/article/",
+        date: "Wed Jun 12 2024 14:41:04 GMT+0800 (中国标准时间)",
+        description: "## 提示词工程师进阶版@@@@@@大模型工作逻辑可以简单的抽象成一个公式：`y = f(x, w)`@@@@@@输出`y`等于`函数f`使用参数`w`处理输入`x`。训练过程就是函数f找到最佳参数w的过程@@@",
+        outline: ["## 提示词工程师进阶版","## 写好提示词的前置条件","## 基础概念","## 标准提示词的构成","## 注意事项","### 常见超参数设置","### 温度","### 多样性","### 重复惩罚","### Top-p","### seed","## 常用的文案","## 调试流程","## 最后的退路","### 思维链","### 自洽性","### 思维树","## 提示词工程","### 防范措施","### 提示词调优提示词","## 补充提示词实战技巧"],
+      },{
+        hash: "a101aa65fce50c24486308fb0e68118bf2cb7867",
+        fileName: "e71fee3dfe71f1ddb1febf7cade07186b5b0bb3d",
+        title: "提示工程师prompt-engineering",
+        filePath: "/blogs/article/",
+        date: "Wed Jun 12 2024 14:34:58 GMT+0800 (中国标准时间)",
+        description: "## LLM优点@@@@@@总结、推理、转换、扩展@@@@@@## LLM弱点@@@",
+        outline: ["## LLM优点","## LLM弱点","## 宗旨","## 提示指南","## 提示迭代","## 提示摘要","## 提示推理","## 提示转换","## 提示扩展","### 温度","## 聊天机器人","## 如何完成提示通用 "],
+      },{
+        hash: "9cf1b9c52c8e6f18f9744bd1f5cbe780861f19d0",
+        fileName: "7df77943158c57a8da38042761ba1b5e30c1d75c",
+        title: "agent workflow",
+        filePath: "/blogs/article/",
+        date: "Tue Jun 04 2024 09:58:49 GMT+0800 (中国标准时间)",
+        description: "## agent workflow@@@@@@代理工作流(Agentic Workflow)是与大型语言模型(LLM)交互和完成任务的一种新方法。传统上,我们与LLM交互时，会直接输入一个提示(prompt),LLM然后会基于这个提示直接生成一个输出结果。这种做法有点像让一个人一次性从头到尾写出一篇文章,没有反复修改和迭代的机会。@@@@@@代理工作流则更像是将写作过程分解为多个步骤：首先是根据主题大纲写一个草稿，然后是对草稿进行分析、修改和补充，之后是进一步完善和润色,如此反复迭代,直到最终生成期望的结果。@@@",
+        outline: ["## agent workflow","## agent设计模式","### Reflection - 利用大模型的思考能力","### tool use - 利用外部API","### Planning - 利用MOE多专家模式","### Multiagent collaboration - 多智能体协作","## 结论"],
+      },{
         hash: "ddc3f15ede6734fc0d903e04e5a1bc62dce8d21f",
         fileName: "113ec85a07ef4951ba8871d23def556ad5ef7d98",
         title: "chrome控制台使用",
@@ -47,14 +71,6 @@ const article = [{
         date: "Thu Jun 22 2023 10:40:35 GMT+0800 (中国标准时间)",
         description: "@@@## 认识一下前端各种编码与转义符@@@### html实体@@@`&、&#、&#x` html的转义符，叫做**html实体**；@@@例如：@@@* `&nbsp;` @@@* `&gt;`  @@@* `&#60 === $lt === &#x3c`（十进制60等于十六进制3c）；@@@@@@> 相关文档：[https://www.w3school.com.cn/charsets/ref_html_symbols.asp](https://www.w3school.com.cn/charsets/ref_html_symbols.asp)@@@",
         outline: ["## 认识一下前端各种编码与转义符","### html实体","### encode编码","### base64","### unicode","### 数字"],
-      },{
-        hash: "cc78cbd3d49ed548e1effb6b056cb297b8d528de",
-        fileName: "e71fee3dfe71f1ddb1febf7cade07186b5b0bb3d",
-        title: "提示工程师prompt-engineering",
-        filePath: "/blogs/article/",
-        date: "Tue Jun 13 2023 22:58:04 GMT+0800 (中国标准时间)",
-        description: "## LLM优点@@@@@@总结、推理、转换、扩展@@@@@@## LLM弱点@@@",
-        outline: ["## LLM优点","## LLM弱点","## 宗旨","## 提示指南","## 提示迭代","## 提示摘要","## 提示推理","## 提示转换","## 提示扩展","### 温度","## 聊天机器人","## 如何完成提示通用 ","## 应用场景"],
       },{
         hash: "de18255e22e34ec111e33d55218deb2d14cacfe3",
         fileName: "e99c7740e17a8bd2cbb1e26af2eb8cdf96a203fc",
