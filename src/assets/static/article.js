@@ -1,5 +1,13 @@
 
 const article = [{
+        hash: "a19744767f42f6adead3827dbe4dd7e554e2c6ed",
+        fileName: "a18cbcfed36c8f7b62c32d12a3ae1ad1398617ab",
+        title: "RAG实战记录",
+        filePath: "/blogs/article/",
+        date: "Fri Jun 28 2024 14:24:57 GMT+0800 (中国标准时间)",
+        description: "# RAG实战记录@@@@@@- 检索（Retrieve）：拿用户 query 调搜索引擎 API，拿到搜素结果；@@@- 增强（Augmented）：设置提示词，把检索结果作为挂载上下文；@@@- 生成（Generation）：大模型回答问题，标注引用来源；@@@@@@",
+        outline: ["# RAG实战记录","## 主要问题","## 方案","## 最后"],
+      },{
         hash: "721a70cde639efb4b70923bc527e9ab0027234f9",
         fileName: "e676e624b47604e28791f09ade5e03b01e23e16b",
         title: "提示工程师2 进阶学习",
