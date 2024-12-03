@@ -1,5 +1,13 @@
 
 const article = [{
+        hash: "3decae25bc51f42a69181fca1468624bae5ea694",
+        fileName: "77f82d8f6db25fc34f7761dac2d9002f25ebd9b1",
+        title: "AI大模型知识点-快速版",
+        filePath: "/blogs/article/",
+        date: "Tue Dec 03 2024 11:51:31 GMT+0800 (中国标准时间)",
+        description: "## AI大模型知识点-快速版@@@@@@把AI**当人看**，用对待人的方式对待AI。@@@@@@AI的落地场景是**提效**而不是代替。@@@",
+        outline: ["## AI大模型知识点-快速版","### prompt","### RAG","### function call","### Fine-tuning","### workflow","### Agent","### COT","## ADAPTIVE THINKING FRAMEWORK","## CORE THINKING SEQUENCE","### Initial Engagement","### Problem Space Exploration","### Multiple Hypothesis Generation","### Natural Discovery Process","### Testing and Verification","### Error Recognition and Correction","### Knowledge Synthesis","### Pattern Recognition and Analysis","### Progress Tracking","### Recursive Thinking","## VERIFICATION AND QUALITY CONTROL","### Systematic Verification","### Error Prevention","### Quality Metrics","## ADVANCED THINKING TECHNIQUES","### Domain Integration","### Strategic Meta-Cognition","### Synthesis Techniques","## CRITICAL ELEMENTS TO MAINTAIN","### Natural Language","### Progressive Understanding","## MAINTAINING AUTHENTIC THOUGHT FLOW","### Transitional Connections","### Depth Progression","### Handling Complexity","### Problem-Solving Approach","## ESSENTIAL CHARACTERISTICS TO MAINTAIN","### Authenticity","### Balance","### Focus","## RESPONSE PREPARATION","## IMPORTANT REMINDERS","### 常见问题与解决方案"],
+      },{
         hash: "a19744767f42f6adead3827dbe4dd7e554e2c6ed",
         fileName: "a18cbcfed36c8f7b62c32d12a3ae1ad1398617ab",
         title: "RAG实战记录",
