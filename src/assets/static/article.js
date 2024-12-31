@@ -1,5 +1,13 @@
 
 const article = [{
+        hash: "0616dc307d3327219d3e6abf145446d16818a490",
+        fileName: "a18cbcfed36c8f7b62c32d12a3ae1ad1398617ab",
+        title: "RAG实战记录",
+        filePath: "/blogs/article/",
+        date: "Tue Dec 31 2024 13:39:00 GMT+0800 (中国标准时间)",
+        description: "# RAG实战记录@@@@@@- 检索（Retrieve）：拿用户 query 调搜索引擎 API，拿到搜素结果；@@@- 增强（Augmented）：设置提示词，把检索结果作为挂载上下文；@@@- 生成（Generation）：大模型回答问题，标注引用来源；@@@@@@",
+        outline: ["# RAG实战记录","## 主要问题","## 方案","## 最后","## 25-1-1 补充"],
+      },{
         hash: "0c7b6fbdfae48848e88938b9385d8c37ecd092aa",
         fileName: "77f82d8f6db25fc34f7761dac2d9002f25ebd9b1",
         title: "AI大模型知识点-快速版",
@@ -7,14 +15,6 @@ const article = [{
         date: "Wed Dec 04 2024 09:35:41 GMT+0800 (中国标准时间)",
         description: "## AI大模型知识点-快速版@@@@@@把AI**当人看**，用对待人的方式对待AI。@@@@@@AI的落地场景是**提效**而不是代替。@@@",
         outline: ["## AI大模型知识点-快速版","### prompt","### RAG","### function call","### Fine-tuning","### workflow","### Agent","### COT","## ADAPTIVE THINKING FRAMEWORK","## CORE THINKING SEQUENCE","### Initial Engagement","### Problem Space Exploration","### Multiple Hypothesis Generation","### Natural Discovery Process","### Testing and Verification","### Error Recognition and Correction","### Knowledge Synthesis","### Pattern Recognition and Analysis","### Progress Tracking","### Recursive Thinking","## VERIFICATION AND QUALITY CONTROL","### Systematic Verification","### Error Prevention","### Quality Metrics","## ADVANCED THINKING TECHNIQUES","### Domain Integration","### Strategic Meta-Cognition","### Synthesis Techniques","## CRITICAL ELEMENTS TO MAINTAIN","### Natural Language","### Progressive Understanding","## MAINTAINING AUTHENTIC THOUGHT FLOW","### Transitional Connections","### Depth Progression","### Handling Complexity","### Problem-Solving Approach","## ESSENTIAL CHARACTERISTICS TO MAINTAIN","### Authenticity","### Balance","### Focus","## RESPONSE PREPARATION","## IMPORTANT REMINDERS","### 常见问题与解决方案"],
-      },{
-        hash: "a19744767f42f6adead3827dbe4dd7e554e2c6ed",
-        fileName: "a18cbcfed36c8f7b62c32d12a3ae1ad1398617ab",
-        title: "RAG实战记录",
-        filePath: "/blogs/article/",
-        date: "Fri Jun 28 2024 14:24:57 GMT+0800 (中国标准时间)",
-        description: "# RAG实战记录@@@@@@- 检索（Retrieve）：拿用户 query 调搜索引擎 API，拿到搜素结果；@@@- 增强（Augmented）：设置提示词，把检索结果作为挂载上下文；@@@- 生成（Generation）：大模型回答问题，标注引用来源；@@@@@@",
-        outline: ["# RAG实战记录","## 主要问题","## 方案","## 最后"],
       },{
         hash: "721a70cde639efb4b70923bc527e9ab0027234f9",
         fileName: "e676e624b47604e28791f09ade5e03b01e23e16b",
